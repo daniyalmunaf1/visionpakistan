@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->middleware(['auth','verified']);
+Route::get('/', App\Http\Controllers\Admin\UsersController::Class, 'index')->middleware(['auth','verified'])->name('index');
 
+Route::get('/dashboard', App\Http\Controllers\Admin\UsersController::Class, 'index')->middleware(['auth','verified'])->name('dashboard');
 
-Route::get('/dashboard', function () {
-    return view('index');
-})->middleware(['auth','verified'])->name('dashboard');
+Route::namespace('App\Http\Controllers\Admin')->group(function(){
+    Route::resource('users',UsersController::Class)->except(['show','create','store']);
+
+});
 
 require __DIR__.'/auth.php';

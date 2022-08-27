@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -13,10 +14,13 @@ class UsersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function __invoke()
     {
-        //
+        $users = User::all();
+        return view('users.index')->with('users',$users);
+
     }
+   
 
     /**
      * Show the form for creating a new resource.
@@ -34,7 +38,11 @@ class UsersController extends Controller
      */
     public function edit(User $user)
     {
-        //
+        $roles = Role::all();
+        return view('users.edit')->with([
+            'user'=>$user,
+            'roles'=>$roles
+        ]);
     }
 
     /**
@@ -46,7 +54,8 @@ class UsersController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $user->roles()->sync($request->roles);
+        return redirect()->route('index');
     }
 
     /**
@@ -57,6 +66,8 @@ class UsersController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        $user->roles()->detach();
+        $user->delete();
+        return redirect()->route('index');
     }
 }

@@ -35,21 +35,46 @@ License: For each use you must have a valid license purchased only from above li
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
-	<body data-kt-name="metronic" id="kt_body" class="app-blank">
+	<body data-kt-name="metronic" id="kt_body" class="app-blank bgi-size-cover bgi-position-center bgi-no-repeat">
 		<!--begin::Theme mode setup on page load-->
 		<script>if ( document.documentElement ) { const defaultThemeMode = "system"; const name = document.body.getAttribute("data-kt-name"); let themeMode = localStorage.getItem("kt_" + ( name !== null ? name + "_" : "" ) + "theme_mode_value"); if ( themeMode === null ) { if ( defaultThemeMode === "system" ) { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } else { themeMode = defaultThemeMode; } } document.documentElement.setAttribute("data-theme", themeMode); }</script>
 		<!--end::Theme mode setup on page load-->
 		<!--begin::Main-->
 		<!--begin::Root-->
 		<div class="d-flex flex-column flex-root">
+			<!--begin::Page bg image-->
+			<style>body { background-image: url('assets/media/auth/bg10.jpeg'); } [data-theme="dark"] body { background-image: url('assets/media/auth/bg10-dark.jpeg'); }</style>
+			<!--end::Page bg image-->
 			<!--begin::Authentication - Sign-up -->
 			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
+				<!--begin::Aside-->
+				<div class="d-flex flex-lg-row-fluid">
+					<!--begin::Content-->
+					<div class="d-flex flex-column flex-center pb-0 pb-lg-10 p-10 w-100">
+						<!--begin::Image-->
+						<img class="theme-light-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20" src="assets/media/auth/agency.png" alt="" />
+						<img class="theme-dark-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20" src="assets/media/auth/agency-dark.png" alt="" />
+						<!--end::Image-->
+						<!--begin::Title-->
+						<h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">Fast, Efficient and Productive</h1>
+						<!--end::Title-->
+						<!--begin::Text-->
+						<div class="text-gray-600 fs-base text-center fw-semibold">In this kind of post,
+						<a href="#" class="opacity-75-hover text-primary me-1">the blogger</a>introduces a person they’ve interviewed
+						<br />and provides some background information about
+						<a href="#" class="opacity-75-hover text-primary me-1">the interviewee</a>and their
+						<br />work following this is a transcript of the interview.</div>
+						<!--end::Text-->
+					</div>
+					<!--end::Content-->
+				</div>
+				<!--begin::Aside-->
 				<!--begin::Body-->
-				<div class="d-flex flex-column flex-lg-row-fluid w-lg-50 p-10 order-2 order-lg-1">
-					<!--begin::Form-->
-					<div class="d-flex flex-center flex-column flex-lg-row-fluid">
-						<!--begin::Wrapper-->
-						<div class="w-lg-500px p-10">
+				<div class="d-flex flex-column-fluid flex-lg-row-auto justify-content-center justify-content-lg-end p-12">
+					<!--begin::Wrapper-->
+					<div class="bg-body d-flex flex-center rounded-4 w-md-600px p-10">
+						<!--begin::Content-->
+						<div class="w-md-400px">
 							<!--begin::Form-->
 							<form method="POST" action="{{ route('register') }}" class="form w-100" novalidate="novalidate" id="" >
                             @csrf
@@ -63,7 +88,7 @@ License: For each use you must have a valid license purchased only from above li
 								<!-- Validation Errors -->
                                     @if(Session::has('errors'))
                                     <p class="alert alert-danger">    {{ implode('', $errors->all(':message')) }}
-</p>
+									</p>
                                     @endif
 								
 								<!--begin::Input group=-->
@@ -139,48 +164,11 @@ License: For each use you must have a valid license purchased only from above li
 							</form>
 							<!--end::Form-->
 						</div>
-						<!--end::Wrapper-->
+						<!--end::Content-->
 					</div>
-					<!--end::Form-->
-					<!--begin::Footer-->
-					<div class="d-flex flex-center flex-wrap px-5">
-						<!--begin::Links-->
-						<div class="d-flex fw-semibold text-primary fs-base">
-							<a href="../../demo3/dist/pages/team.html" class="px-5" target="_blank">Terms</a>
-							<a href="../../demo3/dist/pages/pricing/column.html" class="px-5" target="_blank">Plans</a>
-							<a href="../../demo3/dist/pages/contact.html" class="px-5" target="_blank">Contact Us</a>
-						</div>
-						<!--end::Links-->
-					</div>
-					<!--end::Footer-->
+					<!--end::Wrapper-->
 				</div>
 				<!--end::Body-->
-				<!--begin::Aside-->
-				<div class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2" style="background-image: url(assets/media/misc/auth-bg.png)">
-					<!--begin::Content-->
-					<div class="d-flex flex-column flex-center py-15 px-5 px-md-15 w-100">
-						<!--begin::Logo-->
-						<a href="../../demo3/dist/index.html" class="mb-12">
-							<img alt="Logo" src="assets/media/logos/custom-1.png" class="h-75px" />
-						</a>
-						<!--end::Logo-->
-						<!--begin::Image-->
-						<img class="mx-auto w-275px w-md-50 w-xl-500px mb-10 mb-lg-20" src="assets/media/misc/auth-screens.png" alt="" />
-						<!--end::Image-->
-						<!--begin::Title-->
-						<h1 class="text-white fs-2qx fw-bolder text-center mb-7">Fast, Efficient and Productive</h1>
-						<!--end::Title-->
-						<!--begin::Text-->
-						<div class="text-white fs-base text-center">In this kind of post,
-						<a href="#" class="opacity-75-hover text-warning fw-bold me-1">the blogger</a>introduces a person they’ve interviewed
-						<br />and provides some background information about
-						<a href="#" class="opacity-75-hover text-warning fw-bold me-1">the interviewee</a>and their
-						<br />work following this is a transcript of the interview.</div>
-						<!--end::Text-->
-					</div>
-					<!--end::Content-->
-				</div>
-				<!--end::Aside-->
 			</div>
 			<!--end::Authentication - Sign-up-->
 		</div>
