@@ -6,6 +6,11 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Role;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rules;
 
 class UsersController extends Controller
 {
@@ -17,8 +22,13 @@ class UsersController extends Controller
     public function __invoke()
     {
         $users = User::all();
-        return view('users.index')->with('users',$users);
+        return view('admin.index')->with('users',$users);
 
+    }
+
+    public function gotochangepassword()
+    {
+        return view('auth.change-password');
     }
    
 
@@ -38,11 +48,28 @@ class UsersController extends Controller
      */
     public function edit(User $user)
     {
-        $roles = Role::all();
-        return view('users.edit')->with([
-            'user'=>$user,
-            'roles'=>$roles
-        ]);
+        if(Gate::denies('helpdesk')){
+            $roles = Role::all();
+            return view('admin.edit')->with([
+                'user'=>$user,
+                'roles'=>$roles
+            ]);
+        }
+        else
+        {
+            if($user->hasRole('student'))
+            {
+                $roles = Role::all();
+                return view('admin.edit')->with([
+                    'user'=>$user,
+                    'roles'=>$roles
+                ]);
+            }
+            else{
+                return redirect()->route('index');
+
+            }
+        }
     }
 
     /**
@@ -54,8 +81,77 @@ class UsersController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:11',
+            'email' => ['required', 'string', 'email', 'max:255']
+        ]);
         $user->roles()->sync($request->roles);
+        $user->name = $request->name;
+        $user->number = $request->number;
+        $user->save();
+        
         return redirect()->route('index');
+    }
+
+    public function changePassword(Request $request, User $user)
+    {
+        $request->validate([
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        ]);
+        // $user->userid = Auth::user()->userid;
+        // $user->six_digit_Id = Auth::user()->six_digit_Id;
+        // $user->name = Auth::user()->name;
+        // $user->email = Auth::user()->email;
+        // $user->lock = Auth::user()->lock;
+        // $user->number = Auth::user()->number;
+        
+        DB::table('users')
+        ->where('id', Auth::user()->id)  // find your user by their email
+        ->update(array('password' => Hash::make($request->password)));
+        
+        return redirect()->route('index');
+    }
+
+
+    public function lockuser(User $user)
+    {
+        if(Gate::denies('helpdesk')){
+            if($user->lock==1)
+            {
+                $user->lock = 0;
+                $user->save();
+                return redirect()->route('index');
+            }
+            else
+            {
+                $user->lock = 1;
+                $user->save();
+                return redirect()->route('index');
+            }
+        }
+        else
+        {
+            if($user->hasRole('student'))
+            {
+                if($user->lock==1)
+                {
+                    $user->lock = 0;
+                    $user->save();
+                    return redirect()->route('index');
+                }
+                else
+                {
+                    $user->lock = 1;
+                    $user->save();
+                    return redirect()->route('index');
+                }
+            }
+            else{
+                return redirect()->route('index');
+
+            }
+        }
     }
 
     /**
@@ -66,8 +162,23 @@ class UsersController extends Controller
      */
     public function destroy(User $user)
     {
-        $user->roles()->detach();
-        $user->delete();
-        return redirect()->route('index');
+        if(Gate::denies('helpdesk')){
+            $user->roles()->detach();
+            $user->delete();
+            return redirect()->route('index');
+        }
+        else
+        {
+            if($user->hasRole('student'))
+            {
+                $user->roles()->detach();
+                $user->delete();
+                return redirect()->route('index');
+            }
+            else{
+                return redirect()->route('index');
+
+            }
+        }
     }
 }

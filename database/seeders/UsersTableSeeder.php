@@ -27,28 +27,41 @@ class UsersTableSeeder extends Seeder
         $studentRole = Role::where('name','student')->first();
 
         $admin = User::create([
+            'userid' => 'SYSA_270822_000001',
+            'six_digit_id' => '_000001',
             'name' => 'Admin',
+            'lock' => 0,
+            'number' => '03123456789',
             'email' => 'admin@admin.com',
             'password' => Hash::make('qwertyuiop'),
             'email_verified_at' => '2022-08-19 18:34:11'
         ]);
-
         $helpdesk = User::create([
+            'userid' => 'HELP_270822_000002',
+            'six_digit_id' => '_000002',
             'name' => 'Helpdesk',
+            'lock' => 0,
+            'number' => '031234567890',
             'email' => 'helpdesk@helpdesk.com',
             'password' => Hash::make('qwertyuiop'),
             'email_verified_at' => '2022-08-19 18:34:11'
         ]);
-
         $contributor = User::create([
+            'userid' => 'CONT_270822_000003',
+            'six_digit_id' => '_000003',
             'name' => 'xyz Contributor',
+            'lock' => 0,
+            'number' => '0312345678901',
             'email' => 'contributor@contributor.com',
             'password' => Hash::make('qwertyuiop'),
             'email_verified_at' => '2022-08-19 18:34:11'
         ]);
-
         $student = User::create([
+            'userid' => 'STUD_270822_000004',
+            'six_digit_id' => '_000004',
             'name' => 'xyz Student',
+            'lock' => 0,
+            'number' => '03123456789012',
             'email' => 'student@student.com',
             'password' => Hash::make('qwertyuiop'),
             'email_verified_at' => '2022-08-19 18:34:11'

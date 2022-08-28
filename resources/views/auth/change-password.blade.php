@@ -24,13 +24,13 @@ License: For each use you must have a valid license purchased only from above li
 		<meta property="og:url" content="https://keenthemes.com/metronic" />
 		<meta property="og:site_name" content="Keenthemes | Metronic" />
 		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href="{{URL::asset('assets/media/logos/favicon.ico')}}" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Global Stylesheets Bundle(used by all pages)-->
-		<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="{{URL::asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{URL::asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
 	</head>
 	<!--end::Head-->
@@ -43,17 +43,17 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Root-->
 		<div class="d-flex flex-column flex-root">
 			<!--begin::Page bg image-->
-			<style>body { background-image: url('assets/media/auth/bg10.jpeg'); } [data-theme="dark"] body { background-image: url('assets/media/auth/bg10-dark.jpeg'); }</style>
+			<style>body { background-image: url('{{URL::asset('assets/media/auth/bg10.jpeg')}}'); } [data-theme="dark"] body { background-image: url('{{URL::asset('assets/media/auth/bg10-dark.jpeg')}}'); }</style>
 			<!--end::Page bg image-->
-			<!--begin::Authentication - Sign-in -->
+			<!--begin::Authentication - New password -->
 			<div class="d-flex flex-column flex-lg-row flex-column-fluid">
 				<!--begin::Aside-->
 				<div class="d-flex flex-lg-row-fluid">
 					<!--begin::Content-->
 					<div class="d-flex flex-column flex-center pb-0 pb-lg-10 p-10 w-100">
 						<!--begin::Image-->
-						<img class="theme-light-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20" src="assets/media/auth/agency.png" alt="" />
-						<img class="theme-dark-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20" src="assets/media/auth/agency-dark.png" alt="" />
+						<img class="theme-light-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20" src="{{URL::asset('assets/media/auth/agency.png')}}" alt="" />
+						<img class="theme-dark-show mx-auto mw-100 w-150px w-lg-300px mb-10 mb-lg-20" src="{{URL::asset('assets/media/auth/agency-dark.png')}}" alt="" />
 						<!--end::Image-->
 						<!--begin::Title-->
 						<h1 class="text-gray-800 fs-2qx fw-bold text-center mb-7">Fast, Efficient and Productive</h1>
@@ -76,68 +76,83 @@ License: For each use you must have a valid license purchased only from above li
 						<!--begin::Content-->
 						<div class="w-md-400px">
 							<!--begin::Form-->
-							<form  method="POST" action="{{ route('login') }}" class="form w-100" novalidate="novalidate" id="kt_sign_in_form" data-kt-redirect-url="../../demo3/dist/index.html" >
-								@csrf
-                           	 	<!--begin::Heading-->
-								<div class="text-center mb-11">
+							<form class="form w-100" method="POST" action="{{ route('change_password') }}" novalidate="novalidate" id="kt_new_password_form" >
+                           	 @csrf
+
+								<!--begin::Heading-->
+								<div class="text-center mb-10">
 									<!--begin::Title-->
-									<h1 class="text-dark fw-bolder mb-3">Sign In</h1>
+									<h1 class="text-dark fw-bolder mb-3">Change Password</h1>
 									<!--end::Title-->
 									
-								</div>
-								<!--begin::Heading-->
-								<!-- Session Status -->
+
+                                    <!-- Session Status -->
                                     @if(Session::has('status'))
                                     <p class="alert alert-success">{{ Session::get('status') }}</p>
                                     @endif
                                     <!-- Validation Errors -->
                                     @if(Session::has('errors'))
                                     <p class="alert alert-danger">    {{ implode('', $errors->all(':message')) }}
-														</p>
+											</p>
                                     @endif
+								</div>
+								<!--begin::Heading-->
+								<!--begin::Input group-->
+                                
+								<div class="fv-row mb-8" data-kt-password-meter="true">
+									<!--begin::Wrapper-->
+									<div class="mb-1">
+                                   
+										<!--begin::Input wrapper-->
+										<div class="position-relative mb-3">
+                                            <input id="password" class="form-control bg-transparent" placeholder="Password" type="password" name="password" required />
+											<span class="btn btn-sm btn-icon position-absolute translate-middle top-50 end-0 me-n2" data-kt-password-meter-control="visibility">
+												<i class="bi bi-eye-slash fs-2"></i>
+												<i class="bi bi-eye fs-2 d-none"></i>
+											</span>
+										</div>
+										<!--end::Input wrapper-->
+										<!--begin::Meter-->
+										<div class="d-flex align-items-center mb-3" data-kt-password-meter-control="highlight">
+											<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+											<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+											<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px me-2"></div>
+											<div class="flex-grow-1 bg-secondary bg-active-success rounded h-5px"></div>
+										</div>
+										<!--end::Meter-->
+									</div>
+									<!--end::Wrapper-->
+									<!--begin::Hint-->
+									<div class="text-muted">Use 8 or more characters with a mix of letters, numbers &amp; symbols.</div>
+									<!--end::Hint-->
+								</div>
+								<!--end::Input group=-->
+								<!--end::Input group=-->
+								<div class="fv-row mb-8">
+									<!--begin::Repeat Password-->
+                                    <input id="password_confirmation" placeholder="Repeat Password" class="form-control bg-transparent" type="password" name="password_confirmation" required />
+									<!--end::Repeat Password-->
+								</div>
+								<!--end::Input group=-->
 								<!--begin::Input group=-->
-								<div class=" mb-8">
-									<!--begin::Email-->
-                                    <input id="email" placeholder="Email/Phone Number" value="{{ old('email') }}" class="form-control bg-transparent" type="text" name="email" required autofocus />
+								<div class="fv-row mb-8">
+									<label class="form-check form-check-inline">
+                                        <input class="form-check-input"  type="checkbox" name="TermsAndConditions" id="TermsAndConditions" value="1" required/>
 
-									<!--end::Email-->
+										<span class="form-check-label fw-semibold text-gray-700 fs-base ms-1">I Accept the
+										<a href="#" class="ms-1 link-primary">Terms And Conditions</a></span>
+									</label>
 								</div>
 								<!--end::Input group=-->
-								<div class="fv-row mb-3">
-									<!--begin::Password-->
-                                    <input id="password" placeholder="Password" class="form-control bg-transparent" type="password" name="password" required autocomplete="current-password" />                                    
-									<!--end::Password-->
-								</div>
-								<!--end::Input group=-->
-								<!--begin::Wrapper-->
-								<div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
-									<div></div>
-									<!--begin::Link-->
-                                    @if (Route::has('password.request'))
-                                        <a class="link-primary" href="{{ route('password.request') }}">
-                                            {{ __('Forgot your password?') }}
-                                        </a>
-                                    @endif
-									<!--end::Link-->
-								</div>
-								<!--end::Wrapper-->
-								<!--begin::Submit button-->
+								<!--begin::Action-->
 								<div class="d-grid mb-10">
-									<button type="submit" id="" class="btn btn-primary">
+									<button type="Submit" id="" class="btn btn-primary">
 										<!--begin::Indicator label-->
-										<span class="indicator-label">Sign In</span>
-										<!--end::Indicator label-->
-										<!--begin::Indicator progress-->
-										<span class="indicator-progress">Please wait...
-										<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-										<!--end::Indicator progress-->
+										<span class="indicator-label">Submit</span>
+										
 									</button>
 								</div>
-								<!--end::Submit button-->
-								<!--begin::Sign up-->
-								<div class="text-gray-500 text-center fw-semibold fs-6">Not a Member yet?
-								<a href="{{ route('register')}}" class="link-primary">Sign up</a></div>
-								<!--end::Sign up-->
+								<!--end::Action-->
 							</form>
 							<!--end::Form-->
 						</div>
@@ -147,18 +162,18 @@ License: For each use you must have a valid license purchased only from above li
 				</div>
 				<!--end::Body-->
 			</div>
-			<!--end::Authentication - Sign-in-->
+			<!--end::Authentication - New password-->
 		</div>
 		<!--end::Root-->
 		<!--end::Main-->
 		<!--begin::Javascript-->
 		<script>var hostUrl = "assets/";</script>
 		<!--begin::Global Javascript Bundle(used by all pages)-->
-		<script src="assets/plugins/global/plugins.bundle.js"></script>
-		<script src="assets/js/scripts.bundle.js"></script>
+		<script src="{{URL::asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+		<script src="{{URL::asset('assets/js/scripts.bundle.js')}}"></script>
 		<!--end::Global Javascript Bundle-->
 		<!--begin::Custom Javascript(used by this page)-->
-		<script src="assets/js/custom/authentication/sign-in/general.js"></script>
+		<script src="{{URL::asset('assets/js/custom/authentication/password-reset/new-password.js')}}"></script>
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
 	</body>
