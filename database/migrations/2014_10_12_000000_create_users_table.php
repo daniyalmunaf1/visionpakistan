@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('name');
             $table->integer('lock');
             $table->string('number');
+            $table->string('profilepic')->nullable();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

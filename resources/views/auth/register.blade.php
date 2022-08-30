@@ -76,7 +76,7 @@ License: For each use you must have a valid license purchased only from above li
 						<!--begin::Content-->
 						<div class="w-md-400px">
 							<!--begin::Form-->
-							<form method="POST" action="{{ route('register') }}" class="form w-100" novalidate="novalidate" id="" >
+							<form enctype="multipart/form-data" method="POST" action="{{ route('register') }}" class="form w-100" novalidate="novalidate" id="" >
                             @csrf
 								<!--begin::Heading-->
 								<div class="text-center mb-11">
@@ -140,6 +140,16 @@ License: For each use you must have a valid license purchased only from above li
 									<!--begin::Repeat Password-->
                                     <input id="password_confirmation" placeholder="Repeat Password" class="form-control bg-transparent" type="password" name="password_confirmation" required />
 									<!--end::Repeat Password-->
+								</div>
+								<div class="fv-row row mb-8">
+									<!--begin::ProfilePic-->
+									<div class="col-4 mt-4">
+									<label class="text-muted" style="font-size: 15px; margin-left:5px">Profile Picture :</label>
+									</div>
+									<div class="col-8">
+                                    <input id="profilepic" placeholder="profilepic" value="{{ old('profilepic') }}" class="form-control bg-transparent" type="File" name="profilepic" required autofocus />
+									</div>
+									<!--end::ProfilePic-->
 								</div>
 								<!--end::Input group=-->
 								<!--begin::Accept-->

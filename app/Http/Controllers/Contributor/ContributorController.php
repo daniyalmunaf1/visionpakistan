@@ -17,8 +17,8 @@ class ContributorController extends Controller
      */
     public function __invoke()
     {
-        $users = User::all();
-        return view('contributor.index')->with('users',$users);
+        $user = Auth::user();
+        return view('contributor.index')->with('user',$user);
 
     }
     /**

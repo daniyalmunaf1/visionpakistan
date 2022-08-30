@@ -32,6 +32,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'Admin',
             'lock' => 0,
             'number' => '03123456789',
+            'profilepic' => '/app/public/Users/Profile/78155563001661826913.avatar-male-1.jpg',
             'email' => 'admin@admin.com',
             'password' => Hash::make('qwertyuiop'),
             'email_verified_at' => '2022-08-19 18:34:11'
@@ -42,6 +43,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'Helpdesk',
             'lock' => 0,
             'number' => '031234567890',
+            'profilepic' => '/app/public/Users/Profile/78155563001661826913.avatar-male-2.jpg',
             'email' => 'helpdesk@helpdesk.com',
             'password' => Hash::make('qwertyuiop'),
             'email_verified_at' => '2022-08-19 18:34:11'
@@ -52,6 +54,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'xyz Contributor',
             'lock' => 0,
             'number' => '0312345678901',
+            'profilepic' => '/app/public/Users/Profile/78155563001661826913.avatar-male-3.jpg',
             'email' => 'contributor@contributor.com',
             'password' => Hash::make('qwertyuiop'),
             'email_verified_at' => '2022-08-19 18:34:11'
@@ -62,6 +65,7 @@ class UsersTableSeeder extends Seeder
             'name' => 'xyz Student',
             'lock' => 0,
             'number' => '03123456789012',
+            'profilepic' => '/app/public/Users/Profile/78155563001661826913.avatar-male-4.jpg',
             'email' => 'student@student.com',
             'password' => Hash::make('qwertyuiop'),
             'email_verified_at' => '2022-08-19 18:34:11'

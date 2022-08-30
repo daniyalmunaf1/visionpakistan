@@ -40,8 +40,9 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:11',
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'TermsAndConditions' => ['required', 'accepted'],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            // 'profilepic' => ['required', 'string', 'max:255'],
+            'TermsAndConditions' => ['required', 'accepted'],
         ]);
         $last_id = User::orderBy('six_digit_Id', 'desc')->first()->six_digit_Id;
         $six_digit_Id = ++$last_id;
@@ -56,6 +57,7 @@ class RegisteredUserController extends Controller
         //     'email' => $request->email,
         //     'password' => Hash::make($request->password),
         // ]);
+        $profilepic = app('App\Http\Controllers\UploadImageController')->storage_upload($request->profilepic,'/app/public/Users/Profile/');
         $user = new User();
         $user->userid = $userid;
         $user->six_digit_Id = $six_digit_Id;
@@ -63,6 +65,7 @@ class RegisteredUserController extends Controller
         $user->email = $request->email;
         $user->lock = 0;
         $user->number = $request->number;
+        $user->profilepic = $profilepic;
         $user->password = Hash::make($request->password);
         $user->save();
         $role = Role::where('name','student')->first();

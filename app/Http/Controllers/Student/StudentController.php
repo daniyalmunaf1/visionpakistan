@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
@@ -17,8 +18,8 @@ class StudentController extends Controller
      */
     public function __invoke()
     {
-        $users = User::all();
-        return view('student.index')->with('users',$users);
+        $user = Auth::user();
+        return view('student.index')->with('user',$user);
 
     }
 

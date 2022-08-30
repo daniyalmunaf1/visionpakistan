@@ -12,7 +12,7 @@ License: For each use you must have a valid license purchased only from above li
 -->
 <html lang="en">
 	<!--begin::Head-->
-	<head><base href="../">
+	<head>
 		<title>Metronic - the world's #1 selling Bootstrap Admin Theme Ecosystem for HTML, Vue, React, Angular &amp; Laravel by Keenthemes</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="The most advanced Bootstrap Admin Theme on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Blazor, Django, Flask &amp; Laravel versions. Grab your copy now and get life-time updates for free." />
@@ -24,17 +24,16 @@ License: For each use you must have a valid license purchased only from above li
 		<meta property="og:url" content="https://keenthemes.com/metronic" />
 		<meta property="og:site_name" content="Keenthemes | Metronic" />
 		<link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
-		<link rel="shortcut icon" href="{{URL::asset('assets/media/logos/favicon.ico')}}" />
+		<link rel="shortcut icon" href="{{asset('assets/media/logos/favicon.ico')}}" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 		<!--end::Fonts-->
 		<!--begin::Vendor Stylesheets(used by this page)-->
-		<link href="{{URL::asset('assets/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{URL::asset('assets/plugins/custom/vis-timeline/vis-timeline.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('assets/plugins/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Vendor Stylesheets-->
 		<!--begin::Global Stylesheets Bundle(used by all pages)-->
-		<link href="{{URL::asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
-		<link href="{{URL::asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Global Stylesheets Bundle-->
 	</head>
 	<!--end::Head-->
@@ -54,8 +53,8 @@ License: For each use you must have a valid license purchased only from above li
 					<div class="aside-logo flex-column-auto px-9 mb-9" id="kt_aside_logo">
 						<!--begin::Logo-->
 						<a href="../../demo3/dist/index.html">
-							<img alt="Logo" src="{{URL::asset('assets/media/logos/demo3.svg')}}" class="h-20px logo theme-light-show" />
-							<img alt="Logo" src="{{URL::asset('assets/media/logos/demo3-dark.svg')}}" class="h-20px logo theme-dark-show" />
+							<img alt="Logo" src="{{asset('assets/media/logos/demo3.svg')}}" class="h-20px logo theme-light-show" />
+							<img alt="Logo" src="{{asset('assets/media/logos/demo3-dark.svg')}}" class="h-20px logo theme-dark-show" />
 						</a>
 						<!--end::Logo-->
 					</div>
@@ -67,7 +66,7 @@ License: For each use you must have a valid license purchased only from above li
 							<!--begin::Menu-->
 							<div class="menu menu-column menu-rounded menu-sub-indention menu-active-bg fw-semibold my-auto" id="#kt_aside_menu" data-kt-menu="true">
 								<!--begin:Menu item-->
-								<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
+								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
 									<!--begin:Menu link-->
 									<span class="menu-link">
 										<span class="menu-icon">
@@ -146,7 +145,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end:Menu link-->
 										</div>
 										<!--end:Menu item-->
-										<div class="menu-inner flex-column collapse show" id="kt_app_sidebar_menu_dashboards_collapse">
+										<div class="menu-inner flex-column collapse" id="kt_app_sidebar_menu_dashboards_collapse">
 											<!--begin:Menu item-->
 											<div class="menu-item">
 												<!--begin:Menu link-->
@@ -174,7 +173,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin:Menu item-->
 											<div class="menu-item">
 												<!--begin:Menu link-->
-												<a class="menu-link active" href="../../demo3/dist/dashboards/call-center.html">
+												<a class="menu-link" href="../../demo3/dist/dashboards/call-center.html">
 													<span class="menu-bullet">
 														<span class="bullet bullet-dot"></span>
 													</span>
@@ -306,8 +305,8 @@ License: For each use you must have a valid license purchased only from above li
 										</div>
 										<div class="menu-item">
 											<div class="menu-content">
-												<a class="btn btn-flex btn-color-primary d-flex flex-stack fs-base p-0 ms-2 mb-2 toggle collapsible active" data-bs-toggle="collapse" href="#kt_app_sidebar_menu_dashboards_collapse" data-kt-toggle-text="Show 12 More">
-													<span data-kt-toggle-text-target="true">Show Less</span>
+												<a class="btn btn-flex btn-color-primary d-flex flex-stack fs-base p-0 ms-2 mb-2 toggle collapsible collapsed" data-bs-toggle="collapse" href="#kt_app_sidebar_menu_dashboards_collapse" data-kt-toggle-text="Show Less">
+													<span data-kt-toggle-text-target="true">Show 12 More</span>
 													<!--begin::Svg Icon | path: icons/duotune/general/gen036.svg')}}-->
 													<span class="svg-icon toggle-on svg-icon-2 me-0">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1464,7 +1463,7 @@ License: For each use you must have a valid license purchased only from above li
 								</div>
 								<!--end:Menu item-->
 								<!--begin:Menu item-->
-								<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+								<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
 									<!--begin:Menu link-->
 									<span class="menu-link">
 										<span class="menu-icon">
@@ -2221,7 +2220,7 @@ License: For each use you must have a valid license purchased only from above li
 										</div>
 										<!--end:Menu item-->
 										<!--begin:Menu item-->
-										<div data-kt-menu-trigger="click" class="menu-item menu-accordion">
+										<div data-kt-menu-trigger="click" class="menu-item here show menu-accordion">
 											<!--begin:Menu link-->
 											<span class="menu-link">
 												<span class="menu-bullet">
@@ -2260,7 +2259,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--begin:Menu item-->
 												<div class="menu-item">
 													<!--begin:Menu link-->
-													<a class="menu-link" href="../../demo3/dist/apps/customers/view.html">
+													<a class="menu-link active" href="../../demo3/dist/apps/customers/view.html">
 														<span class="menu-bullet">
 															<span class="bullet bullet-dot"></span>
 														</span>
@@ -3226,13 +3225,13 @@ License: For each use you must have a valid license purchased only from above li
 							<div class="d-flex align-items-center">
 								<!--begin::Avatar-->
 								<div class="symbol symbol-circle symbol-40px">
-								<img src="{{asset('/storage/'.$user->profilepic)}}" alt="">
+								    <img src="{{asset('/storage/'.Auth::user()->profilepic)}}" alt="">
 								</div>
 								<!--end::Avatar-->
 								<!--begin::User info-->
 								<div class="ms-2">
 									<!--begin::Name-->
-									<a href="{{route('profile')}}" class="text-gray-800 text-hover-primary fs-6 fw-bold lh-1">{{ Auth::user()->name }}</a>
+									<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold lh-1">{{$user->name}}</a>
 									<!--end::Name-->
 									<!--begin::Major-->
 									<span class="text-muted fw-semibold d-block fs-7 lh-1">Python Dev</span>
@@ -3260,14 +3259,14 @@ License: For each use you must have a valid license purchased only from above li
 										<div class="menu-content d-flex align-items-center px-3">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-50px me-5">
-												<img src="{{asset('/storage/'.$user->profilepic)}}" alt="">
+                                            <img src="{{asset('/storage/'.Auth::user()->profilepic)}}" alt="">
 											</div>
 											<!--end::Avatar-->
 											<!--begin::Username-->
 											<div class="d-flex flex-column">
-                                            <div class="fw-bold d-flex align-items-center fs-5">{{ Auth::user()->name }}
+												<div class="fw-bold d-flex align-items-center fs-5">{{$user->name}}
 												<span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span></div>
-												<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{ Auth::user()->email }}</a>
+												<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{$user->email}}</a>
 											</div>
 											<!--end::Username-->
 										</div>
@@ -3278,7 +3277,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Menu separator-->
 									<!--begin::Menu item-->
 									<div class="menu-item px-5">
-										<a href="{{route('profile')}}" class="menu-link px-5">My Profile</a>
+										<a href="../../demo3/dist/account/overview.html" class="menu-link px-5">My Profile</a>
 									</div>
 									<!--end::Menu item-->
 									<!--begin::Menu item-->
@@ -3350,7 +3349,7 @@ License: For each use you must have a valid license purchased only from above li
 										<a href="#" class="menu-link px-5">
 											<span class="menu-title position-relative">Language
 											<span class="fs-8 rounded bg-light px-3 py-2 position-absolute translate-middle-y top-50 end-0">English
-											<img class="w-15px h-15px rounded-1 ms-2" src="{{URL::asset('assets/media/flags/united-states.svg')}}" alt="" /></span></span>
+											<img class="w-15px h-15px rounded-1 ms-2" src="{{asset('assets/media/flags/united-states.svg')}}" alt="" /></span></span>
 										</a>
 										<!--begin::Menu sub-->
 										<div class="menu-sub menu-sub-dropdown w-175px py-4">
@@ -3358,7 +3357,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="menu-item px-3">
 												<a href="../../demo3/dist/account/settings.html" class="menu-link d-flex px-5 active">
 												<span class="symbol symbol-20px me-4">
-													<img class="rounded-1" src="{{URL::asset('assets/media/flags/united-states.svg')}}" alt="" />
+													<img class="rounded-1" src="{{asset('assets/media/flags/united-states.svg')}}" alt="" />
 												</span>English</a>
 											</div>
 											<!--end::Menu item-->
@@ -3366,7 +3365,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="menu-item px-3">
 												<a href="../../demo3/dist/account/settings.html" class="menu-link d-flex px-5">
 												<span class="symbol symbol-20px me-4">
-													<img class="rounded-1" src="{{URL::asset('assets/media/flags/spain.svg')}}" alt="" />
+													<img class="rounded-1" src="{{asset('assets/media/flags/spain.svg')}}" alt="" />
 												</span>Spanish</a>
 											</div>
 											<!--end::Menu item-->
@@ -3374,7 +3373,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="menu-item px-3">
 												<a href="../../demo3/dist/account/settings.html" class="menu-link d-flex px-5">
 												<span class="symbol symbol-20px me-4">
-													<img class="rounded-1" src="{{URL::asset('assets/media/flags/germany.svg')}}" alt="" />
+													<img class="rounded-1" src="{{asset('assets/media/flags/germany.svg')}}" alt="" />
 												</span>German</a>
 											</div>
 											<!--end::Menu item-->
@@ -3382,7 +3381,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="menu-item px-3">
 												<a href="../../demo3/dist/account/settings.html" class="menu-link d-flex px-5">
 												<span class="symbol symbol-20px me-4">
-													<img class="rounded-1" src="{{URL::asset('assets/media/flags/japan.svg')}}" alt="" />
+													<img class="rounded-1" src="{{asset('assets/media/flags/japan.svg')}}" alt="" />
 												</span>Japanese</a>
 											</div>
 											<!--end::Menu item-->
@@ -3390,7 +3389,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="menu-item px-3">
 												<a href="../../demo3/dist/account/settings.html" class="menu-link d-flex px-5">
 												<span class="symbol symbol-20px me-4">
-													<img class="rounded-1" src="{{URL::asset('assets/media/flags/france.svg')}}" alt="" />
+													<img class="rounded-1" src="{{asset('assets/media/flags/france.svg')}}" alt="" />
 												</span>French</a>
 											</div>
 											<!--end::Menu item-->
@@ -3402,17 +3401,11 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="menu-item px-5 my-1">
 										<a href="../../demo3/dist/account/settings.html" class="menu-link px-5">Account Settings</a>
 									</div>
-                                    <div class="menu-item px-5 my-1">
-										<a href="{{route('gotochangepassword')}}" class="menu-link px-5">Change Password</a>
-									</div>
 									<!--end::Menu item-->
 									<!--begin::Menu item-->
 									<div class="menu-item px-5">
-                                    <form method="POST" action="{{ route('logout') }}">
-                            			@csrf
-										<button type="Submit" class="menu-link px-5">Sign Out</button>
-									</form>
-                                    </div>
+										<a href="../../demo3/dist/authentication/flows/basic/sign-in.html" class="menu-link px-5">Sign Out</a>
+									</div>
 									<!--end::Menu item-->
 								</div>
 								<!--end::User account menu-->
@@ -3427,14 +3420,32 @@ License: For each use you must have a valid license purchased only from above li
 				<!--begin::Wrapper-->
 				<div class="wrapper d-flex flex-column flex-row-fluid" id="kt_wrapper">
 					<!--begin::Header-->
+                    <!-- Validation Errors -->
+                    <div style="margin-left: 50px;margin-right: 50px;">
+                    
+                                    @if(Session::has('errors'))
+                                    <p class="alert alert-danger">    {{ implode('', $errors->all(':message')) }}
+									</p>
+                                    @endif
+                                    @if (Session::has('message'))
+   <div class="alert alert-success">{{ Session::get('message') }}</div>
+@endif
+                    </div>
 					<div id="kt_header" class="header">
 						<!--begin::Container-->
+                        
 						<div class="container d-flex flex-stack flex-wrap gap-2" id="kt_header_container">
+                        
 							<!--begin::Page title-->
 							<div class="page-title d-flex flex-column align-items-start justify-content-center flex-wrap me-lg-2 pb-5 pb-lg-0" data-kt-swapper="true" data-kt-swapper-mode="prepend" data-kt-swapper-parent="{default: '#kt_content_container', lg: '#kt_header_container'}">
 								<!--begin::Heading-->
-								<h1 class="d-flex flex-column text-dark fw-bold my-0 fs-1">Call Center</h1>
+								<h1 class="d-flex flex-column text-dark fw-bold my-0 fs-1">User Details</h1>
 								<!--end::Heading-->
+								<!--begin::Breadcrumb-->
+								<ul class="breadcrumb breadcrumb-dot fw-semibold fs-base my-1">
+									
+								</ul>
+								<!--end::Breadcrumb-->
 							</div>
 							<!--end::Page title=-->
 							<!--begin::Wrapper-->
@@ -3453,8 +3464,8 @@ License: For each use you must have a valid license purchased only from above li
 								<!--end::Aside mobile toggle-->
 								<!--begin::Logo-->
 								<a href="../../demo3/dist/index.html" class="d-flex align-items-center">
-									<img alt="Logo" src="{{URL::asset('assets/media/logos/demo3.svg')}}" class="theme-light-show h-20px" />
-									<img alt="Logo" src="{{URL::asset('assets/media/logos/demo3-dark.svg')}}" class="theme-dark-show h-20px" />
+									<img alt="Logo" src="{{asset('assets/media/logos/demo3.svg')}}" class="theme-light-show h-20px" />
+									<img alt="Logo" src="{{asset('assets/media/logos/demo3-dark.svg')}}" class="theme-dark-show h-20px" />
 								</a>
 								<!--end::Logo-->
 							</div>
@@ -3529,7 +3540,7 @@ License: For each use you must have a valid license purchased only from above li
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="{{URL::asset('assets/media/avatars/300-6.jpg')}}" alt="" />
+															<img src="{{asset('assets/media/avatars/300-6.jpg')}}" alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -3544,7 +3555,7 @@ License: For each use you must have a valid license purchased only from above li
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="{{URL::asset('assets/media/avatars/300-2.jpg')}}" alt="" />
+															<img src="{{asset('assets/media/avatars/300-2.jpg')}}" alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -3559,7 +3570,7 @@ License: For each use you must have a valid license purchased only from above li
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="{{URL::asset('assets/media/avatars/300-9.jpg')}}" alt="" />
+															<img src="{{asset('assets/media/avatars/300-9.jpg')}}" alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -3574,7 +3585,7 @@ License: For each use you must have a valid license purchased only from above li
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="{{URL::asset('assets/media/avatars/300-14.jpg')}}" alt="" />
+															<img src="{{asset('assets/media/avatars/300-14.jpg')}}" alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -3589,7 +3600,7 @@ License: For each use you must have a valid license purchased only from above li
 													<a href="#" class="d-flex text-dark text-hover-primary align-items-center mb-5">
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
-															<img src="{{URL::asset('assets/media/avatars/300-11.jpg')}}" alt="" />
+															<img src="{{asset('assets/media/avatars/300-11.jpg')}}" alt="" />
 														</div>
 														<!--end::Symbol-->
 														<!--begin::Title-->
@@ -3608,7 +3619,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
 															<span class="symbol-label bg-light">
-																<img class="w-20px h-20px" src="{{URL::asset('assets/media/svg/brand-logos/volicity-9.svg')}}" alt="" />
+																<img class="w-20px h-20px" src="{{asset('assets/media/svg/brand-logos/volicity-9.svg')}}" alt="" />
 															</span>
 														</div>
 														<!--end::Symbol-->
@@ -3625,7 +3636,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
 															<span class="symbol-label bg-light">
-																<img class="w-20px h-20px" src="{{URL::asset('assets/media/svg/brand-logos/tvit.svg')}}" alt="" />
+																<img class="w-20px h-20px" src="{{asset('assets/media/svg/brand-logos/tvit.svg')}}" alt="" />
 															</span>
 														</div>
 														<!--end::Symbol-->
@@ -3642,7 +3653,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
 															<span class="symbol-label bg-light">
-																<img class="w-20px h-20px" src="{{URL::asset('assets/media/svg/misc/infography.svg')}}" alt="" />
+																<img class="w-20px h-20px" src="{{asset('assets/media/svg/misc/infography.svg')}}" alt="" />
 															</span>
 														</div>
 														<!--end::Symbol-->
@@ -3659,7 +3670,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
 															<span class="symbol-label bg-light">
-																<img class="w-20px h-20px" src="{{URL::asset('assets/media/svg/brand-logos/leaf.svg')}}" alt="" />
+																<img class="w-20px h-20px" src="{{asset('assets/media/svg/brand-logos/leaf.svg')}}" alt="" />
 															</span>
 														</div>
 														<!--end::Symbol-->
@@ -3676,7 +3687,7 @@ License: For each use you must have a valid license purchased only from above li
 														<!--begin::Symbol-->
 														<div class="symbol symbol-40px me-4">
 															<span class="symbol-label bg-light">
-																<img class="w-20px h-20px" src="{{URL::asset('assets/media/svg/brand-logos/tower.svg')}}" alt="" />
+																<img class="w-20px h-20px" src="{{asset('assets/media/svg/brand-logos/tower.svg')}}" alt="" />
 															</span>
 														</div>
 														<!--end::Symbol-->
@@ -4344,1176 +4355,4270 @@ License: For each use you must have a valid license purchased only from above li
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
 						<!--begin::Container-->
 						<div class="container-xxl" id="kt_content_container">
-							<!--begin::Row-->
-							<div class="row g-5 g-xl-10 mb-5 mb-xl-10">
-								<!--begin::Col-->
-								<div class="col-xl-3">
-									<!--begin::Card widget 3-->
-									<div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-xl-100" style="background-color: #F1416C;background-image:url('{{URL::asset('assets/media/svg/shapes/wave-bg-red.svg')}}')">
-										<!--begin::Header-->
-										<div class="card-header pt-5 mb-3">
-											<!--begin::Icon-->
-											<div class="d-flex flex-center rounded-circle h-80px w-80px" style="border: 1px dashed rgba(255, 255, 255, 0.4);background-color: #F1416C">
-												<i class="fonticon-incoming-call text-white fs-2qx lh-0"></i>
-											</div>
-											<!--end::Icon-->
-										</div>
-										<!--end::Header-->
+							<!--begin::Layout-->
+							<div class="d-flex flex-column flex-xl-row">
+								<!--begin::Sidebar-->
+								<div class="flex-column flex-lg-row-auto w-100 w-xl-350px mb-10">
+									<!--begin::Card-->
+									<div class="card mb-5 mb-xl-8">
 										<!--begin::Card body-->
-										<div class="card-body d-flex align-items-end mb-3">
-											<!--begin::Info-->
-											<div class="d-flex align-items-center">
-												<span class="fs-4hx text-white fw-bold me-6">1.2k</span>
-												<div class="fw-bold fs-6 text-white">
-													<span class="d-block">Inbound</span>
-													<span class="">Calls</span>
+										<div class="card-body pt-15">
+											<!--begin::Summary-->
+											<div class="d-flex flex-center flex-column mb-5">
+												<!--begin::Avatar-->
+												<div class="symbol symbol-100px symbol-circle mb-7">
+                                                <img src="{{asset('/storage/'.Auth::user()->profilepic)}}" alt="">
 												</div>
-											</div>
-											<!--end::Info-->
-										</div>
-										<!--end::Card body-->
-										<!--begin::Card footer-->
-										<div class="card-footer" style="border-top: 1px solid rgba(255, 255, 255, 0.3);background: rgba(0, 0, 0, 0.15);">
-											<!--begin::Progress-->
-											<div class="fw-bold text-white py-2">
-												<span class="fs-1 d-block">935</span>
-												<span class="opacity-50">Problems Solved</span>
-											</div>
-											<!--end::Progress-->
-										</div>
-										<!--end::Card footer-->
-									</div>
-									<!--end::Card widget 3-->
-								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-xl-3">
-									<!--begin::Card widget 3-->
-									<div class="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-end h-xl-100" style="background-color: #7239EA;background-image:url('{{URL::asset('assets/media/svg/shapes/wave-bg-purple.svg')}}')">
-										<!--begin::Header-->
-										<div class="card-header pt-5 mb-3">
-											<!--begin::Icon-->
-											<div class="d-flex flex-center rounded-circle h-80px w-80px" style="border: 1px dashed rgba(255, 255, 255, 0.4);background-color: #7239EA">
-												<i class="fonticon-outgoing-call text-white fs-2qx lh-0"></i>
-											</div>
-											<!--end::Icon-->
-										</div>
-										<!--end::Header-->
-										<!--begin::Card body-->
-										<div class="card-body d-flex align-items-end mb-3">
-											<!--begin::Info-->
-											<div class="d-flex align-items-center">
-												<span class="fs-4hx text-white fw-bold me-6">427</span>
-												<div class="fw-bold fs-6 text-white">
-													<span class="d-block">Outbound</span>
-													<span class="">Calls</span>
+												<!--end::Avatar-->
+												<!--begin::Name-->
+												<a href="#" class="fs-3 text-gray-800 text-hover-primary fw-bold mb-1">{{$user->name}}</a>
+												<!--end::Name-->
+												<!--begin::Position-->
+												<div class="fs-5 fw-semibold text-muted mb-6" style="text-transform: capitalize;">{{ implode(',', $user->roles()->get()->pluck('name')->toArray())}}</div>
+												<!--end::Position-->
+												<!--begin::Info-->
+												<div class="d-flex flex-wrap flex-center">
+													<!--begin::Stats-->
+													<div class="border border-gray-300 border-dashed rounded py-3 px-3 mb-3">
+														<div class="fs-4 fw-bold text-gray-700">
+															<span class="w-75px">6,900</span>
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg')}}-->
+															<span class="svg-icon svg-icon-3 svg-icon-success">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																	<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</div>
+														<div class="fw-semibold text-muted">Earnings</div>
+													</div>
+													<!--end::Stats-->
+													<!--begin::Stats-->
+													<div class="border border-gray-300 border-dashed rounded py-3 px-3 mx-4 mb-3">
+														<div class="fs-4 fw-bold text-gray-700">
+															<span class="w-50px">130</span>
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg')}}-->
+															<span class="svg-icon svg-icon-3 svg-icon-danger">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
+																	<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</div>
+														<div class="fw-semibold text-muted">Tasks</div>
+													</div>
+													<!--end::Stats-->
+													<!--begin::Stats-->
+													<div class="border border-gray-300 border-dashed rounded py-3 px-3 mb-3">
+														<div class="fs-4 fw-bold text-gray-700">
+															<span class="w-50px">500</span>
+															<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg')}}-->
+															<span class="svg-icon svg-icon-3 svg-icon-success">
+																<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																	<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																</svg>
+															</span>
+															<!--end::Svg Icon-->
+														</div>
+														<div class="fw-semibold text-muted">Hours</div>
+													</div>
+													<!--end::Stats-->
 												</div>
+												<!--end::Info-->
 											</div>
-											<!--end::Info-->
-										</div>
-										<!--end::Card body-->
-										<!--begin::Card footer-->
-										<div class="card-footer" style="border-top: 1px solid rgba(255, 255, 255, 0.3);background: rgba(0, 0, 0, 0.15);">
-											<!--begin::Progress-->
-											<div class="fw-bold text-white py-2">
-												<span class="fs-1 d-block">386</span>
-												<span class="opacity-50">Generated Leads</span>
-											</div>
-											<!--end::Progress-->
-										</div>
-										<!--end::Card footer-->
-									</div>
-									<!--end::Card widget 3-->
-								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-xl-6">
-									<!--begin::Chart widget 36-->
-									<div class="card card-flush overflow-hidden h-lg-100">
-										<!--begin::Header-->
-										<div class="card-header pt-5">
-											<!--begin::Title-->
-											<h3 class="card-title align-items-start flex-column">
-												<span class="card-label fw-bold text-dark">Performance</span>
-												<span class="text-gray-400 mt-1 fw-semibold fs-6">1,046 Inbound Calls today</span>
-											</h3>
-											<!--end::Title-->
-											<!--begin::Toolbar-->
-											<div class="card-toolbar">
-												<!--begin::Daterangepicker(defined in src/js/layout/app.js')}})-->
-												<div data-kt-daterangepicker="true" data-kt-daterangepicker-opens="left" data-kt-daterangepicker-range="today" class="btn btn-sm btn-light d-flex align-items-center px-4">
-													<!--begin::Display range-->
-													<div class="text-gray-600 fw-bold">Loading date range...</div>
-													<!--end::Display range-->
-													<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg')}}-->
-													<span class="svg-icon svg-icon-1 ms-2 me-0">
+											<!--end::Summary-->
+											<!--begin::Details toggle-->
+											<div class="d-flex flex-stack fs-4 py-3">
+												<div class="fw-bold rotate collapsible" data-bs-toggle="collapse" href="#kt_customer_view_details" role="button" aria-expanded="false" aria-controls="kt_customer_view_details">Details
+												<span class="ms-2 rotate-180">
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+													<span class="svg-icon svg-icon-3">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path opacity="0.3" d="M21 22H3C2.4 22 2 21.6 2 21V5C2 4.4 2.4 4 3 4H21C21.6 4 22 4.4 22 5V21C22 21.6 21.6 22 21 22Z" fill="currentColor" />
-															<path d="M6 6C5.4 6 5 5.6 5 5V3C5 2.4 5.4 2 6 2C6.6 2 7 2.4 7 3V5C7 5.6 6.6 6 6 6ZM11 5V3C11 2.4 10.6 2 10 2C9.4 2 9 2.4 9 3V5C9 5.6 9.4 6 10 6C10.6 6 11 5.6 11 5ZM15 5V3C15 2.4 14.6 2 14 2C13.4 2 13 2.4 13 3V5C13 5.6 13.4 6 14 6C14.6 6 15 5.6 15 5ZM19 5V3C19 2.4 18.6 2 18 2C17.4 2 17 2.4 17 3V5C17 5.6 17.4 6 18 6C18.6 6 19 5.6 19 5Z" fill="currentColor" />
-															<path d="M8.8 13.1C9.2 13.1 9.5 13 9.7 12.8C9.9 12.6 10.1 12.3 10.1 11.9C10.1 11.6 10 11.3 9.8 11.1C9.6 10.9 9.3 10.8 9 10.8C8.8 10.8 8.59999 10.8 8.39999 10.9C8.19999 11 8.1 11.1 8 11.2C7.9 11.3 7.8 11.4 7.7 11.6C7.6 11.8 7.5 11.9 7.5 12.1C7.5 12.2 7.4 12.2 7.3 12.3C7.2 12.4 7.09999 12.4 6.89999 12.4C6.69999 12.4 6.6 12.3 6.5 12.2C6.4 12.1 6.3 11.9 6.3 11.7C6.3 11.5 6.4 11.3 6.5 11.1C6.6 10.9 6.8 10.7 7 10.5C7.2 10.3 7.49999 10.1 7.89999 10C8.29999 9.90003 8.60001 9.80003 9.10001 9.80003C9.50001 9.80003 9.80001 9.90003 10.1 10C10.4 10.1 10.7 10.3 10.9 10.4C11.1 10.5 11.3 10.8 11.4 11.1C11.5 11.4 11.6 11.6 11.6 11.9C11.6 12.3 11.5 12.6 11.3 12.9C11.1 13.2 10.9 13.5 10.6 13.7C10.9 13.9 11.2 14.1 11.4 14.3C11.6 14.5 11.8 14.7 11.9 15C12 15.3 12.1 15.5 12.1 15.8C12.1 16.2 12 16.5 11.9 16.8C11.8 17.1 11.5 17.4 11.3 17.7C11.1 18 10.7 18.2 10.3 18.3C9.9 18.4 9.5 18.5 9 18.5C8.5 18.5 8.1 18.4 7.7 18.2C7.3 18 7 17.8 6.8 17.6C6.6 17.4 6.4 17.1 6.3 16.8C6.2 16.5 6.10001 16.3 6.10001 16.1C6.10001 15.9 6.2 15.7 6.3 15.6C6.4 15.5 6.6 15.4 6.8 15.4C6.9 15.4 7.00001 15.4 7.10001 15.5C7.20001 15.6 7.3 15.6 7.3 15.7C7.5 16.2 7.7 16.6 8 16.9C8.3 17.2 8.6 17.3 9 17.3C9.2 17.3 9.5 17.2 9.7 17.1C9.9 17 10.1 16.8 10.3 16.6C10.5 16.4 10.5 16.1 10.5 15.8C10.5 15.3 10.4 15 10.1 14.7C9.80001 14.4 9.50001 14.3 9.10001 14.3C9.00001 14.3 8.9 14.3 8.7 14.3C8.5 14.3 8.39999 14.3 8.39999 14.3C8.19999 14.3 7.99999 14.2 7.89999 14.1C7.79999 14 7.7 13.8 7.7 13.7C7.7 13.5 7.79999 13.4 7.89999 13.2C7.99999 13 8.2 13 8.5 13H8.8V13.1ZM15.3 17.5V12.2C14.3 13 13.6 13.3 13.3 13.3C13.1 13.3 13 13.2 12.9 13.1C12.8 13 12.7 12.8 12.7 12.6C12.7 12.4 12.8 12.3 12.9 12.2C13 12.1 13.2 12 13.6 11.8C14.1 11.6 14.5 11.3 14.7 11.1C14.9 10.9 15.2 10.6 15.5 10.3C15.8 10 15.9 9.80003 15.9 9.70003C15.9 9.60003 16.1 9.60004 16.3 9.60004C16.5 9.60004 16.7 9.70003 16.8 9.80003C16.9 9.90003 17 10.2 17 10.5V17.2C17 18 16.7 18.4 16.2 18.4C16 18.4 15.8 18.3 15.6 18.2C15.4 18.1 15.3 17.8 15.3 17.5Z" fill="currentColor" />
+															<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
 														</svg>
 													</span>
 													<!--end::Svg Icon-->
-												</div>
-												<!--end::Daterangepicker-->
+												</span></div>
+												<span data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit details">
+													<a href="#" class="btn btn-sm btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_update_customer">Edit</a>
+												</span>
 											</div>
-											<!--end::Toolbar-->
-										</div>
-										<!--end::Header-->
-										<!--begin::Card body-->
-										<div class="card-body d-flex align-items-end p-0">
-											<!--begin::Chart-->
-											<div id="kt_charts_widget_36" class="min-h-auto w-100 ps-4 pe-6" style="height: 300px"></div>
-											<!--end::Chart-->
+											<!--end::Details toggle-->
+											<div class="separator separator-dashed my-3"></div>
+											<!--begin::Details content-->
+											<div id="kt_customer_view_details" class="collapse show">
+												<div class="py-5 fs-6">
+													<!--begin::Badge-->
+													<div class="badge badge-light-info d-inline" style="text-transform: capitalize;" > {{ implode(',', $user->roles()->get()->pluck('name')->toArray())}}</div>
+													<!--begin::Badge-->
+													<!--begin::Details item-->
+													<div class="fw-bold mt-5">User ID</div>
+													<div class="text-gray-600">{{$user->userid}}</div>
+													<!--begin::Details item-->
+													<!--begin::Details item-->
+													<div class="fw-bold mt-5">Email</div>
+													<div class="text-gray-600">
+														<a href="#" class="text-gray-600 text-hover-primary">{{$user->email}}</a>
+													</div>
+													<!--begin::Details item-->
+													<!--begin::Details item-->
+													<div class="fw-bold mt-5">Number</div>
+													<div class="text-gray-600">{{$user->number}}</div>
+													<!--begin::Details item-->
+													<!--begin::Details item-->
+													<div class="fw-bold mt-5">Locked</div>
+														<form method="POST"  action="{{ route('lockuser',$user) }}" class="" novalidate="novalidate" id="" >
+																@csrf
+																{{method_field('put')}}
+																<button type="submit" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1">
+																	<label class="form-check form-switch form-check-custom form-check-solid">
+																		<input class="form-check-input w-30px h-20px" type="checkbox" name="lock" @if($user->lock==1) checked @endif disabled readonly/>
+																	</label>
+																	<!--end::Svg Icon-->
+																</button>
+															</form>
+													
+												</div>
+											</div>
+											<!--end::Details content-->
 										</div>
 										<!--end::Card body-->
 									</div>
-									<!--end::Chart widget 36-->
-								</div>
-								<!--end::Col-->
-							</div>
-							<!--end::Row-->
-							<!--begin::Row-->
-							<div class="row g-5 g-xl-10 mb-5 mb-xl-10">
-								<!--begin::Col-->
-								<div class="col-xl-6">
-									<!--begin::Card widget 19-->
-									<div class="card card-flush h-lg-100">
-										<!--begin::Header-->
-										<div class="card-header pt-5">
-											<!--begin::Title-->
-											<h3 class="card-title align-items-start flex-column">
-												<span class="card-label fw-bold text-dark">Performance</span>
-												<span class="text-gray-400 mt-1 fw-semibold fs-6">1,046 Inbound Calls today</span>
-											</h3>
-											<!--end::Title-->
-											<!--begin::Toolbar-->
-											<div class="card-toolbar">
-												<!--begin::Label-->
-												<span class="badge badge-light-danger fs-base mt-n3">
-												<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg')}}-->
-												<span class="svg-icon svg-icon-5 svg-icon-danger ms-n1">
+									<!--end::Card-->
+									<!--begin::Connected Accounts-->
+									<div class="card mb-5 mb-xl-8">
+										<!--begin::Card header-->
+										<div class="card-header border-0">
+											<div class="card-title">
+												<h3 class="fw-bold m-0">Connected Accounts</h3>
+											</div>
+										</div>
+										<!--end::Card header-->
+										<!--begin::Card body-->
+										<div class="card-body pt-2">
+											<!--begin::Notice-->
+											<div class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6">
+												<!--begin::Icon-->
+												<!--begin::Svg Icon | path: icons/duotune/art/art006.svg')}}-->
+												<span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
 													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-														<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
+														<path opacity="0.3" d="M22 19V17C22 16.4 21.6 16 21 16H8V3C8 2.4 7.6 2 7 2H5C4.4 2 4 2.4 4 3V19C4 19.6 4.4 20 5 20H21C21.6 20 22 19.6 22 19Z" fill="currentColor" />
+														<path d="M20 5V21C20 21.6 19.6 22 19 22H17C16.4 22 16 21.6 16 21V8H8V4H19C19.6 4 20 4.4 20 5ZM3 8H4V4H3C2.4 4 2 4.4 2 5V7C2 7.6 2.4 8 3 8Z" fill="currentColor" />
 													</svg>
 												</span>
-												<!--end::Svg Icon-->7.4%</span>
-												<!--end::Label-->
-											</div>
-											<!--end::Toolbar-->
-										</div>
-										<!--end::Header-->
-										<!--begin::Card body-->
-										<div class="card-body d-flex align-items-end pt-6">
-											<!--begin::Row-->
-											<div class="row align-items-center mx-0 w-100">
-												<!--begin::Col-->
-												<div class="col-7 px-0">
-													<!--begin::Labels-->
-													<div class="d-flex flex-column content-justify-center">
-														<!--begin::Label-->
-														<div class="d-flex fs-6 fw-semibold align-items-center">
-															<!--begin::Bullet-->
-															<div class="bullet bg-success me-3" style="border-radius: 3px;width: 12px;height: 12px"></div>
-															<!--end::Bullet-->
-															<!--begin::Label-->
-															<div class="fs-5 fw-bold text-gray-600 me-5">CRM Team Performance:</div>
-															<!--end::Label-->
-															<!--begin::Stats-->
-															<div class="ms-auto fw-bolder text-gray-700 text-end">72.56%</div>
-															<!--end::Stats-->
-														</div>
-														<!--end::Label-->
-														<!--begin::Label-->
-														<div class="d-flex fs-6 fw-semibold align-items-center my-4">
-															<!--begin::Bullet-->
-															<div class="bullet bg-primary me-3" style="border-radius: 3px;width: 12px;height: 12px"></div>
-															<!--end::Bullet-->
-															<!--begin::Label-->
-															<div class="fs-5 fw-bold text-gray-600 me-5">Recurring Calls:</div>
-															<!--end::Label-->
-															<!--begin::Stats-->
-															<div class="ms-auto fw-bolder text-gray-700 text-end">29.34%</div>
-															<!--end::Stats-->
-														</div>
-														<!--end::Label-->
-														<!--begin::Label-->
-														<div class="d-flex fs-6 fw-semibold align-items-center">
-															<!--begin::Bullet-->
-															<div class="bullet me-3" style="border-radius: 3px;background-color: #E4E6EF;width: 12px;height: 12px"></div>
-															<!--end::Bullet-->
-															<!--begin::Label-->
-															<div class="fs-5 fw-bold text-gray-600 me-5">Tickets Raised:</div>
-															<!--end::Label-->
-															<!--begin::Stats-->
-															<div class="ms-auto fw-bolder text-gray-700 text-end">17.83%</div>
-															<!--end::Stats-->
-														</div>
-														<!--end::Label-->
+												<!--end::Svg Icon-->
+												<!--end::Icon-->
+												<!--begin::Wrapper-->
+												<div class="d-flex flex-stack flex-grow-1">
+													<!--begin::Content-->
+													<div class="fw-semibold">
+														<div class="fs-6 text-gray-700">By connecting an account, you hereby agree to our
+														<a href="#" class="me-1">privacy policy</a>and
+														<a href="#">terms of use</a>.</div>
 													</div>
-													<!--end::Labels-->
+													<!--end::Content-->
 												</div>
-												<!--end::Col-->
-												<!--begin::Col-->
-												<div class="col-5 d-flex justify-content-end px-0">
-													<!--begin::Chart-->
-													<div id="kt_card_widget_19_chart" class="min-h-auto h-150px w-150px" data-kt-size="150" data-kt-line="25"></div>
-													<!--end::Chart-->
-												</div>
-												<!--end::Col-->
+												<!--end::Wrapper-->
 											</div>
-											<!--end::Row-->
+											<!--end::Notice-->
+											<!--begin::Items-->
+											<div class="py-2">
+												<!--begin::Item-->
+												<div class="d-flex flex-stack">
+													<div class="d-flex">
+														<img src="{{asset('assets/media/svg/brand-logos/google-icon.svg')}}" class="w-30px me-6" alt="" />
+														<div class="d-flex flex-column">
+															<a href="#" class="fs-5 text-dark text-hover-primary fw-bold">Google</a>
+															<div class="fs-6 fw-semibold text-muted">Plan properly your workflow</div>
+														</div>
+													</div>
+													<div class="d-flex justify-content-end">
+														<!--begin::Switch-->
+														<label class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
+															<!--begin::Input-->
+															<input class="form-check-input" name="google" type="checkbox" value="1" id="kt_modal_connected_accounts_google" checked="checked" />
+															<!--end::Input-->
+															<!--begin::Label-->
+															<span class="form-check-label fw-semibold text-muted" for="kt_modal_connected_accounts_google"></span>
+															<!--end::Label-->
+														</label>
+														<!--end::Switch-->
+													</div>
+												</div>
+												<!--end::Item-->
+												<div class="separator separator-dashed my-5"></div>
+												<!--begin::Item-->
+												<div class="d-flex flex-stack">
+													<div class="d-flex">
+														<img src="{{asset('assets/media/svg/brand-logos/github.svg')}}" class="w-30px me-6" alt="" />
+														<div class="d-flex flex-column">
+															<a href="#" class="fs-5 text-dark text-hover-primary fw-bold">Github</a>
+															<div class="fs-6 fw-semibold text-muted">Keep eye on on your Repositories</div>
+														</div>
+													</div>
+													<div class="d-flex justify-content-end">
+														<!--begin::Switch-->
+														<label class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
+															<!--begin::Input-->
+															<input class="form-check-input" name="github" type="checkbox" value="1" id="kt_modal_connected_accounts_github" checked="checked" />
+															<!--end::Input-->
+															<!--begin::Label-->
+															<span class="form-check-label fw-semibold text-muted" for="kt_modal_connected_accounts_github"></span>
+															<!--end::Label-->
+														</label>
+														<!--end::Switch-->
+													</div>
+												</div>
+												<!--end::Item-->
+												<div class="separator separator-dashed my-5"></div>
+												<!--begin::Item-->
+												<div class="d-flex flex-stack">
+													<div class="d-flex">
+														<img src="{{asset('assets/media/svg/brand-logos/slack-icon.svg')}}" class="w-30px me-6" alt="" />
+														<div class="d-flex flex-column">
+															<a href="#" class="fs-5 text-dark text-hover-primary fw-bold">Slack</a>
+															<div class="fs-6 fw-semibold text-muted">Integrate Projects Discussions</div>
+														</div>
+													</div>
+													<div class="d-flex justify-content-end">
+														<!--begin::Switch-->
+														<label class="form-check form-switch form-switch-sm form-check-custom form-check-solid">
+															<!--begin::Input-->
+															<input class="form-check-input" name="slack" type="checkbox" value="1" id="kt_modal_connected_accounts_slack" />
+															<!--end::Input-->
+															<!--begin::Label-->
+															<span class="form-check-label fw-semibold text-muted" for="kt_modal_connected_accounts_slack"></span>
+															<!--end::Label-->
+														</label>
+														<!--end::Switch-->
+													</div>
+												</div>
+												<!--end::Item-->
+											</div>
+											<!--end::Items-->
 										</div>
 										<!--end::Card body-->
-									</div>
-									<!--end::Card widget 19-->
-								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-xl-6">
-									<!--begin::Engage widget 9-->
-									<div class="card h-lg-100" style="background: linear-gradient(112.14deg, #FF8A00 0%, #E96922 100%)">
-										<!--begin::Body-->
-										<div class="card-body">
-											<!--begin::Row-->
-											<div class="row align-items-center">
-												<!--begin::Col-->
-												<div class="col-sm-7 pe-0 mb-5 mb-sm-0">
-													<!--begin::Wrapper-->
-													<div class="d-flex justify-content-between h-100 flex-column pt-xl-5 pb-xl-2 ps-xl-7">
-														<!--begin::Container-->
-														<div class="mb-7">
-															<!--begin::Title-->
-															<div class="mb-6">
-																<h3 class="fs-2x fw-semibold text-white">Upgrade Your Plan</h3>
-																<span class="fw-semibold text-white opacity-75">Flat cartoony and illustrations with vivid color</span>
-															</div>
-															<!--end::Title-->
-															<!--begin::Items-->
-															<div class="d-flex align-items-center flex-wrap d-grid gap-2">
-																<!--begin::Item-->
-																<div class="d-flex align-items-center me-5 me-xl-13">
-																	<!--begin::Symbol-->
-																	<div class="symbol symbol-30px symbol-circle me-3">
-																		<span class="symbol-label" style="background: rgba(255, 255, 255, 0.15);">
-																			<!--begin::Svg Icon | path: icons/duotune/abstract/abs042.svg')}}-->
-																			<span class="svg-icon svg-icon-4 svg-icon-white">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																					<path d="M18 21.6C16.6 20.4 9.1 20.3 6.3 21.2C5.7 21.4 5.1 21.2 4.7 20.8L2 18C4.2 15.8 10.8 15.1 15.8 15.8C16.2 18.3 17 20.5 18 21.6ZM18.8 2.8C18.4 2.4 17.8 2.20001 17.2 2.40001C14.4 3.30001 6.9 3.2 5.5 2C6.8 3.3 7.4 5.5 7.7 7.7C9 7.9 10.3 8 11.7 8C15.8 8 19.8 7.2 21.5 5.5L18.8 2.8Z" fill="currentColor" />
-																					<path opacity="0.3" d="M21.2 17.3C21.4 17.9 21.2 18.5 20.8 18.9L18 21.6C15.8 19.4 15.1 12.8 15.8 7.8C18.3 7.4 20.4 6.70001 21.5 5.60001C20.4 7.00001 20.2 14.5 21.2 17.3ZM8 11.7C8 9 7.7 4.2 5.5 2L2.8 4.8C2.4 5.2 2.2 5.80001 2.4 6.40001C2.7 7.40001 3.00001 9.2 3.10001 11.7C3.10001 15.5 2.40001 17.6 2.10001 18C3.20001 16.9 5.3 16.2 7.8 15.8C8 14.2 8 12.7 8 11.7Z" fill="currentColor" />
-																				</svg>
-																			</span>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</div>
-																	<!--end::Symbol-->
-																	<!--begin::Info-->
-																	<div class="m-0">
-																		<a href="../../demo3/dist/pages/user-profile/projects.html" class="text-white text-opacity-75 fs-8">Projects</a>
-																		<span class="fw-bold text-white fs-7 d-block">Up to 500</span>
-																	</div>
-																	<!--end::Info-->
-																</div>
-																<!--end::Item-->
-																<!--begin::Item-->
-																<div class="d-flex align-items-center">
-																	<!--begin::Symbol-->
-																	<div class="symbol symbol-30px symbol-circle me-3">
-																		<span class="symbol-label" style="background: rgba(255, 255, 255, 0.15);">
-																			<!--begin::Svg Icon | path: icons/duotune/abstract/abs027.svg')}}-->
-																			<span class="svg-icon svg-icon-4 svg-icon-white">
-																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																					<path opacity="0.3" d="M21.25 18.525L13.05 21.825C12.35 22.125 11.65 22.125 10.95 21.825L2.75 18.525C1.75 18.125 1.75 16.725 2.75 16.325L4.04999 15.825L10.25 18.325C10.85 18.525 11.45 18.625 12.05 18.625C12.65 18.625 13.25 18.525 13.85 18.325L20.05 15.825L21.35 16.325C22.35 16.725 22.35 18.125 21.25 18.525ZM13.05 16.425L21.25 13.125C22.25 12.725 22.25 11.325 21.25 10.925L13.05 7.62502C12.35 7.32502 11.65 7.32502 10.95 7.62502L2.75 10.925C1.75 11.325 1.75 12.725 2.75 13.125L10.95 16.425C11.65 16.725 12.45 16.725 13.05 16.425Z" fill="currentColor" />
-																					<path d="M11.05 11.025L2.84998 7.725C1.84998 7.325 1.84998 5.925 2.84998 5.525L11.05 2.225C11.75 1.925 12.45 1.925 13.15 2.225L21.35 5.525C22.35 5.925 22.35 7.325 21.35 7.725L13.05 11.025C12.45 11.325 11.65 11.325 11.05 11.025Z" fill="currentColor" />
-																				</svg>
-																			</span>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</div>
-																	<!--end::Symbol-->
-																	<!--begin::Info-->
-																	<div class="m-0">
-																		<a href="../../demo3/dist/apps/user-management/users/list.html" class="text-white text-opacity-75 fs-8">Tasks</a>
-																		<span class="fw-bold text-white fs-7 d-block">Unlimited</span>
-																	</div>
-																	<!--end::Info-->
-																</div>
-																<!--end::Item-->
-															</div>
-															<!--end::Items-->
-														</div>
-														<!--end::Container-->
-														<!--begin::Action-->
-														<div class="m-0">
-															<a href="#" class="btn btn-color-white bg-white bg-opacity-15 bg-hover-opacity-25 fw-semibold" data-bs-toggle="modal" data-bs-target="#kt_modal_upgrade_plan">Upgrade Plan</a>
-														</div>
-														<!--begin::Action-->
-													</div>
-													<!--end::Wrapper-->
-												</div>
-												<!--begin::Col-->
-												<!--begin::Col-->
-												<div class="col-sm-5">
-													<!--begin::Illustration-->
-													<img src="{{URL::asset('assets/media/svg/illustrations/easy/7.svg')}}" class="h-200px h-lg-250px my-n6" alt="" />
-													<!--end::Illustration-->
-												</div>
-												<!--begin::Col-->
-											</div>
-											<!--begin::Row-->
+										<!--begin::Card footer-->
+										<div class="card-footer border-0 d-flex justify-content-center pt-0">
+											<button class="btn btn-sm btn-light-primary">Save Changes</button>
 										</div>
-										<!--end::Body-->
+										<!--end::Card footer-->
 									</div>
-									<!--end::Engage widget 9-->
+									<!--end::Connected Accounts-->
 								</div>
-								<!--end::Col-->
-							</div>
-							<!--end::Row-->
-							<!--begin::Row-->
-							<div class="row g-5 g-xl-10 mb-5 mb-xl-10">
-								<!--begin::Col-->
-								<div class="col-xl-4">
-									<!--begin::Chart Widget 37-->
-									<div class="card card-flush h-lg-100">
-										<!--begin::Header-->
-										<div class="card-header pt-5 mb-6">
-											<!--begin::Title-->
-											<h3 class="card-title align-items-start flex-column">
-												<!--begin::Statistics-->
-												<div class="d-flex align-items-center mb-2">
-													<!--begin::Currency-->
-													<span class="fs-3 fw-semibold text-gray-400 align-self-start me-1">$</span>
-													<!--end::Currency-->
-													<!--begin::Value-->
-													<span class="fs-2hx fw-bold text-gray-800 me-2 lh-1 ls-n2">3,274.94</span>
-													<!--end::Value-->
-													<!--begin::Label-->
-													<span class="badge badge-light-success fs-base">
-													<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg')}}-->
-													<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
-															<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->9.2%</span>
-													<!--end::Label-->
+								<!--end::Sidebar-->
+								<!--begin::Content-->
+								<div class="flex-lg-row-fluid ms-lg-15">
+									<!--begin:::Tabs-->
+									<ul class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-semibold mb-8">
+										<!--begin:::Tab item-->
+										<li class="nav-item">
+											<a class="nav-link text-active-primary pb-4 active" data-bs-toggle="tab" href="#kt_customer_view_overview_tab">Overview</a>
+										</li>
+										<!--end:::Tab item-->
+										<!--begin:::Tab item-->
+										<li class="nav-item">
+											<a class="nav-link text-active-primary pb-4" data-bs-toggle="tab" href="#kt_customer_view_overview_events_and_logs_tab">Events &amp; Logs</a>
+										</li>
+										<!--end:::Tab item-->
+										<!--begin:::Tab item-->
+										<li class="nav-item">
+											<a class="nav-link text-active-primary pb-4" data-kt-countup-tabs="true" data-bs-toggle="tab" href="#kt_customer_view_overview_statements">Statements</a>
+										</li>
+										<!--end:::Tab item-->
+										<!--begin:::Tab item-->
+										<li class="nav-item ms-auto">
+											<!--begin::Action menu-->
+											<a href="#" class="btn btn-primary ps-7" data-kt-menu-trigger="click" data-kt-menu-attach="parent" data-kt-menu-placement="bottom-end">Actions
+											<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+											<span class="svg-icon svg-icon-2 me-0">
+												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+												</svg>
+											</span>
+											<!--end::Svg Icon--></a>
+											<!--begin::Menu-->
+											<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold py-4 w-250px fs-6" data-kt-menu="true">
+												<!--begin::Menu item-->
+												<div class="menu-item px-5">
+													<div class="menu-content text-muted pb-2 px-5 fs-7 text-uppercase">Payments</div>
 												</div>
-												<!--end::Statistics-->
-												<!--begin::Description-->
-												<span class="fs-6 fw-semibold text-gray-400">Avg. Agent Earnings</span>
-												<!--end::Description-->
-											</h3>
-											<!--end::Title-->
-											<!--begin::Toolbar-->
-											<div class="card-toolbar">
-												<!--begin::Menu-->
-												<button class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-overflow="true">
-													<!--begin::Svg Icon | path: icons/duotune/general/gen023.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-gray-300 me-n1">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="4" fill="currentColor" />
-															<rect x="11" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor" />
-															<rect x="15" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor" />
-															<rect x="7" y="11" width="2.6" height="2.6" rx="1.3" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</button>
-												<!--begin::Menu 2-->
-												<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px" data-kt-menu="true">
-													<!--begin::Menu item-->
-													<div class="menu-item px-3">
-														<div class="menu-content fs-6 text-dark fw-bold px-3 py-4">Quick Actions</div>
-													</div>
-													<!--end::Menu item-->
-													<!--begin::Menu separator-->
-													<div class="separator mb-3 opacity-75"></div>
-													<!--end::Menu separator-->
-													<!--begin::Menu item-->
-													<div class="menu-item px-3">
-														<a href="#" class="menu-link px-3">New Ticket</a>
-													</div>
-													<!--end::Menu item-->
-													<!--begin::Menu item-->
-													<div class="menu-item px-3">
-														<a href="#" class="menu-link px-3">New Customer</a>
-													</div>
-													<!--end::Menu item-->
-													<!--begin::Menu item-->
-													<div class="menu-item px-3" data-kt-menu-trigger="hover" data-kt-menu-placement="right-start">
+												<!--end::Menu item-->
+												<!--begin::Menu item-->
+												<div class="menu-item px-5">
+													<a href="#" class="menu-link px-5">Create invoice</a>
+												</div>
+												<!--end::Menu item-->
+												<!--begin::Menu item-->
+												<div class="menu-item px-5">
+													<a href="#" class="menu-link flex-stack px-5">Create payments
+													<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Specify a target name for future usage and reference"></i></a>
+												</div>
+												<!--end::Menu item-->
+												<!--begin::Menu item-->
+												<div class="menu-item px-5" data-kt-menu-trigger="hover" data-kt-menu-placement="left-start">
+													<a href="#" class="menu-link px-5">
+														<span class="menu-title">Subscription</span>
+														<span class="menu-arrow"></span>
+													</a>
+													<!--begin::Menu sub-->
+													<div class="menu-sub menu-sub-dropdown w-175px py-4">
 														<!--begin::Menu item-->
-														<a href="#" class="menu-link px-3">
-															<span class="menu-title">New Group</span>
-															<span class="menu-arrow"></span>
-														</a>
+														<div class="menu-item px-3">
+															<a href="#" class="menu-link px-5">Apps</a>
+														</div>
 														<!--end::Menu item-->
-														<!--begin::Menu sub-->
-														<div class="menu-sub menu-sub-dropdown w-175px py-4">
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3">Admin Group</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3">Staff Group</a>
-															</div>
-															<!--end::Menu item-->
-															<!--begin::Menu item-->
-															<div class="menu-item px-3">
-																<a href="#" class="menu-link px-3">Member Group</a>
-															</div>
-															<!--end::Menu item-->
+														<!--begin::Menu item-->
+														<div class="menu-item px-3">
+															<a href="#" class="menu-link px-5">Billing</a>
 														</div>
-														<!--end::Menu sub-->
-													</div>
-													<!--end::Menu item-->
-													<!--begin::Menu item-->
-													<div class="menu-item px-3">
-														<a href="#" class="menu-link px-3">New Contact</a>
-													</div>
-													<!--end::Menu item-->
-													<!--begin::Menu separator-->
-													<div class="separator mt-3 opacity-75"></div>
-													<!--end::Menu separator-->
-													<!--begin::Menu item-->
-													<div class="menu-item px-3">
-														<div class="menu-content px-3 py-3">
-															<a class="btn btn-primary btn-sm px-4" href="#">Generate Reports</a>
+														<!--end::Menu item-->
+														<!--begin::Menu item-->
+														<div class="menu-item px-3">
+															<a href="#" class="menu-link px-5">Statements</a>
 														</div>
+														<!--end::Menu item-->
+														<!--begin::Menu separator-->
+														<div class="separator my-2"></div>
+														<!--end::Menu separator-->
+														<!--begin::Menu item-->
+														<div class="menu-item px-3">
+															<div class="menu-content px-3">
+																<label class="form-check form-switch form-check-custom form-check-solid">
+																	<input class="form-check-input w-30px h-20px" type="checkbox" value="" name="notifications" checked="checked" id="kt_user_menu_notifications" />
+																	<span class="form-check-label text-muted fs-6" for="kt_user_menu_notifications">Notifications</span>
+																</label>
+															</div>
+														</div>
+														<!--end::Menu item-->
 													</div>
-													<!--end::Menu item-->
+													<!--end::Menu sub-->
 												</div>
-												<!--end::Menu 2-->
-												<!--end::Menu-->
+												<!--end::Menu item-->
+												<!--begin::Menu separator-->
+												<div class="separator my-3"></div>
+												<!--end::Menu separator-->
+												<!--begin::Menu item-->
+												<div class="menu-item px-5">
+													<div class="menu-content text-muted pb-2 px-5 fs-7 text-uppercase">Account</div>
+												</div>
+												<!--end::Menu item-->
+												<!--begin::Menu item-->
+												<div class="menu-item px-5">
+													<a href="#" class="menu-link px-5">Reports</a>
+												</div>
+												<!--end::Menu item-->
+												<!--begin::Menu item-->
+												<div class="menu-item px-5 my-1">
+													<a href="#" class="menu-link px-5">Account Settings</a>
+												</div>
+												<!--end::Menu item-->
+												<!--begin::Menu item-->
+												<div class="menu-item px-5">
+                                                <form method="POST" action="{{ route('users.destroy',$user) }}" class="" novalidate="novalidate" id="" >
+															@csrf
+																{{method_field('DELETE')}}
+                                                                <button href="submit" class="btn btn-primary menu-link px-5">Delete User</button>
+
+															</form>
+												</div>
+												<!--end::Menu item-->
 											</div>
-											<!--end::Toolbar-->
-										</div>
-										<!--end::Header-->
-										<!--begin::Body-->
-										<div class="card-body py-0 px-0">
-											<!--begin::Nav-->
-											<ul class="nav d-flex justify-content-between mb-3 mx-9">
-												<!--begin::Item-->
-												<li class="nav-item mb-3">
-													<!--begin::Link-->
-													<a class="nav-link btn btn-flex flex-center btn-active-info btn-color-gray-600 btn-active-color-white rounded-2 w-45px h-35px active" data-bs-toggle="tab" id="kt_charts_widget_37_tab_1" href="#kt_charts_widget_37_tab_content_1">1d</a>
-													<!--end::Link-->
-												</li>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<li class="nav-item mb-3">
-													<!--begin::Link-->
-													<a class="nav-link btn btn-flex flex-center btn-active-info btn-color-gray-600 btn-active-color-white rounded-2 w-45px h-35px" data-bs-toggle="tab" id="kt_charts_widget_37_tab_2" href="#kt_charts_widget_37_tab_content_2">5d</a>
-													<!--end::Link-->
-												</li>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<li class="nav-item mb-3">
-													<!--begin::Link-->
-													<a class="nav-link btn btn-flex flex-center btn-active-info btn-color-gray-600 btn-active-color-white rounded-2 w-45px h-35px" data-bs-toggle="tab" id="kt_charts_widget_37_tab_3" href="#kt_charts_widget_37_tab_content_3">1m</a>
-													<!--end::Link-->
-												</li>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<li class="nav-item mb-3">
-													<!--begin::Link-->
-													<a class="nav-link btn btn-flex flex-center btn-active-info btn-color-gray-600 btn-active-color-white rounded-2 w-45px h-35px" data-bs-toggle="tab" id="kt_charts_widget_37_tab_4" href="#kt_charts_widget_37_tab_content_4">6m</a>
-													<!--end::Link-->
-												</li>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<li class="nav-item mb-3">
-													<!--begin::Link-->
-													<a class="nav-link btn btn-flex flex-center btn-active-info btn-color-gray-600 btn-active-color-white rounded-2 w-45px h-35px" data-bs-toggle="tab" id="kt_charts_widget_37_tab_5" href="#kt_charts_widget_37_tab_content_5">1y</a>
-													<!--end::Link-->
-												</li>
-												<!--end::Item-->
-											</ul>
-											<!--end::Nav-->
-											<!--begin::Tab Content-->
-											<div class="tab-content mt-n6">
-												<!--begin::Tap pane-->
-												<div class="tab-pane fade active show" id="kt_charts_widget_37_tab_content_1">
-													<!--begin::Chart-->
-													<div id="kt_charts_widget_37_chart_1" data-kt-chart-color="danger" class="min-h-auto h-200px ps-3 pe-6"></div>
-													<!--end::Chart-->
-													<!--begin::Table container-->
-													<div class="table-responsive mx-9 mt-n6">
-														<!--begin::Table-->
-														<table class="table align-middle gs-0 gy-4">
-															<!--begin::Table head-->
-															<thead>
-																<tr>
-																	<th class="min-w-100px"></th>
-																	<th class="min-w-100px text-end pe-0"></th>
-																	<th class="text-end min-w-50px"></th>
-																</tr>
-															</thead>
-															<!--end::Table head-->
-															<!--begin::Table body-->
-															<tbody>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">2:30 PM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$2,756.26</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-danger">-139.34</span>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">3:10 PM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$3,207.03</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-success">+576.24</span>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">3:55 PM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$3,274.94</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-success">+124.03</span>
-																	</td>
-																</tr>
-															</tbody>
-															<!--end::Table body-->
-														</table>
-														<!--end::Table-->
+											<!--end::Menu-->
+											<!--end::Menu-->
+										</li>
+										<!--end:::Tab item-->
+									</ul>
+									<!--end:::Tabs-->
+									<!--begin:::Tab content-->
+									<div class="tab-content" id="myTabContent">
+										<!--begin:::Tab pane-->
+										<div class="tab-pane fade show active" id="kt_customer_view_overview_tab" role="tabpanel">
+											<!--begin::Card-->
+											<div class="card pt-4 mb-6 mb-xl-9">
+												<!--begin::Card header-->
+												<div class="card-header border-0">
+													<!--begin::Card title-->
+													<div class="card-title">
+														<h2>Payment Records</h2>
 													</div>
-													<!--end::Table container-->
-												</div>
-												<!--end::Tap pane-->
-												<!--begin::Tap pane-->
-												<div class="tab-pane fade" id="kt_charts_widget_37_tab_content_2">
-													<!--begin::Chart-->
-													<div id="kt_charts_widget_37_chart_2" data-kt-chart-color="danger" class="min-h-auto h-200px ps-3 pe-6"></div>
-													<!--end::Chart-->
-													<!--begin::Table container-->
-													<div class="table-responsive mx-9 mt-n6">
-														<!--begin::Table-->
-														<table class="table align-middle gs-0 gy-4">
-															<!--begin::Table head-->
-															<thead>
-																<tr>
-																	<th class="min-w-100px"></th>
-																	<th class="min-w-100px text-end pe-0"></th>
-																	<th class="text-end min-w-50px"></th>
-																</tr>
-															</thead>
-															<!--end::Table head-->
-															<!--begin::Table body-->
-															<tbody>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">2:30 PM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$2,756.26</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-success">+231.01</span>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">2:30 PM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$2,756.26</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-primary">+233.07</span>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">2:30 PM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$2,145.55</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-danger">+134.06</span>
-																	</td>
-																</tr>
-															</tbody>
-															<!--end::Table body-->
-														</table>
-														<!--end::Table-->
+													<!--end::Card title-->
+													<!--begin::Card toolbar-->
+													<div class="card-toolbar">
+														<!--begin::Filter-->
+														<button type="button" class="btn btn-sm btn-flex btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_payment">
+														<!--begin::Svg Icon | path: icons/duotune/general/gen035.svg')}}-->
+														<span class="svg-icon svg-icon-3">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
+																<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor" />
+																<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->Add payment</button>
+														<!--end::Filter-->
 													</div>
-													<!--end::Table container-->
+													<!--end::Card toolbar-->
 												</div>
-												<!--end::Tap pane-->
-												<!--begin::Tap pane-->
-												<div class="tab-pane fade" id="kt_charts_widget_37_tab_content_3">
-													<!--begin::Chart-->
-													<div id="kt_charts_widget_37_chart_3" data-kt-chart-color="danger" class="min-h-auto h-200px ps-3 pe-6"></div>
-													<!--end::Chart-->
-													<!--begin::Table container-->
-													<div class="table-responsive mx-9 mt-n6">
-														<!--begin::Table-->
-														<table class="table align-middle gs-0 gy-4">
-															<!--begin::Table head-->
-															<thead>
-																<tr>
-																	<th class="min-w-100px"></th>
-																	<th class="min-w-100px text-end pe-0"></th>
-																	<th class="text-end min-w-50px"></th>
-																</tr>
-															</thead>
-															<!--end::Table head-->
-															<!--begin::Table body-->
-															<tbody>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">12:40 AM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$2,346.25</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-warning">+134.57</span>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">11:30 PM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$1,565.26</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-danger">+155.03</span>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">4:25 PM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$2,756.26</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-success">+124.03</span>
-																	</td>
-																</tr>
-															</tbody>
-															<!--end::Table body-->
-														</table>
-														<!--end::Table-->
-													</div>
-													<!--end::Table container-->
+												<!--end::Card header-->
+												<!--begin::Card body-->
+												<div class="card-body pt-0 pb-5">
+													<!--begin::Table-->
+													<table class="table align-middle table-row-dashed gy-5" id="kt_table_customers_payment">
+														<!--begin::Table head-->
+														<thead class="border-bottom border-gray-200 fs-7 fw-bold">
+															<!--begin::Table row-->
+															<tr class="text-start text-muted text-uppercase gs-0">
+																<th class="min-w-100px">Invoice No.</th>
+																<th>Status</th>
+																<th>Amount</th>
+																<th class="min-w-100px">Date</th>
+																<th class="text-end min-w-100px pe-4">Actions</th>
+															</tr>
+															<!--end::Table row-->
+														</thead>
+														<!--end::Table head-->
+														<!--begin::Table body-->
+														<tbody class="fs-6 fw-semibold text-gray-600">
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Invoice=-->
+																<td>
+																	<a href="#" class="text-gray-600 text-hover-primary mb-1">4810-8707</a>
+																</td>
+																<!--end::Invoice=-->
+																<!--begin::Status=-->
+																<td>
+																	<span class="badge badge-light-success">Successful</span>
+																</td>
+																<!--end::Status=-->
+																<!--begin::Amount=-->
+																<td>$1,200.00</td>
+																<!--end::Amount=-->
+																<!--begin::Date=-->
+																<td>14 Dec 2020, 8:43 pm</td>
+																<!--end::Date=-->
+																<!--begin::Action=-->
+																<td class="pe-0 text-end">
+																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+																	<span class="svg-icon svg-icon-5 m-0">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon--></a>
+																	<!--begin::Menu-->
+																	<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="../../demo3/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																		</div>
+																		<!--end::Menu item-->
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																		</div>
+																		<!--end::Menu item-->
+																	</div>
+																	<!--end::Menu-->
+																</td>
+																<!--end::Action=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Invoice=-->
+																<td>
+																	<a href="#" class="text-gray-600 text-hover-primary mb-1">9726-6965</a>
+																</td>
+																<!--end::Invoice=-->
+																<!--begin::Status=-->
+																<td>
+																	<span class="badge badge-light-success">Successful</span>
+																</td>
+																<!--end::Status=-->
+																<!--begin::Amount=-->
+																<td>$79.00</td>
+																<!--end::Amount=-->
+																<!--begin::Date=-->
+																<td>01 Dec 2020, 10:12 am</td>
+																<!--end::Date=-->
+																<!--begin::Action=-->
+																<td class="pe-0 text-end">
+																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+																	<span class="svg-icon svg-icon-5 m-0">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon--></a>
+																	<!--begin::Menu-->
+																	<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="../../demo3/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																		</div>
+																		<!--end::Menu item-->
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																		</div>
+																		<!--end::Menu item-->
+																	</div>
+																	<!--end::Menu-->
+																</td>
+																<!--end::Action=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Invoice=-->
+																<td>
+																	<a href="#" class="text-gray-600 text-hover-primary mb-1">7432-9063</a>
+																</td>
+																<!--end::Invoice=-->
+																<!--begin::Status=-->
+																<td>
+																	<span class="badge badge-light-success">Successful</span>
+																</td>
+																<!--end::Status=-->
+																<!--begin::Amount=-->
+																<td>$5,500.00</td>
+																<!--end::Amount=-->
+																<!--begin::Date=-->
+																<td>12 Nov 2020, 2:01 pm</td>
+																<!--end::Date=-->
+																<!--begin::Action=-->
+																<td class="pe-0 text-end">
+																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+																	<span class="svg-icon svg-icon-5 m-0">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon--></a>
+																	<!--begin::Menu-->
+																	<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="../../demo3/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																		</div>
+																		<!--end::Menu item-->
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																		</div>
+																		<!--end::Menu item-->
+																	</div>
+																	<!--end::Menu-->
+																</td>
+																<!--end::Action=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Invoice=-->
+																<td>
+																	<a href="#" class="text-gray-600 text-hover-primary mb-1">6439-8283</a>
+																</td>
+																<!--end::Invoice=-->
+																<!--begin::Status=-->
+																<td>
+																	<span class="badge badge-light-warning">Pending</span>
+																</td>
+																<!--end::Status=-->
+																<!--begin::Amount=-->
+																<td>$880.00</td>
+																<!--end::Amount=-->
+																<!--begin::Date=-->
+																<td>21 Oct 2020, 5:54 pm</td>
+																<!--end::Date=-->
+																<!--begin::Action=-->
+																<td class="pe-0 text-end">
+																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+																	<span class="svg-icon svg-icon-5 m-0">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon--></a>
+																	<!--begin::Menu-->
+																	<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="../../demo3/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																		</div>
+																		<!--end::Menu item-->
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																		</div>
+																		<!--end::Menu item-->
+																	</div>
+																	<!--end::Menu-->
+																</td>
+																<!--end::Action=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Invoice=-->
+																<td>
+																	<a href="#" class="text-gray-600 text-hover-primary mb-1">5677-6398</a>
+																</td>
+																<!--end::Invoice=-->
+																<!--begin::Status=-->
+																<td>
+																	<span class="badge badge-light-success">Successful</span>
+																</td>
+																<!--end::Status=-->
+																<!--begin::Amount=-->
+																<td>$7,650.00</td>
+																<!--end::Amount=-->
+																<!--begin::Date=-->
+																<td>19 Oct 2020, 7:32 am</td>
+																<!--end::Date=-->
+																<!--begin::Action=-->
+																<td class="pe-0 text-end">
+																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+																	<span class="svg-icon svg-icon-5 m-0">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon--></a>
+																	<!--begin::Menu-->
+																	<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="../../demo3/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																		</div>
+																		<!--end::Menu item-->
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																		</div>
+																		<!--end::Menu item-->
+																	</div>
+																	<!--end::Menu-->
+																</td>
+																<!--end::Action=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Invoice=-->
+																<td>
+																	<a href="#" class="text-gray-600 text-hover-primary mb-1">9895-9688</a>
+																</td>
+																<!--end::Invoice=-->
+																<!--begin::Status=-->
+																<td>
+																	<span class="badge badge-light-success">Successful</span>
+																</td>
+																<!--end::Status=-->
+																<!--begin::Amount=-->
+																<td>$375.00</td>
+																<!--end::Amount=-->
+																<!--begin::Date=-->
+																<td>23 Sep 2020, 12:38 am</td>
+																<!--end::Date=-->
+																<!--begin::Action=-->
+																<td class="pe-0 text-end">
+																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+																	<span class="svg-icon svg-icon-5 m-0">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon--></a>
+																	<!--begin::Menu-->
+																	<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="../../demo3/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																		</div>
+																		<!--end::Menu item-->
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																		</div>
+																		<!--end::Menu item-->
+																	</div>
+																	<!--end::Menu-->
+																</td>
+																<!--end::Action=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Invoice=-->
+																<td>
+																	<a href="#" class="text-gray-600 text-hover-primary mb-1">6397-9637</a>
+																</td>
+																<!--end::Invoice=-->
+																<!--begin::Status=-->
+																<td>
+																	<span class="badge badge-light-success">Successful</span>
+																</td>
+																<!--end::Status=-->
+																<!--begin::Amount=-->
+																<td>$129.00</td>
+																<!--end::Amount=-->
+																<!--begin::Date=-->
+																<td>11 Sep 2020, 3:18 pm</td>
+																<!--end::Date=-->
+																<!--begin::Action=-->
+																<td class="pe-0 text-end">
+																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+																	<span class="svg-icon svg-icon-5 m-0">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon--></a>
+																	<!--begin::Menu-->
+																	<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="../../demo3/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																		</div>
+																		<!--end::Menu item-->
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																		</div>
+																		<!--end::Menu item-->
+																	</div>
+																	<!--end::Menu-->
+																</td>
+																<!--end::Action=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Invoice=-->
+																<td>
+																	<a href="#" class="text-gray-600 text-hover-primary mb-1">1403-2989</a>
+																</td>
+																<!--end::Invoice=-->
+																<!--begin::Status=-->
+																<td>
+																	<span class="badge badge-light-danger">Rejected</span>
+																</td>
+																<!--end::Status=-->
+																<!--begin::Amount=-->
+																<td>$450.00</td>
+																<!--end::Amount=-->
+																<!--begin::Date=-->
+																<td>03 Sep 2020, 1:08 am</td>
+																<!--end::Date=-->
+																<!--begin::Action=-->
+																<td class="pe-0 text-end">
+																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+																	<span class="svg-icon svg-icon-5 m-0">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon--></a>
+																	<!--begin::Menu-->
+																	<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="../../demo3/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																		</div>
+																		<!--end::Menu item-->
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																		</div>
+																		<!--end::Menu item-->
+																	</div>
+																	<!--end::Menu-->
+																</td>
+																<!--end::Action=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Invoice=-->
+																<td>
+																	<a href="#" class="text-gray-600 text-hover-primary mb-1">5413-7147</a>
+																</td>
+																<!--end::Invoice=-->
+																<!--begin::Status=-->
+																<td>
+																	<span class="badge badge-light-warning">Pending</span>
+																</td>
+																<!--end::Status=-->
+																<!--begin::Amount=-->
+																<td>$8,700.00</td>
+																<!--end::Amount=-->
+																<!--begin::Date=-->
+																<td>01 Sep 2020, 4:58 pm</td>
+																<!--end::Date=-->
+																<!--begin::Action=-->
+																<td class="pe-0 text-end">
+																	<a href="#" class="btn btn-sm btn-light btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+																	<span class="svg-icon svg-icon-5 m-0">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon--></a>
+																	<!--begin::Menu-->
+																	<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold fs-7 w-125px py-4" data-kt-menu="true">
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="../../demo3/dist/apps/customers/view.html" class="menu-link px-3">View</a>
+																		</div>
+																		<!--end::Menu item-->
+																		<!--begin::Menu item-->
+																		<div class="menu-item px-3">
+																			<a href="#" class="menu-link px-3" data-kt-customer-table-filter="delete_row">Delete</a>
+																		</div>
+																		<!--end::Menu item-->
+																	</div>
+																	<!--end::Menu-->
+																</td>
+																<!--end::Action=-->
+															</tr>
+															<!--end::Table row-->
+														</tbody>
+														<!--end::Table body-->
+													</table>
+													<!--end::Table-->
 												</div>
-												<!--end::Tap pane-->
-												<!--begin::Tap pane-->
-												<div class="tab-pane fade" id="kt_charts_widget_37_tab_content_4">
-													<!--begin::Chart-->
-													<div id="kt_charts_widget_37_chart_4" data-kt-chart-color="danger" class="min-h-auto h-200px ps-3 pe-6"></div>
-													<!--end::Chart-->
-													<!--begin::Table container-->
-													<div class="table-responsive mx-9 mt-n6">
-														<!--begin::Table-->
-														<table class="table align-middle gs-0 gy-4">
-															<!--begin::Table head-->
-															<thead>
-																<tr>
-																	<th class="min-w-100px"></th>
-																	<th class="min-w-100px text-end pe-0"></th>
-																	<th class="text-end min-w-50px"></th>
-																</tr>
-															</thead>
-															<!--end::Table head-->
-															<!--begin::Table body-->
-															<tbody>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">3:20 PM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$3,756.26</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-danger">+234.03</span>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">10:30 AM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$1,474.04</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-info">-134.03</span>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">1:30 AM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$2,756.26</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-primary">+124.03</span>
-																	</td>
-																</tr>
-															</tbody>
-															<!--end::Table body-->
-														</table>
-														<!--end::Table-->
-													</div>
-													<!--end::Table container-->
-												</div>
-												<!--end::Tap pane-->
-												<!--begin::Tap pane-->
-												<div class="tab-pane fade" id="kt_charts_widget_37_tab_content_5">
-													<!--begin::Chart-->
-													<div id="kt_charts_widget_37_chart_5" data-kt-chart-color="danger" class="min-h-auto h-200px ps-3 pe-6"></div>
-													<!--end::Chart-->
-													<!--begin::Table container-->
-													<div class="table-responsive mx-9 mt-n6">
-														<!--begin::Table-->
-														<table class="table align-middle gs-0 gy-4">
-															<!--begin::Table head-->
-															<thead>
-																<tr>
-																	<th class="min-w-100px"></th>
-																	<th class="min-w-100px text-end pe-0"></th>
-																	<th class="text-end min-w-50px"></th>
-																</tr>
-															</thead>
-															<!--end::Table head-->
-															<!--begin::Table body-->
-															<tbody>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">3:30 PM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$1,756.25</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-primary">+144.04</span>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">2:30 PM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$2,756.26</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-danger">+124.03</span>
-																	</td>
-																</tr>
-																<tr>
-																	<td>
-																		<a href="#" class="text-gray-600 fw-bold fs-6">12:30 AM</a>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="text-gray-800 fw-bold fs-6 me-1">$2,034.65</span>
-																	</td>
-																	<td class="pe-0 text-end">
-																		<span class="fw-bold fs-6 text-success">+184.05</span>
-																	</td>
-																</tr>
-															</tbody>
-															<!--end::Table body-->
-														</table>
-														<!--end::Table-->
-													</div>
-													<!--end::Table container-->
-												</div>
-												<!--end::Tap pane-->
+												<!--end::Card body-->
 											</div>
-											<!--end::Tab Content-->
+											<!--end::Card-->
+											<!--begin::Card-->
+											<div class="card pt-4 mb-6 mb-xl-9">
+												<!--begin::Card header-->
+												<div class="card-header border-0">
+													<!--begin::Card title-->
+													<div class="card-title">
+														<h2 class="fw-bold mb-0">Payment Methods</h2>
+													</div>
+													<!--end::Card title-->
+													<!--begin::Card toolbar-->
+													<div class="card-toolbar">
+														<a href="#" class="btn btn-sm btn-flex btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">
+														<!--begin::Svg Icon | path: icons/duotune/general/gen035.svg')}}-->
+														<span class="svg-icon svg-icon-3">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="5" fill="currentColor" />
+																<rect x="10.8891" y="17.8033" width="12" height="2" rx="1" transform="rotate(-90 10.8891 17.8033)" fill="currentColor" />
+																<rect x="6.01041" y="10.9247" width="12" height="2" rx="1" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->Add new method</a>
+													</div>
+													<!--end::Card toolbar-->
+												</div>
+												<!--end::Card header-->
+												<!--begin::Card body-->
+												<div id="kt_customer_view_payment_method" class="card-body pt-0">
+													<!--begin::Option-->
+													<div class="py-0" data-kt-customer-payment-method="row">
+														<!--begin::Header-->
+														<div class="py-3 d-flex flex-stack flex-wrap">
+															<!--begin::Toggle-->
+															<div class="d-flex align-items-center collapsible rotate" data-bs-toggle="collapse" href="#kt_customer_view_payment_method_1" role="button" aria-expanded="false" aria-controls="kt_customer_view_payment_method_1">
+																<!--begin::Arrow-->
+																<div class="me-3 rotate-90">
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr071.svg')}}-->
+																	<span class="svg-icon svg-icon-3">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M12.6343 12.5657L8.45001 16.75C8.0358 17.1642 8.0358 17.8358 8.45001 18.25C8.86423 18.6642 9.5358 18.6642 9.95001 18.25L15.4929 12.7071C15.8834 12.3166 15.8834 11.6834 15.4929 11.2929L9.95001 5.75C9.5358 5.33579 8.86423 5.33579 8.45001 5.75C8.0358 6.16421 8.0358 6.83579 8.45001 7.25L12.6343 11.4343C12.9467 11.7467 12.9467 12.2533 12.6343 12.5657Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</div>
+																<!--end::Arrow-->
+																<!--begin::Logo-->
+																<img src="{{asset('assets/media/svg/card-logos/mastercard.svg')}}" class="w-40px me-3" alt="" />
+																<!--end::Logo-->
+																<!--begin::Summary-->
+																<div class="me-3">
+																	<div class="d-flex align-items-center">
+																		<div class="text-gray-800 fw-bold">Mastercard</div>
+																		<div class="badge badge-light-primary ms-5">Primary</div>
+																	</div>
+																	<div class="text-muted">Expires Dec 2024</div>
+																</div>
+																<!--end::Summary-->
+															</div>
+															<!--end::Toggle-->
+															<!--begin::Toolbar-->
+															<div class="d-flex my-3 ms-9">
+																<!--begin::Edit-->
+																<a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">
+																	<span data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit">
+																		<!--begin::Svg Icon | path: icons/duotune/art/art005.svg')}}-->
+																		<span class="svg-icon svg-icon-3">
+																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor" />
+																				<path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="currentColor" />
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->
+																	</span>
+																</a>
+																<!--end::Edit-->
+																<!--begin::Delete-->
+																<a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="tooltip" title="Delete" data-kt-customer-payment-method="delete">
+																	<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg')}}-->
+																	<span class="svg-icon svg-icon-3">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor" />
+																			<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor" />
+																			<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</a>
+																<!--end::Delete-->
+																<!--begin::More-->
+																<a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px" data-bs-toggle="tooltip" title="More Options" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+																	<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg')}}-->
+																	<span class="svg-icon svg-icon-3">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="currentColor" />
+																			<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</a>
+																<!--begin::Menu-->
+																<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3" data-kt-menu="true">
+																	<!--begin::Menu item-->
+																	<div class="menu-item px-3">
+																		<a href="#" class="menu-link px-3" data-kt-payment-mehtod-action="set_as_primary">Set as Primary</a>
+																	</div>
+																	<!--end::Menu item-->
+																</div>
+																<!--end::Menu-->
+																<!--end::More-->
+															</div>
+															<!--end::Toolbar-->
+														</div>
+														<!--end::Header-->
+														<!--begin::Body-->
+														<div id="kt_customer_view_payment_method_1" class="collapse show fs-6 ps-10" data-bs-parent="#kt_customer_view_payment_method">
+															<!--begin::Details-->
+															<div class="d-flex flex-wrap py-5">
+																<!--begin::Col-->
+																<div class="flex-equal me-5">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Name</td>
+																			<td class="text-gray-800">Emma Smith</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Number</td>
+																			<td class="text-gray-800">**** 9599</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Expires</td>
+																			<td class="text-gray-800">12/2024</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Type</td>
+																			<td class="text-gray-800">Mastercard credit card</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Issuer</td>
+																			<td class="text-gray-800">VICBANK</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">ID</td>
+																			<td class="text-gray-800">id_4325df90sdf8</td>
+																		</tr>
+																	</table>
+																</div>
+																<!--end::Col-->
+																<!--begin::Col-->
+																<div class="flex-equal">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Billing address</td>
+																			<td class="text-gray-800">AU</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Phone</td>
+																			<td class="text-gray-800">No phone provided</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Email</td>
+																			<td class="text-gray-800">
+																				<a href="#" class="text-gray-900 text-hover-primary">smith@kpmg.com</a>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Origin</td>
+																			<td class="text-gray-800">Australia
+																			<div class="symbol symbol-20px symbol-circle ms-2">
+																				<img src="{{asset('assets/media/flags/australia.svg')}}" />
+																			</div></td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">CVC check</td>
+																			<td class="text-gray-800">Passed
+																			<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
+																			<span class="svg-icon svg-icon-2 svg-icon-success">
+																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
+																					<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon--></td>
+																		</tr>
+																	</table>
+																</div>
+																<!--end::Col-->
+															</div>
+															<!--end::Details-->
+														</div>
+														<!--end::Body-->
+													</div>
+													<!--end::Option-->
+													<div class="separator separator-dashed"></div>
+													<!--begin::Option-->
+													<div class="py-0" data-kt-customer-payment-method="row">
+														<!--begin::Header-->
+														<div class="py-3 d-flex flex-stack flex-wrap">
+															<!--begin::Toggle-->
+															<div class="d-flex align-items-center collapsible collapsed rotate" data-bs-toggle="collapse" href="#kt_customer_view_payment_method_2" role="button" aria-expanded="false" aria-controls="kt_customer_view_payment_method_2">
+																<!--begin::Arrow-->
+																<div class="me-3 rotate-90">
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr071.svg')}}-->
+																	<span class="svg-icon svg-icon-3">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M12.6343 12.5657L8.45001 16.75C8.0358 17.1642 8.0358 17.8358 8.45001 18.25C8.86423 18.6642 9.5358 18.6642 9.95001 18.25L15.4929 12.7071C15.8834 12.3166 15.8834 11.6834 15.4929 11.2929L9.95001 5.75C9.5358 5.33579 8.86423 5.33579 8.45001 5.75C8.0358 6.16421 8.0358 6.83579 8.45001 7.25L12.6343 11.4343C12.9467 11.7467 12.9467 12.2533 12.6343 12.5657Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</div>
+																<!--end::Arrow-->
+																<!--begin::Logo-->
+																<img src="{{asset('assets/media/svg/card-logos/visa.svg')}}" class="w-40px me-3" alt="" />
+																<!--end::Logo-->
+																<!--begin::Summary-->
+																<div class="me-3">
+																	<div class="d-flex align-items-center">
+																		<div class="text-gray-800 fw-bold">Visa</div>
+																	</div>
+																	<div class="text-muted">Expires Feb 2022</div>
+																</div>
+																<!--end::Summary-->
+															</div>
+															<!--end::Toggle-->
+															<!--begin::Toolbar-->
+															<div class="d-flex my-3 ms-9">
+																<!--begin::Edit-->
+																<a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">
+																	<span data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit">
+																		<!--begin::Svg Icon | path: icons/duotune/art/art005.svg')}}-->
+																		<span class="svg-icon svg-icon-3">
+																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor" />
+																				<path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="currentColor" />
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->
+																	</span>
+																</a>
+																<!--end::Edit-->
+																<!--begin::Delete-->
+																<a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="tooltip" title="Delete" data-kt-customer-payment-method="delete">
+																	<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg')}}-->
+																	<span class="svg-icon svg-icon-3">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor" />
+																			<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor" />
+																			<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</a>
+																<!--end::Delete-->
+																<!--begin::More-->
+																<a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px" data-bs-toggle="tooltip" title="More Options" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+																	<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg')}}-->
+																	<span class="svg-icon svg-icon-3">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="currentColor" />
+																			<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</a>
+																<!--begin::Menu-->
+																<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3" data-kt-menu="true">
+																	<!--begin::Menu item-->
+																	<div class="menu-item px-3">
+																		<a href="#" class="menu-link px-3" data-kt-payment-mehtod-action="set_as_primary">Set as Primary</a>
+																	</div>
+																	<!--end::Menu item-->
+																</div>
+																<!--end::Menu-->
+																<!--end::More-->
+															</div>
+															<!--end::Toolbar-->
+														</div>
+														<!--end::Header-->
+														<!--begin::Body-->
+														<div id="kt_customer_view_payment_method_2" class="collapse fs-6 ps-10" data-bs-parent="#kt_customer_view_payment_method">
+															<!--begin::Details-->
+															<div class="d-flex flex-wrap py-5">
+																<!--begin::Col-->
+																<div class="flex-equal me-5">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Name</td>
+																			<td class="text-gray-800">Melody Macy</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Number</td>
+																			<td class="text-gray-800">**** 7957</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Expires</td>
+																			<td class="text-gray-800">02/2022</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Type</td>
+																			<td class="text-gray-800">Visa credit card</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Issuer</td>
+																			<td class="text-gray-800">ENBANK</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">ID</td>
+																			<td class="text-gray-800">id_w2r84jdy723</td>
+																		</tr>
+																	</table>
+																</div>
+																<!--end::Col-->
+																<!--begin::Col-->
+																<div class="flex-equal">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Billing address</td>
+																			<td class="text-gray-800">UK</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Phone</td>
+																			<td class="text-gray-800">No phone provided</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Email</td>
+																			<td class="text-gray-800">
+																				<a href="#" class="text-gray-900 text-hover-primary">melody@altbox.com</a>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Origin</td>
+																			<td class="text-gray-800">United Kingdom
+																			<div class="symbol symbol-20px symbol-circle ms-2">
+																				<img src="{{asset('assets/media/flags/united-kingdom.svg')}}" />
+																			</div></td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">CVC check</td>
+																			<td class="text-gray-800">Passed
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr012.svg')}}-->
+																			<span class="svg-icon svg-icon-2 svg-icon-success">
+																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<path opacity="0.3" d="M10 18C9.7 18 9.5 17.9 9.3 17.7L2.3 10.7C1.9 10.3 1.9 9.7 2.3 9.3C2.7 8.9 3.29999 8.9 3.69999 9.3L10.7 16.3C11.1 16.7 11.1 17.3 10.7 17.7C10.5 17.9 10.3 18 10 18Z" fill="currentColor" />
+																					<path d="M10 18C9.7 18 9.5 17.9 9.3 17.7C8.9 17.3 8.9 16.7 9.3 16.3L20.3 5.3C20.7 4.9 21.3 4.9 21.7 5.3C22.1 5.7 22.1 6.30002 21.7 6.70002L10.7 17.7C10.5 17.9 10.3 18 10 18Z" fill="currentColor" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon--></td>
+																		</tr>
+																	</table>
+																</div>
+																<!--end::Col-->
+															</div>
+															<!--end::Details-->
+														</div>
+														<!--end::Body-->
+													</div>
+													<!--end::Option-->
+													<div class="separator separator-dashed"></div>
+													<!--begin::Option-->
+													<div class="py-0" data-kt-customer-payment-method="row">
+														<!--begin::Header-->
+														<div class="py-3 d-flex flex-stack flex-wrap">
+															<!--begin::Toggle-->
+															<div class="d-flex align-items-center collapsible collapsed rotate" data-bs-toggle="collapse" href="#kt_customer_view_payment_method_3" role="button" aria-expanded="false" aria-controls="kt_customer_view_payment_method_3">
+																<!--begin::Arrow-->
+																<div class="me-3 rotate-90">
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr071.svg')}}-->
+																	<span class="svg-icon svg-icon-3">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M12.6343 12.5657L8.45001 16.75C8.0358 17.1642 8.0358 17.8358 8.45001 18.25C8.86423 18.6642 9.5358 18.6642 9.95001 18.25L15.4929 12.7071C15.8834 12.3166 15.8834 11.6834 15.4929 11.2929L9.95001 5.75C9.5358 5.33579 8.86423 5.33579 8.45001 5.75C8.0358 6.16421 8.0358 6.83579 8.45001 7.25L12.6343 11.4343C12.9467 11.7467 12.9467 12.2533 12.6343 12.5657Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</div>
+																<!--end::Arrow-->
+																<!--begin::Logo-->
+																<img src="{{asset('assets/media/svg/card-logos/american-express.svg')}}" class="w-40px me-3" alt="" />
+																<!--end::Logo-->
+																<!--begin::Summary-->
+																<div class="me-3">
+																	<div class="d-flex align-items-center">
+																		<div class="text-gray-800 fw-bold">American Express</div>
+																		<div class="badge badge-light-danger ms-5">Expired</div>
+																	</div>
+																	<div class="text-muted">Expires Aug 2021</div>
+																</div>
+																<!--end::Summary-->
+															</div>
+															<!--end::Toggle-->
+															<!--begin::Toolbar-->
+															<div class="d-flex my-3 ms-9">
+																<!--begin::Edit-->
+																<a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_new_card">
+																	<span data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit">
+																		<!--begin::Svg Icon | path: icons/duotune/art/art005.svg')}}-->
+																		<span class="svg-icon svg-icon-3">
+																			<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																				<path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor" />
+																				<path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="currentColor" />
+																			</svg>
+																		</span>
+																		<!--end::Svg Icon-->
+																	</span>
+																</a>
+																<!--end::Edit-->
+																<!--begin::Delete-->
+																<a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px me-3" data-bs-toggle="tooltip" title="Delete" data-kt-customer-payment-method="delete">
+																	<!--begin::Svg Icon | path: icons/duotune/general/gen027.svg')}}-->
+																	<span class="svg-icon svg-icon-3">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M5 9C5 8.44772 5.44772 8 6 8H18C18.5523 8 19 8.44772 19 9V18C19 19.6569 17.6569 21 16 21H8C6.34315 21 5 19.6569 5 18V9Z" fill="currentColor" />
+																			<path opacity="0.5" d="M5 5C5 4.44772 5.44772 4 6 4H18C18.5523 4 19 4.44772 19 5V5C19 5.55228 18.5523 6 18 6H6C5.44772 6 5 5.55228 5 5V5Z" fill="currentColor" />
+																			<path opacity="0.5" d="M9 4C9 3.44772 9.44772 3 10 3H14C14.5523 3 15 3.44772 15 4V4H9V4Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</a>
+																<!--end::Delete-->
+																<!--begin::More-->
+																<a href="#" class="btn btn-icon btn-active-light-primary w-30px h-30px" data-bs-toggle="tooltip" title="More Options" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
+																	<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg')}}-->
+																	<span class="svg-icon svg-icon-3">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<path d="M17.5 11H6.5C4 11 2 9 2 6.5C2 4 4 2 6.5 2H17.5C20 2 22 4 22 6.5C22 9 20 11 17.5 11ZM15 6.5C15 7.9 16.1 9 17.5 9C18.9 9 20 7.9 20 6.5C20 5.1 18.9 4 17.5 4C16.1 4 15 5.1 15 6.5Z" fill="currentColor" />
+																			<path opacity="0.3" d="M17.5 22H6.5C4 22 2 20 2 17.5C2 15 4 13 6.5 13H17.5C20 13 22 15 22 17.5C22 20 20 22 17.5 22ZM4 17.5C4 18.9 5.1 20 6.5 20C7.9 20 9 18.9 9 17.5C9 16.1 7.9 15 6.5 15C5.1 15 4 16.1 4 17.5Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</a>
+																<!--begin::Menu-->
+																<div class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-semibold w-150px py-3" data-kt-menu="true">
+																	<!--begin::Menu item-->
+																	<div class="menu-item px-3">
+																		<a href="#" class="menu-link px-3" data-kt-payment-mehtod-action="set_as_primary">Set as Primary</a>
+																	</div>
+																	<!--end::Menu item-->
+																</div>
+																<!--end::Menu-->
+																<!--end::More-->
+															</div>
+															<!--end::Toolbar-->
+														</div>
+														<!--end::Header-->
+														<!--begin::Body-->
+														<div id="kt_customer_view_payment_method_3" class="collapse fs-6 ps-10" data-bs-parent="#kt_customer_view_payment_method">
+															<!--begin::Details-->
+															<div class="d-flex flex-wrap py-5">
+																<!--begin::Col-->
+																<div class="flex-equal me-5">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Name</td>
+																			<td class="text-gray-800">Max Smith</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Number</td>
+																			<td class="text-gray-800">**** 6874</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Expires</td>
+																			<td class="text-gray-800">08/2021</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Type</td>
+																			<td class="text-gray-800">American express credit card</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Issuer</td>
+																			<td class="text-gray-800">USABANK</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">ID</td>
+																			<td class="text-gray-800">id_89457jcje63</td>
+																		</tr>
+																	</table>
+																</div>
+																<!--end::Col-->
+																<!--begin::Col-->
+																<div class="flex-equal">
+																	<table class="table table-flush fw-semibold gy-1">
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Billing address</td>
+																			<td class="text-gray-800">US</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Phone</td>
+																			<td class="text-gray-800">No phone provided</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Email</td>
+																			<td class="text-gray-800">
+																				<a href="#" class="text-gray-900 text-hover-primary">max@kt.com</a>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">Origin</td>
+																			<td class="text-gray-800">United States of America
+																			<div class="symbol symbol-20px symbol-circle ms-2">
+																				<img src="{{asset('assets/media/flags/united-states.svg')}}" />
+																			</div></td>
+																		</tr>
+																		<tr>
+																			<td class="text-muted min-w-125px w-125px">CVC check</td>
+																			<td class="text-gray-800">Failed
+																			<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg')}}-->
+																			<span class="svg-icon svg-icon-2 svg-icon-danger">
+																				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																					<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+																					<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+																				</svg>
+																			</span>
+																			<!--end::Svg Icon--></td>
+																		</tr>
+																	</table>
+																</div>
+																<!--end::Col-->
+															</div>
+															<!--end::Details-->
+														</div>
+														<!--end::Body-->
+													</div>
+													<!--end::Option-->
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Card-->
+											<!--begin::Card-->
+											<div class="card pt-4 mb-6 mb-xl-9">
+												<!--begin::Card header-->
+												<div class="card-header border-0">
+													<!--begin::Card title-->
+													<div class="card-title">
+														<h2 class="fw-bold">Credit Balance</h2>
+													</div>
+													<!--end::Card title-->
+													<!--begin::Card toolbar-->
+													<div class="card-toolbar">
+														<a href="#" class="btn btn-sm btn-flex btn-light-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_adjust_balance">
+														<!--begin::Svg Icon | path: icons/duotune/art/art005.svg')}}-->
+														<span class="svg-icon svg-icon-3">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M21.4 8.35303L19.241 10.511L13.485 4.755L15.643 2.59595C16.0248 2.21423 16.5426 1.99988 17.0825 1.99988C17.6224 1.99988 18.1402 2.21423 18.522 2.59595L21.4 5.474C21.7817 5.85581 21.9962 6.37355 21.9962 6.91345C21.9962 7.45335 21.7817 7.97122 21.4 8.35303ZM3.68699 21.932L9.88699 19.865L4.13099 14.109L2.06399 20.309C1.98815 20.5354 1.97703 20.7787 2.03189 21.0111C2.08674 21.2436 2.2054 21.4561 2.37449 21.6248C2.54359 21.7934 2.75641 21.9115 2.989 21.9658C3.22158 22.0201 3.4647 22.0084 3.69099 21.932H3.68699Z" fill="currentColor" />
+																<path d="M5.574 21.3L3.692 21.928C3.46591 22.0032 3.22334 22.0141 2.99144 21.9594C2.75954 21.9046 2.54744 21.7864 2.3789 21.6179C2.21036 21.4495 2.09202 21.2375 2.03711 21.0056C1.9822 20.7737 1.99289 20.5312 2.06799 20.3051L2.696 18.422L5.574 21.3ZM4.13499 14.105L9.891 19.861L19.245 10.507L13.489 4.75098L4.13499 14.105Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->Adjust Balance</a>
+													</div>
+													<!--end::Card toolbar-->
+												</div>
+												<!--end::Card header-->
+												<!--begin::Card body-->
+												<div class="card-body pt-0">
+													<div class="fw-bold fs-2">$32,487.57
+													<span class="text-muted fs-4 fw-semibold">USD</span>
+													<div class="fs-7 fw-normal text-muted">Balance will increase the amount due on the customer's next invoice.</div></div>
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Card-->
+											<!--begin::Card-->
+											<div class="card pt-2 mb-6 mb-xl-9">
+												<!--begin::Card header-->
+												<div class="card-header border-0">
+													<!--begin::Card title-->
+													<div class="card-title">
+														<h2>Invoices</h2>
+													</div>
+													<!--end::Card title-->
+													<!--begin::Toolbar-->
+													<div class="card-toolbar m-0">
+														<!--begin::Tab nav-->
+														<ul class="nav nav-stretch fs-5 fw-semibold nav-line-tabs nav-line-tabs-2x border-transparent" role="tablist">
+															<li class="nav-item" role="presentation">
+																<a id="kt_referrals_year_tab" class="nav-link text-active-primary active" data-bs-toggle="tab" role="tab" href="#kt_customer_details_invoices_1">This Year</a>
+															</li>
+															<li class="nav-item" role="presentation">
+																<a id="kt_referrals_2019_tab" class="nav-link text-active-primary ms-3" data-bs-toggle="tab" role="tab" href="#kt_customer_details_invoices_2">2020</a>
+															</li>
+															<li class="nav-item" role="presentation">
+																<a id="kt_referrals_2018_tab" class="nav-link text-active-primary ms-3" data-bs-toggle="tab" role="tab" href="#kt_customer_details_invoices_3">2019</a>
+															</li>
+															<li class="nav-item" role="presentation">
+																<a id="kt_referrals_2017_tab" class="nav-link text-active-primary ms-3" data-bs-toggle="tab" role="tab" href="#kt_customer_details_invoices_4">2018</a>
+															</li>
+														</ul>
+														<!--end::Tab nav-->
+													</div>
+													<!--end::Toolbar-->
+												</div>
+												<!--end::Card header-->
+												<!--begin::Card body-->
+												<div class="card-body pt-0">
+													<!--begin::Tab Content-->
+													<div id="kt_referred_users_tab_content" class="tab-content">
+														<!--begin::Tab panel-->
+														<div id="kt_customer_details_invoices_1" class="py-0 tab-pane fade show active" role="tabpanel">
+															<!--begin::Table-->
+															<table id="kt_customer_details_invoices_table_1" class="table align-middle table-row-dashed fs-6 fw-bold gy-5">
+																<!--begin::Thead-->
+																<thead class="border-bottom border-gray-200 fs-7 text-uppercase fw-bold">
+																	<tr class="text-start text-muted gs-0">
+																		<th class="min-w-100px">Order ID</th>
+																		<th class="min-w-100px">Amount</th>
+																		<th class="min-w-100px">Status</th>
+																		<th class="min-w-125px">Date</th>
+																		<th class="min-w-100px text-end pe-7">Invoice</th>
+																	</tr>
+																</thead>
+																<!--end::Thead-->
+																<!--begin::Tbody-->
+																<tbody class="fs-6 fw-semibold text-gray-600">
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td class="text-success">$38.00</td>
+																		<td>
+																			<span class="badge badge-light-warning">Pending</span>
+																		</td>
+																		<td>Nov 01, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td>
+																			<span class="badge badge-light-danger">Rejected</span>
+																		</td>
+																		<td>Oct 24, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td class="text-success">$76.00</td>
+																		<td>
+																			<span class="badge badge-light-info">In progress</span>
+																		</td>
+																		<td>Oct 08, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td class="text-success">$5.00</td>
+																		<td>
+																			<span class="badge badge-light-success">Approved</span>
+																		</td>
+																		<td>Sep 15, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">523445943</a>
+																		</td>
+																		<td class="text-danger">$-1.30</td>
+																		<td>
+																			<span class="badge badge-light-success">Approved</span>
+																		</td>
+																		<td>May 30, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">231445943</a>
+																		</td>
+																		<td class="text-success">$204.00</td>
+																		<td>
+																			<span class="badge badge-light-success">Approved</span>
+																		</td>
+																		<td>Apr 22, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td class="text-success">$31.00</td>
+																		<td>
+																			<span class="badge badge-light-danger">Rejected</span>
+																		</td>
+																		<td>Feb 09, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td class="text-success">$52.00</td>
+																		<td>
+																			<span class="badge badge-light-danger">Rejected</span>
+																		</td>
+																		<td>Nov 01, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td>
+																			<span class="badge badge-light-danger">Rejected</span>
+																		</td>
+																		<td>Jan 04, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																</tbody>
+																<!--end::Tbody-->
+															</table>
+															<!--end::Table-->
+														</div>
+														<!--end::Tab panel-->
+														<!--begin::Tab panel-->
+														<div id="kt_customer_details_invoices_2" class="py-0 tab-pane fade" role="tabpanel">
+															<!--begin::Table-->
+															<table id="kt_customer_details_invoices_table_2" class="table align-middle table-row-dashed fs-6 fw-bold gy-5">
+																<!--begin::Thead-->
+																<thead class="border-bottom border-gray-200 fs-7 text-uppercase fw-bold">
+																	<tr class="text-start text-muted gs-0">
+																		<th class="min-w-100px">Order ID</th>
+																		<th class="min-w-100px">Amount</th>
+																		<th class="min-w-100px">Status</th>
+																		<th class="min-w-125px">Date</th>
+																		<th class="min-w-100px text-end pe-7">Invoice</th>
+																	</tr>
+																</thead>
+																<!--end::Thead-->
+																<!--begin::Tbody-->
+																<tbody class="fs-6 fw-semibold text-gray-600">
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">523445943</a>
+																		</td>
+																		<td class="text-danger">$-1.30</td>
+																		<td>
+																			<span class="badge badge-light-warning">Pending</span>
+																		</td>
+																		<td>May 30, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">231445943</a>
+																		</td>
+																		<td class="text-success">$204.00</td>
+																		<td>
+																			<span class="badge badge-light-info">In progress</span>
+																		</td>
+																		<td>Apr 22, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td class="text-success">$31.00</td>
+																		<td>
+																			<span class="badge badge-light-danger">Rejected</span>
+																		</td>
+																		<td>Feb 09, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td class="text-success">$52.00</td>
+																		<td>
+																			<span class="badge badge-light-success">Approved</span>
+																		</td>
+																		<td>Nov 01, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td>
+																			<span class="badge badge-light-success">Approved</span>
+																		</td>
+																		<td>Jan 04, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td class="text-success">$38.00</td>
+																		<td>
+																			<span class="badge badge-light-warning">Pending</span>
+																		</td>
+																		<td>Nov 01, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td>
+																			<span class="badge badge-light-warning">Pending</span>
+																		</td>
+																		<td>Oct 24, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td class="text-success">$76.00</td>
+																		<td>
+																			<span class="badge badge-light-success">Approved</span>
+																		</td>
+																		<td>Oct 08, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td class="text-success">$5.00</td>
+																		<td>
+																			<span class="badge badge-light-warning">Pending</span>
+																		</td>
+																		<td>Sep 15, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																</tbody>
+																<!--end::Tbody-->
+															</table>
+															<!--end::Table-->
+														</div>
+														<!--end::Tab panel-->
+														<!--begin::Tab panel-->
+														<div id="kt_customer_details_invoices_3" class="py-0 tab-pane fade" role="tabpanel">
+															<!--begin::Table-->
+															<table id="kt_customer_details_invoices_table_3" class="table align-middle table-row-dashed fs-6 fw-bold gy-5">
+																<!--begin::Thead-->
+																<thead class="border-bottom border-gray-200 fs-7 text-uppercase fw-bold">
+																	<tr class="text-start text-muted gs-0">
+																		<th class="min-w-100px">Order ID</th>
+																		<th class="min-w-100px">Amount</th>
+																		<th class="min-w-100px">Status</th>
+																		<th class="min-w-125px">Date</th>
+																		<th class="min-w-100px text-end pe-7">Invoice</th>
+																	</tr>
+																</thead>
+																<!--end::Thead-->
+																<!--begin::Tbody-->
+																<tbody class="fs-6 fw-semibold text-gray-600">
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td class="text-success">$31.00</td>
+																		<td>
+																			<span class="badge badge-light-success">Approved</span>
+																		</td>
+																		<td>Feb 09, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td class="text-success">$52.00</td>
+																		<td>
+																			<span class="badge badge-light-danger">Rejected</span>
+																		</td>
+																		<td>Nov 01, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td>
+																			<span class="badge badge-light-info">In progress</span>
+																		</td>
+																		<td>Jan 04, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td class="text-success">$5.00</td>
+																		<td>
+																			<span class="badge badge-light-info">In progress</span>
+																		</td>
+																		<td>Sep 15, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td class="text-success">$38.00</td>
+																		<td>
+																			<span class="badge badge-light-info">In progress</span>
+																		</td>
+																		<td>Nov 01, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td>
+																			<span class="badge badge-light-warning">Pending</span>
+																		</td>
+																		<td>Oct 24, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td class="text-success">$76.00</td>
+																		<td>
+																			<span class="badge badge-light-info">In progress</span>
+																		</td>
+																		<td>Oct 08, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">523445943</a>
+																		</td>
+																		<td class="text-danger">$-1.30</td>
+																		<td>
+																			<span class="badge badge-light-warning">Pending</span>
+																		</td>
+																		<td>May 30, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">231445943</a>
+																		</td>
+																		<td class="text-success">$204.00</td>
+																		<td>
+																			<span class="badge badge-light-warning">Pending</span>
+																		</td>
+																		<td>Apr 22, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																</tbody>
+																<!--end::Tbody-->
+															</table>
+															<!--end::Table-->
+														</div>
+														<!--end::Tab panel-->
+														<!--begin::Tab panel-->
+														<div id="kt_customer_details_invoices_4" class="py-0 tab-pane fade" role="tabpanel">
+															<!--begin::Table-->
+															<table id="kt_customer_details_invoices_table_4" class="table align-middle table-row-dashed fs-6 fw-bold gy-5">
+																<!--begin::Thead-->
+																<thead class="border-bottom border-gray-200 fs-7 text-uppercase fw-bold">
+																	<tr class="text-start text-muted gs-0">
+																		<th class="min-w-100px">Order ID</th>
+																		<th class="min-w-100px">Amount</th>
+																		<th class="min-w-100px">Status</th>
+																		<th class="min-w-125px">Date</th>
+																		<th class="min-w-100px text-end pe-7">Invoice</th>
+																	</tr>
+																</thead>
+																<!--end::Thead-->
+																<!--begin::Tbody-->
+																<tbody class="fs-6 fw-semibold text-gray-600">
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td class="text-success">$38.00</td>
+																		<td>
+																			<span class="badge badge-light-danger">Rejected</span>
+																		</td>
+																		<td>Nov 01, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td>
+																			<span class="badge badge-light-danger">Rejected</span>
+																		</td>
+																		<td>Oct 24, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td class="text-success">$38.00</td>
+																		<td>
+																			<span class="badge badge-light-warning">Pending</span>
+																		</td>
+																		<td>Nov 01, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td>
+																			<span class="badge badge-light-info">In progress</span>
+																		</td>
+																		<td>Oct 24, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td class="text-success">$31.00</td>
+																		<td>
+																			<span class="badge badge-light-info">In progress</span>
+																		</td>
+																		<td>Feb 09, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td class="text-success">$52.00</td>
+																		<td>
+																			<span class="badge badge-light-success">Approved</span>
+																		</td>
+																		<td>Nov 01, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td>
+																			<span class="badge badge-light-danger">Rejected</span>
+																		</td>
+																		<td>Jan 04, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td class="text-success">$76.00</td>
+																		<td>
+																			<span class="badge badge-light-success">Approved</span>
+																		</td>
+																		<td>Oct 08, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td class="text-success">$76.00</td>
+																		<td>
+																			<span class="badge badge-light-danger">Rejected</span>
+																		</td>
+																		<td>Oct 08, 2020</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																</tbody>
+																<!--end::Tbody-->
+															</table>
+															<!--end::Table-->
+														</div>
+														<!--end::Tab panel-->
+													</div>
+													<!--end::Tab Content-->
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Card-->
 										</div>
-										<!--end::Body-->
+										<!--end:::Tab pane-->
+										<!--begin:::Tab pane-->
+										<div class="tab-pane fade" id="kt_customer_view_overview_events_and_logs_tab" role="tabpanel">
+											<!--begin::Card-->
+											<div class="card pt-4 mb-6 mb-xl-9">
+												<!--begin::Card header-->
+												<div class="card-header border-0">
+													<!--begin::Card title-->
+													<div class="card-title">
+														<h2>Logs</h2>
+													</div>
+													<!--end::Card title-->
+													<!--begin::Card toolbar-->
+													<div class="card-toolbar">
+														<!--begin::Button-->
+														<button type="button" class="btn btn-sm btn-light-primary">
+														<!--begin::Svg Icon | path: icons/duotune/files/fil021.svg')}}-->
+														<span class="svg-icon svg-icon-3">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M19 15C20.7 15 22 13.7 22 12C22 10.3 20.7 9 19 9C18.9 9 18.9 9 18.8 9C18.9 8.7 19 8.3 19 8C19 6.3 17.7 5 16 5C15.4 5 14.8 5.2 14.3 5.5C13.4 4 11.8 3 10 3C7.2 3 5 5.2 5 8C5 8.3 5 8.7 5.1 9H5C3.3 9 2 10.3 2 12C2 13.7 3.3 15 5 15H19Z" fill="currentColor" />
+																<path d="M13 17.4V12C13 11.4 12.6 11 12 11C11.4 11 11 11.4 11 12V17.4H13Z" fill="currentColor" />
+																<path opacity="0.3" d="M8 17.4H16L12.7 20.7C12.3 21.1 11.7 21.1 11.3 20.7L8 17.4Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->Download Report</button>
+														<!--end::Button-->
+													</div>
+													<!--end::Card toolbar-->
+												</div>
+												<!--end::Card header-->
+												<!--begin::Card body-->
+												<div class="card-body py-0">
+													<!--begin::Table wrapper-->
+													<div class="table-responsive">
+														<!--begin::Table-->
+														<table class="table align-middle table-row-dashed fw-semibold text-gray-600 fs-6 gy-5" id="kt_table_customers_logs">
+															<!--begin::Table body-->
+															<tbody>
+																<!--begin::Table row-->
+																<tr>
+																	<!--begin::Badge=-->
+																	<td class="min-w-70px">
+																		<div class="badge badge-light-warning">404 WRN</div>
+																	</td>
+																	<!--end::Badge=-->
+																	<!--begin::Status=-->
+																	<td>POST /v1/customer/c_62cfbfbad4e37/not_found</td>
+																	<!--end::Status=-->
+																	<!--begin::Timestamp=-->
+																	<td class="pe-0 text-end min-w-200px">24 Jun 2022, 8:43 pm</td>
+																	<!--end::Timestamp=-->
+																</tr>
+																<!--end::Table row-->
+																<!--begin::Table row-->
+																<tr>
+																	<!--begin::Badge=-->
+																	<td class="min-w-70px">
+																		<div class="badge badge-light-success">200 OK</div>
+																	</td>
+																	<!--end::Badge=-->
+																	<!--begin::Status=-->
+																	<td>POST /v1/invoices/in_1518_5561/payment</td>
+																	<!--end::Status=-->
+																	<!--begin::Timestamp=-->
+																	<td class="pe-0 text-end min-w-200px">10 Nov 2022, 10:10 pm</td>
+																	<!--end::Timestamp=-->
+																</tr>
+																<!--end::Table row-->
+																<!--begin::Table row-->
+																<tr>
+																	<!--begin::Badge=-->
+																	<td class="min-w-70px">
+																		<div class="badge badge-light-success">200 OK</div>
+																	</td>
+																	<!--end::Badge=-->
+																	<!--begin::Status=-->
+																	<td>POST /v1/invoices/in_1663_2233/payment</td>
+																	<!--end::Status=-->
+																	<!--begin::Timestamp=-->
+																	<td class="pe-0 text-end min-w-200px">25 Jul 2022, 8:43 pm</td>
+																	<!--end::Timestamp=-->
+																</tr>
+																<!--end::Table row-->
+																<!--begin::Table row-->
+																<tr>
+																	<!--begin::Badge=-->
+																	<td class="min-w-70px">
+																		<div class="badge badge-light-danger">500 ERR</div>
+																	</td>
+																	<!--end::Badge=-->
+																	<!--begin::Status=-->
+																	<td>POST /v1/invoice/in_7078_8308/invalid</td>
+																	<!--end::Status=-->
+																	<!--begin::Timestamp=-->
+																	<td class="pe-0 text-end min-w-200px">21 Feb 2022, 11:05 am</td>
+																	<!--end::Timestamp=-->
+																</tr>
+																<!--end::Table row-->
+																<!--begin::Table row-->
+																<tr>
+																	<!--begin::Badge=-->
+																	<td class="min-w-70px">
+																		<div class="badge badge-light-success">200 OK</div>
+																	</td>
+																	<!--end::Badge=-->
+																	<!--begin::Status=-->
+																	<td>POST /v1/invoices/in_9811_4626/payment</td>
+																	<!--end::Status=-->
+																	<!--begin::Timestamp=-->
+																	<td class="pe-0 text-end min-w-200px">20 Jun 2022, 5:30 pm</td>
+																	<!--end::Timestamp=-->
+																</tr>
+																<!--end::Table row-->
+																<!--begin::Table row-->
+																<tr>
+																	<!--begin::Badge=-->
+																	<td class="min-w-70px">
+																		<div class="badge badge-light-success">200 OK</div>
+																	</td>
+																	<!--end::Badge=-->
+																	<!--begin::Status=-->
+																	<td>POST /v1/invoices/in_1518_5561/payment</td>
+																	<!--end::Status=-->
+																	<!--begin::Timestamp=-->
+																	<td class="pe-0 text-end min-w-200px">22 Sep 2022, 11:05 am</td>
+																	<!--end::Timestamp=-->
+																</tr>
+																<!--end::Table row-->
+																<!--begin::Table row-->
+																<tr>
+																	<!--begin::Badge=-->
+																	<td class="min-w-70px">
+																		<div class="badge badge-light-warning">404 WRN</div>
+																	</td>
+																	<!--end::Badge=-->
+																	<!--begin::Status=-->
+																	<td>POST /v1/customer/c_62cfbfbad4e3a/not_found</td>
+																	<!--end::Status=-->
+																	<!--begin::Timestamp=-->
+																	<td class="pe-0 text-end min-w-200px">15 Apr 2022, 9:23 pm</td>
+																	<!--end::Timestamp=-->
+																</tr>
+																<!--end::Table row-->
+																<!--begin::Table row-->
+																<tr>
+																	<!--begin::Badge=-->
+																	<td class="min-w-70px">
+																		<div class="badge badge-light-success">200 OK</div>
+																	</td>
+																	<!--end::Badge=-->
+																	<!--begin::Status=-->
+																	<td>POST /v1/invoices/in_4905_7668/payment</td>
+																	<!--end::Status=-->
+																	<!--begin::Timestamp=-->
+																	<td class="pe-0 text-end min-w-200px">24 Jun 2022, 5:30 pm</td>
+																	<!--end::Timestamp=-->
+																</tr>
+																<!--end::Table row-->
+																<!--begin::Table row-->
+																<tr>
+																	<!--begin::Badge=-->
+																	<td class="min-w-70px">
+																		<div class="badge badge-light-success">200 OK</div>
+																	</td>
+																	<!--end::Badge=-->
+																	<!--begin::Status=-->
+																	<td>POST /v1/invoices/in_9484_3428/payment</td>
+																	<!--end::Status=-->
+																	<!--begin::Timestamp=-->
+																	<td class="pe-0 text-end min-w-200px">24 Jun 2022, 11:30 am</td>
+																	<!--end::Timestamp=-->
+																</tr>
+																<!--end::Table row-->
+																<!--begin::Table row-->
+																<tr>
+																	<!--begin::Badge=-->
+																	<td class="min-w-70px">
+																		<div class="badge badge-light-success">200 OK</div>
+																	</td>
+																	<!--end::Badge=-->
+																	<!--begin::Status=-->
+																	<td>POST /v1/invoices/in_1518_5561/payment</td>
+																	<!--end::Status=-->
+																	<!--begin::Timestamp=-->
+																	<td class="pe-0 text-end min-w-200px">05 May 2022, 10:30 am</td>
+																	<!--end::Timestamp=-->
+																</tr>
+																<!--end::Table row-->
+															</tbody>
+															<!--end::Table body-->
+														</table>
+														<!--end::Table-->
+													</div>
+													<!--end::Table wrapper-->
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Card-->
+											<!--begin::Card-->
+											<div class="card pt-4 mb-6 mb-xl-9">
+												<!--begin::Card header-->
+												<div class="card-header border-0">
+													<!--begin::Card title-->
+													<div class="card-title">
+														<h2>Events</h2>
+													</div>
+													<!--end::Card title-->
+													<!--begin::Card toolbar-->
+													<div class="card-toolbar">
+														<!--begin::Button-->
+														<button type="button" class="btn btn-sm btn-light-primary">
+														<!--begin::Svg Icon | path: icons/duotune/files/fil021.svg')}}-->
+														<span class="svg-icon svg-icon-3">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path opacity="0.3" d="M19 15C20.7 15 22 13.7 22 12C22 10.3 20.7 9 19 9C18.9 9 18.9 9 18.8 9C18.9 8.7 19 8.3 19 8C19 6.3 17.7 5 16 5C15.4 5 14.8 5.2 14.3 5.5C13.4 4 11.8 3 10 3C7.2 3 5 5.2 5 8C5 8.3 5 8.7 5.1 9H5C3.3 9 2 10.3 2 12C2 13.7 3.3 15 5 15H19Z" fill="currentColor" />
+																<path d="M13 17.4V12C13 11.4 12.6 11 12 11C11.4 11 11 11.4 11 12V17.4H13Z" fill="currentColor" />
+																<path opacity="0.3" d="M8 17.4H16L12.7 20.7C12.3 21.1 11.7 21.1 11.3 20.7L8 17.4Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->Download Report</button>
+														<!--end::Button-->
+													</div>
+													<!--end::Card toolbar-->
+												</div>
+												<!--end::Card header-->
+												<!--begin::Card body-->
+												<div class="card-body py-0">
+													<!--begin::Table-->
+													<table class="table align-middle table-row-dashed fs-6 text-gray-600 fw-semibold gy-5" id="kt_table_customers_events">
+														<!--begin::Table body-->
+														<tbody>
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Event=-->
+																<td class="min-w-400px">Invoice
+																<a href="#" class="fw-bold text-gray-900 text-hover-primary me-1">#DER-45645</a>status has changed from
+																<span class="badge badge-light-info me-1">In Progress</span>to
+																<span class="badge badge-light-primary">In Transit</span></td>
+																<!--end::Event=-->
+																<!--begin::Timestamp=-->
+																<td class="pe-0 text-gray-600 text-end min-w-200px">20 Dec 2022, 6:43 am</td>
+																<!--end::Timestamp=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Event=-->
+																<td class="min-w-400px">Invoice
+																<a href="#" class="fw-bold text-gray-900 text-hover-primary me-1">#DER-45645</a>status has changed from
+																<span class="badge badge-light-info me-1">In Progress</span>to
+																<span class="badge badge-light-primary">In Transit</span></td>
+																<!--end::Event=-->
+																<!--begin::Timestamp=-->
+																<td class="pe-0 text-gray-600 text-end min-w-200px">21 Feb 2022, 10:10 pm</td>
+																<!--end::Timestamp=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Event=-->
+																<td class="min-w-400px">
+																<a href="#" class="text-gray-600 text-hover-primary me-1">Sean Bean</a>has made payment to
+																<a href="#" class="fw-bold text-gray-900 text-hover-primary">#XRS-45670</a></td>
+																<!--end::Event=-->
+																<!--begin::Timestamp=-->
+																<td class="pe-0 text-gray-600 text-end min-w-200px">10 Mar 2022, 5:20 pm</td>
+																<!--end::Timestamp=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Event=-->
+																<td class="min-w-400px">Invoice
+																<a href="#" class="fw-bold text-gray-900 text-hover-primary me-1">#WER-45670</a>is
+																<span class="badge badge-light-info">In Progress</span></td>
+																<!--end::Event=-->
+																<!--begin::Timestamp=-->
+																<td class="pe-0 text-gray-600 text-end min-w-200px">20 Dec 2022, 6:05 pm</td>
+																<!--end::Timestamp=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Event=-->
+																<td class="min-w-400px">
+																<a href="#" class="text-gray-600 text-hover-primary me-1">Sean Bean</a>has made payment to
+																<a href="#" class="fw-bold text-gray-900 text-hover-primary">#XRS-45670</a></td>
+																<!--end::Event=-->
+																<!--begin::Timestamp=-->
+																<td class="pe-0 text-gray-600 text-end min-w-200px">05 May 2022, 10:10 pm</td>
+																<!--end::Timestamp=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Event=-->
+																<td class="min-w-400px">
+																<a href="#" class="text-gray-600 text-hover-primary me-1">Brian Cox</a>has made payment to
+																<a href="#" class="fw-bold text-gray-900 text-hover-primary">#OLP-45690</a></td>
+																<!--end::Event=-->
+																<!--begin::Timestamp=-->
+																<td class="pe-0 text-gray-600 text-end min-w-200px">10 Nov 2022, 9:23 pm</td>
+																<!--end::Timestamp=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Event=-->
+																<td class="min-w-400px">
+																<a href="#" class="text-gray-600 text-hover-primary me-1">Sean Bean</a>has made payment to
+																<a href="#" class="fw-bold text-gray-900 text-hover-primary">#XRS-45670</a></td>
+																<!--end::Event=-->
+																<!--begin::Timestamp=-->
+																<td class="pe-0 text-gray-600 text-end min-w-200px">24 Jun 2022, 10:10 pm</td>
+																<!--end::Timestamp=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Event=-->
+																<td class="min-w-400px">Invoice
+																<a href="#" class="fw-bold text-gray-900 text-hover-primary me-1">#KIO-45656</a>status has changed from
+																<span class="badge badge-light-succees me-1">In Transit</span>to
+																<span class="badge badge-light-success">Approved</span></td>
+																<!--end::Event=-->
+																<!--begin::Timestamp=-->
+																<td class="pe-0 text-gray-600 text-end min-w-200px">21 Feb 2022, 5:30 pm</td>
+																<!--end::Timestamp=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Event=-->
+																<td class="min-w-400px">Invoice
+																<a href="#" class="fw-bold text-gray-900 text-hover-primary me-1">#DER-45645</a>status has changed from
+																<span class="badge badge-light-info me-1">In Progress</span>to
+																<span class="badge badge-light-primary">In Transit</span></td>
+																<!--end::Event=-->
+																<!--begin::Timestamp=-->
+																<td class="pe-0 text-gray-600 text-end min-w-200px">19 Aug 2022, 5:20 pm</td>
+																<!--end::Timestamp=-->
+															</tr>
+															<!--end::Table row-->
+															<!--begin::Table row-->
+															<tr>
+																<!--begin::Event=-->
+																<td class="min-w-400px">Invoice
+																<a href="#" class="fw-bold text-gray-900 text-hover-primary me-1">#LOP-45640</a>has been
+																<span class="badge badge-light-danger">Declined</span></td>
+																<!--end::Event=-->
+																<!--begin::Timestamp=-->
+																<td class="pe-0 text-gray-600 text-end min-w-200px">10 Mar 2022, 6:43 am</td>
+																<!--end::Timestamp=-->
+															</tr>
+															<!--end::Table row-->
+														</tbody>
+														<!--end::Table body-->
+													</table>
+													<!--end::Table-->
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Card-->
+										</div>
+										<!--end:::Tab pane-->
+										<!--begin:::Tab pane-->
+										<div class="tab-pane fade" id="kt_customer_view_overview_statements" role="tabpanel">
+											<!--begin::Earnings-->
+											<div class="card mb-6 mb-xl-9">
+												<!--begin::Header-->
+												<div class="card-header border-0">
+													<div class="card-title">
+														<h2>Earnings</h2>
+													</div>
+												</div>
+												<!--end::Header-->
+												<!--begin::Body-->
+												<div class="card-body py-0">
+													<div class="fs-5 fw-semibold text-gray-500 mb-4">Last 30 day earnings calculated. Apart from arranging the order of topics.</div>
+													<!--begin::Left Section-->
+													<div class="d-flex flex-wrap flex-stack mb-5">
+														<!--begin::Row-->
+														<div class="d-flex flex-wrap">
+															<!--begin::Col-->
+															<div class="border border-dashed border-gray-300 w-150px rounded my-3 p-4 me-6">
+																<span class="fs-1 fw-bold text-gray-800 lh-1">
+																	<span data-kt-countup="true" data-kt-countup-value="6,840" data-kt-countup-prefix="$">0</span>
+																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg')}}-->
+																	<span class="svg-icon svg-icon-1 svg-icon-success">
+																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																			<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+																			<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+																		</svg>
+																	</span>
+																	<!--end::Svg Icon-->
+																</span>
+																<span class="fs-6 fw-semibold text-muted d-block lh-1 pt-2">Net Earnings</span>
+															</div>
+															<!--end::Col-->
+															<!--begin::Col-->
+															<div class="border border-dashed border-gray-300 w-125px rounded my-3 p-4 me-6">
+																<span class="fs-1 fw-bold text-gray-800 lh-1">
+																<span class="" data-kt-countup="true" data-kt-countup-value="16">0</span>%
+																<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg')}}-->
+																<span class="svg-icon svg-icon-1 svg-icon-danger">
+																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
+																		<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon--></span>
+																<span class="fs-6 fw-semibold text-muted d-block lh-1 pt-2">Change</span>
+															</div>
+															<!--end::Col-->
+															<!--begin::Col-->
+															<div class="border border-dashed border-gray-300 w-150px rounded my-3 p-4 me-6">
+																<span class="fs-1 fw-bold text-gray-800 lh-1">
+																	<span data-kt-countup="true" data-kt-countup-value="1,240" data-kt-countup-prefix="$">0</span>
+																	<span class="text-primary">--</span>
+																</span>
+																<span class="fs-6 fw-semibold text-muted d-block lh-1 pt-2">Fees</span>
+															</div>
+															<!--end::Col-->
+														</div>
+														<!--end::Row-->
+														<a href="#" class="btn btn-sm btn-light-primary flex-shrink-0">Withdraw Earnings</a>
+													</div>
+													<!--end::Left Section-->
+												</div>
+												<!--end::Body-->
+											</div>
+											<!--end::Earnings-->
+											<!--begin::Statements-->
+											<div class="card mb-6 mb-xl-9">
+												<!--begin::Header-->
+												<div class="card-header">
+													<!--begin::Title-->
+													<div class="card-title">
+														<h2>Statement</h2>
+													</div>
+													<!--end::Title-->
+													<!--begin::Toolbar-->
+													<div class="card-toolbar">
+														<!--begin::Tab nav-->
+														<ul class="nav nav-stretch fs-5 fw-semibold nav-line-tabs nav-line-tabs-2x border-transparent" role="tablist">
+															<li class="nav-item" role="presentation">
+																<a class="nav-link text-active-primary active" data-bs-toggle="tab" role="tab" href="#kt_customer_view_statement_1">This Year</a>
+															</li>
+															<li class="nav-item" role="presentation">
+																<a class="nav-link text-active-primary ms-3" data-bs-toggle="tab" role="tab" href="#kt_customer_view_statement_2">2020</a>
+															</li>
+															<li class="nav-item" role="presentation">
+																<a class="nav-link text-active-primary ms-3" data-bs-toggle="tab" role="tab" href="#kt_customer_view_statement_3">2019</a>
+															</li>
+															<li class="nav-item" role="presentation">
+																<a class="nav-link text-active-primary ms-3" data-bs-toggle="tab" role="tab" href="#kt_customer_view_statement_4">2018</a>
+															</li>
+														</ul>
+														<!--end::Tab nav-->
+													</div>
+													<!--end::Toolbar-->
+												</div>
+												<!--end::Header-->
+												<!--begin::Card body-->
+												<div class="card-body pb-5">
+													<!--begin::Tab Content-->
+													<div id="kt_customer_view_statement_tab_content" class="tab-content">
+														<!--begin::Tab panel-->
+														<div id="kt_customer_view_statement_1" class="py-0 tab-pane fade show active" role="tabpanel">
+															<!--begin::Table-->
+															<table id="kt_customer_view_statement_table_1" class="table align-middle table-row-dashed fs-6 text-gray-600 fw-semibold gy-4">
+																<!--begin::Table head-->
+																<thead class="border-bottom border-gray-200">
+																	<!--begin::Table row-->
+																	<tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+																		<th class="w-125px">Date</th>
+																		<th class="w-100px">Order ID</th>
+																		<th class="w-300px">Details</th>
+																		<th class="w-100px">Amount</th>
+																		<th class="w-100px text-end pe-7">Invoice</th>
+																	</tr>
+																	<!--end::Table row-->
+																</thead>
+																<!--end::Table head-->
+																<!--begin::Table body-->
+																<tbody>
+																	<tr>
+																		<td>Nov 01, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td>Darknight transparency 36 Icons Pack</td>
+																		<td class="text-success">$38.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 24, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 08, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Cartoon Mobile Emoji Phone Pack</td>
+																		<td class="text-success">$76.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Sep 15, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Iphone 12 Pro Mockup Mega Bundle</td>
+																		<td class="text-success">$5.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>May 30, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">523445943</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-1.30</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Apr 22, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">231445943</a>
+																		</td>
+																		<td>Parcel Shipping / Delivery Service App</td>
+																		<td class="text-success">$204.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Feb 09, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td>Visual Design Illustration</td>
+																		<td class="text-success">$31.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td>Abstract Vusial Pack</td>
+																		<td class="text-success">$52.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Jan 04, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td>Darknight transparency 36 Icons Pack</td>
+																		<td class="text-success">$38.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 24, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 08, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Cartoon Mobile Emoji Phone Pack</td>
+																		<td class="text-success">$76.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Sep 15, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Iphone 12 Pro Mockup Mega Bundle</td>
+																		<td class="text-success">$5.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>May 30, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">523445943</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-1.30</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Apr 22, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">231445943</a>
+																		</td>
+																		<td>Parcel Shipping / Delivery Service App</td>
+																		<td class="text-success">$204.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Feb 09, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td>Visual Design Illustration</td>
+																		<td class="text-success">$31.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td>Abstract Vusial Pack</td>
+																		<td class="text-success">$52.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Jan 04, 2021</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																</tbody>
+																<!--end::Table body-->
+															</table>
+															<!--end::Table-->
+														</div>
+														<!--end::Tab panel-->
+														<!--begin::Tab panel-->
+														<div id="kt_customer_view_statement_2" class="py-0 tab-pane fade" role="tabpanel">
+															<!--begin::Table-->
+															<table id="kt_customer_view_statement_table_2" class="table align-middle table-row-dashed fs-6 text-gray-600 fw-semibold gy-4">
+																<!--begin::Table head-->
+																<thead class="border-bottom border-gray-200">
+																	<!--begin::Table row-->
+																	<tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+																		<th class="w-125px">Date</th>
+																		<th class="w-100px">Order ID</th>
+																		<th class="w-300px">Details</th>
+																		<th class="w-100px">Amount</th>
+																		<th class="w-100px text-end pe-7">Invoice</th>
+																	</tr>
+																	<!--end::Table row-->
+																</thead>
+																<!--end::Table head-->
+																<!--begin::Table body-->
+																<tbody>
+																	<tr>
+																		<td>May 30, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">523445943</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-1.30</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Apr 22, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">231445943</a>
+																		</td>
+																		<td>Parcel Shipping / Delivery Service App</td>
+																		<td class="text-success">$204.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Feb 09, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td>Visual Design Illustration</td>
+																		<td class="text-success">$31.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td>Abstract Vusial Pack</td>
+																		<td class="text-success">$52.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Jan 04, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td>Darknight transparency 36 Icons Pack</td>
+																		<td class="text-success">$38.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 24, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 08, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Cartoon Mobile Emoji Phone Pack</td>
+																		<td class="text-success">$76.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Sep 15, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Iphone 12 Pro Mockup Mega Bundle</td>
+																		<td class="text-success">$5.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>May 30, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">523445943</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-1.30</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Apr 22, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">231445943</a>
+																		</td>
+																		<td>Parcel Shipping / Delivery Service App</td>
+																		<td class="text-success">$204.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Feb 09, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td>Visual Design Illustration</td>
+																		<td class="text-success">$31.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td>Abstract Vusial Pack</td>
+																		<td class="text-success">$52.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Jan 04, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td>Darknight transparency 36 Icons Pack</td>
+																		<td class="text-success">$38.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 24, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 08, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Cartoon Mobile Emoji Phone Pack</td>
+																		<td class="text-success">$76.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Sep 15, 2020</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Iphone 12 Pro Mockup Mega Bundle</td>
+																		<td class="text-success">$5.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																</tbody>
+																<!--end::Table body-->
+															</table>
+															<!--end::Table-->
+														</div>
+														<!--end::Tab panel-->
+														<!--begin::Tab panel-->
+														<div id="kt_customer_view_statement_3" class="py-0 tab-pane fade" role="tabpanel">
+															<!--begin::Table-->
+															<table id="kt_customer_view_statement_table_3" class="table align-middle table-row-dashed fs-6 text-gray-600 fw-semibold gy-4">
+																<!--begin::Table head-->
+																<thead class="border-bottom border-gray-200">
+																	<!--begin::Table row-->
+																	<tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+																		<th class="w-125px">Date</th>
+																		<th class="w-100px">Order ID</th>
+																		<th class="w-300px">Details</th>
+																		<th class="w-100px">Amount</th>
+																		<th class="w-100px text-end pe-7">Invoice</th>
+																	</tr>
+																	<!--end::Table row-->
+																</thead>
+																<!--end::Table head-->
+																<!--begin::Table body-->
+																<tbody>
+																	<tr>
+																		<td>Feb 09, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td>Visual Design Illustration</td>
+																		<td class="text-success">$31.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td>Abstract Vusial Pack</td>
+																		<td class="text-success">$52.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Jan 04, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Sep 15, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Iphone 12 Pro Mockup Mega Bundle</td>
+																		<td class="text-success">$5.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td>Darknight transparency 36 Icons Pack</td>
+																		<td class="text-success">$38.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 24, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 08, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Cartoon Mobile Emoji Phone Pack</td>
+																		<td class="text-success">$76.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>May 30, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">523445943</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-1.30</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Apr 22, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">231445943</a>
+																		</td>
+																		<td>Parcel Shipping / Delivery Service App</td>
+																		<td class="text-success">$204.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Feb 09, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td>Visual Design Illustration</td>
+																		<td class="text-success">$31.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td>Abstract Vusial Pack</td>
+																		<td class="text-success">$52.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Jan 04, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Sep 15, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Iphone 12 Pro Mockup Mega Bundle</td>
+																		<td class="text-success">$5.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td>Darknight transparency 36 Icons Pack</td>
+																		<td class="text-success">$38.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 24, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 08, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Cartoon Mobile Emoji Phone Pack</td>
+																		<td class="text-success">$76.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>May 30, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">523445943</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-1.30</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Apr 22, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">231445943</a>
+																		</td>
+																		<td>Parcel Shipping / Delivery Service App</td>
+																		<td class="text-success">$204.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																</tbody>
+																<!--end::Table body-->
+															</table>
+															<!--end::Table-->
+														</div>
+														<!--end::Tab panel-->
+														<!--begin::Tab panel-->
+														<div id="kt_customer_view_statement_4" class="py-0 tab-pane fade" role="tabpanel">
+															<!--begin::Table-->
+															<table id="kt_customer_view_statement_table_4" class="table align-middle table-row-dashed fs-6 text-gray-600 fw-semibold gy-4">
+																<!--begin::Table head-->
+																<thead class="border-bottom border-gray-200">
+																	<!--begin::Table row-->
+																	<tr class="text-start text-muted fw-bold fs-7 text-uppercase gs-0">
+																		<th class="w-125px">Date</th>
+																		<th class="w-100px">Order ID</th>
+																		<th class="w-300px">Details</th>
+																		<th class="w-100px">Amount</th>
+																		<th class="w-100px text-end pe-7">Invoice</th>
+																	</tr>
+																	<!--end::Table row-->
+																</thead>
+																<!--end::Table head-->
+																<!--begin::Table body-->
+																<tbody>
+																	<tr>
+																		<td>Nov 01, 2018</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td>Darknight transparency 36 Icons Pack</td>
+																		<td class="text-success">$38.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 24, 2018</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2018</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td>Darknight transparency 36 Icons Pack</td>
+																		<td class="text-success">$38.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 24, 2018</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Feb 09, 2018</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td>Visual Design Illustration</td>
+																		<td class="text-success">$31.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2018</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td>Abstract Vusial Pack</td>
+																		<td class="text-success">$52.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Jan 04, 2018</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 08, 2018</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Cartoon Mobile Emoji Phone Pack</td>
+																		<td class="text-success">$76.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 08, 2018</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Cartoon Mobile Emoji Phone Pack</td>
+																		<td class="text-success">$76.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Feb 09, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">426445943</a>
+																		</td>
+																		<td>Visual Design Illustration</td>
+																		<td class="text-success">$31.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">984445943</a>
+																		</td>
+																		<td>Abstract Vusial Pack</td>
+																		<td class="text-success">$52.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Jan 04, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">324442313</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-0.80</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Sep 15, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Iphone 12 Pro Mockup Mega Bundle</td>
+																		<td class="text-success">$5.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Nov 01, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">102445788</a>
+																		</td>
+																		<td>Darknight transparency 36 Icons Pack</td>
+																		<td class="text-success">$38.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 24, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">423445721</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-2.60</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Oct 08, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">312445984</a>
+																		</td>
+																		<td>Cartoon Mobile Emoji Phone Pack</td>
+																		<td class="text-success">$76.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>May 30, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">523445943</a>
+																		</td>
+																		<td>Seller Fee</td>
+																		<td class="text-danger">$-1.30</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>Apr 22, 2019</td>
+																		<td>
+																			<a href="#" class="text-gray-600 text-hover-primary">231445943</a>
+																		</td>
+																		<td>Parcel Shipping / Delivery Service App</td>
+																		<td class="text-success">$204.00</td>
+																		<td class="text-end">
+																			<button class="btn btn-sm btn-light btn-active-light-primary">Download</button>
+																		</td>
+																	</tr>
+																</tbody>
+																<!--end::Table body-->
+															</table>
+															<!--end::Table-->
+														</div>
+														<!--end::Tab panel-->
+													</div>
+													<!--end::Tab Content-->
+												</div>
+												<!--end::Card body-->
+											</div>
+											<!--end::Statements-->
+										</div>
+										<!--end:::Tab pane-->
 									</div>
-									<!--end::Chart Widget 37-->
+									<!--end:::Tab content-->
 								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-xl-8">
-									<!--begin::Tables widget 15-->
-									<div class="card card-flush h-lg-100">
-										<!--begin::Header-->
-										<div class="card-header pt-7">
-											<!--begin::Title-->
-											<h3 class="card-title align-items-start flex-column">
-												<span class="card-label fw-bold text-gray-800">Projects Stats</span>
-												<span class="text-gray-400 mt-1 fw-semibold fs-6">Updated 37 minutes ago</span>
-											</h3>
-											<!--end::Title-->
-											<!--begin::Toolbar-->
-											<div class="card-toolbar">
-												<!--begin::Daterangepicker(defined in src/js/layout/app.js')}})-->
-												<div data-kt-daterangepicker="true" data-kt-daterangepicker-opens="left" class="btn btn-sm btn-light d-flex align-items-center px-4">
-													<!--begin::Display range-->
-													<div class="text-gray-600 fw-bold">Loading date range...</div>
-													<!--end::Display range-->
-													<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg')}}-->
-													<span class="svg-icon svg-icon-1 ms-2 me-0">
+								<!--end::Content-->
+							</div>
+							<!--end::Layout-->
+							<!--begin::Modals-->
+							<!--begin::Modal - Add Payment-->
+							<div class="modal fade" id="kt_modal_add_payment" tabindex="-1" aria-hidden="true">
+								<!--begin::Modal dialog-->
+								<div class="modal-dialog mw-650px">
+									<!--begin::Modal content-->
+									<div class="modal-content">
+										<!--begin::Modal header-->
+										<div class="modal-header">
+											<!--begin::Modal title-->
+											<h2 class="fw-bold">Add a Payment Record</h2>
+											<!--end::Modal title-->
+											<!--begin::Close-->
+											<div id="kt_modal_add_payment_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+												<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg')}}-->
+												<span class="svg-icon svg-icon-1">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+											</div>
+											<!--end::Close-->
+										</div>
+										<!--end::Modal header-->
+										<!--begin::Modal body-->
+										<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+											<!--begin::Form-->
+											<form id="kt_modal_add_payment_form" class="form" action="#">
+												<!--begin::Input group-->
+												<div class="fv-row mb-7">
+													<!--begin::Label-->
+													<label class="fs-6 fw-semibold form-label mb-2">
+														<span class="required">Invoice Number</span>
+														<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="The invoice number must be unique."></i>
+													</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-solid" name="invoice" value="" />
+													<!--end::Input-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Input group-->
+												<div class="fv-row mb-7">
+													<!--begin::Label-->
+													<label class="required fs-6 fw-semibold form-label mb-2">Status</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<select class="form-select form-select-solid fw-bold" name="status" data-control="select2" data-placeholder="Select an option" data-hide-search="true">
+														<option></option>
+														<option value="0">Approved</option>
+														<option value="1">Pending</option>
+														<option value="2">Rejected</option>
+														<option value="3">In progress</option>
+														<option value="4">Completed</option>
+													</select>
+													<!--end::Input-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Input group-->
+												<div class="fv-row mb-7">
+													<!--begin::Label-->
+													<label class="required fs-6 fw-semibold form-label mb-2">Invoice Amount</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-solid" name="amount" value="" />
+													<!--end::Input-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Input group-->
+												<div class="fv-row mb-15">
+													<!--begin::Label-->
+													<label class="fs-6 fw-semibold form-label mb-2">
+														<span class="required">Additional Information</span>
+														<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Information such as description of invoice or product purchased."></i>
+													</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<textarea class="form-control form-control-solid rounded-3" name="additional_info"></textarea>
+													<!--end::Input-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Actions-->
+												<div class="text-center">
+													<button type="reset" id="kt_modal_add_payment_cancel" class="btn btn-light me-3">Discard</button>
+													<button type="submit" id="kt_modal_add_payment_submit" class="btn btn-primary">
+														<span class="indicator-label">Submit</span>
+														<span class="indicator-progress">Please wait...
+														<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													</button>
+												</div>
+												<!--end::Actions-->
+											</form>
+											<!--end::Form-->
+										</div>
+										<!--end::Modal body-->
+									</div>
+									<!--end::Modal content-->
+								</div>
+								<!--end::Modal dialog-->
+							</div>
+							<!--end::Modal - New Card-->
+							<!--begin::Modal - Adjust Balance-->
+							<div class="modal fade" id="kt_modal_adjust_balance" tabindex="-1" aria-hidden="true">
+								<!--begin::Modal dialog-->
+								<div class="modal-dialog modal-dialog-centered mw-650px">
+									<!--begin::Modal content-->
+									<div class="modal-content">
+										<!--begin::Modal header-->
+										<div class="modal-header">
+											<!--begin::Modal title-->
+											<h2 class="fw-bold">Adjust Balance</h2>
+											<!--end::Modal title-->
+											<!--begin::Close-->
+											<div id="kt_modal_adjust_balance_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+												<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg')}}-->
+												<span class="svg-icon svg-icon-1">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
+											</div>
+											<!--end::Close-->
+										</div>
+										<!--end::Modal header-->
+										<!--begin::Modal body-->
+										<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+											<!--begin::Balance preview-->
+											<div class="d-flex text-center mb-9">
+												<div class="w-50 border border-dashed border-gray-300 rounded mx-2 p-4">
+													<div class="fs-6 fw-semibold mb-2 text-muted">Current Balance</div>
+													<div class="fs-2 fw-bold" kt-modal-adjust-balance="current_balance">US$ 32,487.57</div>
+												</div>
+												<div class="w-50 border border-dashed border-gray-300 rounded mx-2 p-4">
+													<div class="fs-6 fw-semibold mb-2 text-muted">New Balance
+													<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Enter an amount to preview the new balance."></i></div>
+													<div class="fs-2 fw-bold" kt-modal-adjust-balance="new_balance">--</div>
+												</div>
+											</div>
+											<!--end::Balance preview-->
+											<!--begin::Form-->
+											<form id="kt_modal_adjust_balance_form" class="form" action="#">
+												<!--begin::Input group-->
+												<div class="fv-row mb-7">
+													<!--begin::Label-->
+													<label class="required fs-6 fw-semibold form-label mb-2">Adjustment type</label>
+													<!--end::Label-->
+													<!--begin::Dropdown-->
+													<select class="form-select form-select-solid fw-bold" name="adjustment" aria-label="Select an option" data-control="select2" data-dropdown-parent="#kt_modal_adjust_balance" data-placeholder="Select an option" data-hide-search="true">
+														<option></option>
+														<option value="1">Credit</option>
+														<option value="2">Debit</option>
+													</select>
+													<!--end::Dropdown-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Input group-->
+												<div class="fv-row mb-7">
+													<!--begin::Label-->
+													<label class="required fs-6 fw-semibold form-label mb-2">Amount</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<input id="kt_modal_inputmask" type="text" class="form-control form-control-solid" name="amount" value="" />
+													<!--end::Input-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Input group-->
+												<div class="fv-row mb-7">
+													<!--begin::Label-->
+													<label class="fs-6 fw-semibold form-label mb-2">Add adjustment note</label>
+													<!--end::Label-->
+													<!--begin::Input-->
+													<textarea class="form-control form-control-solid rounded-3 mb-5"></textarea>
+													<!--end::Input-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Disclaimer-->
+												<div class="fs-7 text-muted mb-15">Please be aware that all manual balance changes will be audited by the financial team every fortnight. Please maintain your invoices and receipts until then. Thank you.</div>
+												<!--end::Disclaimer-->
+												<!--begin::Actions-->
+												<div class="text-center">
+													<button type="reset" id="kt_modal_adjust_balance_cancel" class="btn btn-light me-3">Discard</button>
+													<button type="submit" id="kt_modal_adjust_balance_submit" class="btn btn-primary">
+														<span class="indicator-label">Submit</span>
+														<span class="indicator-progress">Please wait...
+														<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													</button>
+												</div>
+												<!--end::Actions-->
+											</form>
+											<!--end::Form-->
+										</div>
+										<!--end::Modal body-->
+									</div>
+									<!--end::Modal content-->
+								</div>
+								<!--end::Modal dialog-->
+							</div>
+							<!--end::Modal - New Card-->
+							<!--begin::Modal - New Address-->
+							<div class="modal fade" id="kt_modal_update_customer" tabindex="-1" aria-hidden="true">
+								<!--begin::Modal dialog-->
+								<div class="modal-dialog modal-dialog-centered mw-650px">
+									<!--begin::Modal content-->
+									<div class="modal-content">
+										<!--begin::Form-->
+                                        <form enctype="multipart/form-data" method="POST" action="{{ route('users.update',$user) }}" class="form w-100" novalidate="novalidate" id="" >
+                                        @csrf
+                                            {{method_field('PUT')}}
+                                            <!-- Validation Errors -->
+                                                @if(Session::has('errors'))
+                                                <p class="alert alert-danger">    {{ implode('', $errors->all(':message')) }}
+                                                </p>
+                                                @endif
+                                                
+                                                 <!--begin::Modal header-->
+											<div class="modal-header" id="kt_modal_update_customer_header">
+												<!--begin::Modal title-->
+												<h2 class="fw-bold">Update Details</h2>
+												<!--end::Modal title-->
+												<!--begin::Close-->
+												<div id="kt_modal_update_customer_close" class="btn btn-icon btn-sm btn-active-icon-primary">
+													<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg')}}-->
+													<span class="svg-icon svg-icon-1">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path opacity="0.3" d="M21 22H3C2.4 22 2 21.6 2 21V5C2 4.4 2.4 4 3 4H21C21.6 4 22 4.4 22 5V21C22 21.6 21.6 22 21 22Z" fill="currentColor" />
-															<path d="M6 6C5.4 6 5 5.6 5 5V3C5 2.4 5.4 2 6 2C6.6 2 7 2.4 7 3V5C7 5.6 6.6 6 6 6ZM11 5V3C11 2.4 10.6 2 10 2C9.4 2 9 2.4 9 3V5C9 5.6 9.4 6 10 6C10.6 6 11 5.6 11 5ZM15 5V3C15 2.4 14.6 2 14 2C13.4 2 13 2.4 13 3V5C13 5.6 13.4 6 14 6C14.6 6 15 5.6 15 5ZM19 5V3C19 2.4 18.6 2 18 2C17.4 2 17 2.4 17 3V5C17 5.6 17.4 6 18 6C18.6 6 19 5.6 19 5Z" fill="currentColor" />
-															<path d="M8.8 13.1C9.2 13.1 9.5 13 9.7 12.8C9.9 12.6 10.1 12.3 10.1 11.9C10.1 11.6 10 11.3 9.8 11.1C9.6 10.9 9.3 10.8 9 10.8C8.8 10.8 8.59999 10.8 8.39999 10.9C8.19999 11 8.1 11.1 8 11.2C7.9 11.3 7.8 11.4 7.7 11.6C7.6 11.8 7.5 11.9 7.5 12.1C7.5 12.2 7.4 12.2 7.3 12.3C7.2 12.4 7.09999 12.4 6.89999 12.4C6.69999 12.4 6.6 12.3 6.5 12.2C6.4 12.1 6.3 11.9 6.3 11.7C6.3 11.5 6.4 11.3 6.5 11.1C6.6 10.9 6.8 10.7 7 10.5C7.2 10.3 7.49999 10.1 7.89999 10C8.29999 9.90003 8.60001 9.80003 9.10001 9.80003C9.50001 9.80003 9.80001 9.90003 10.1 10C10.4 10.1 10.7 10.3 10.9 10.4C11.1 10.5 11.3 10.8 11.4 11.1C11.5 11.4 11.6 11.6 11.6 11.9C11.6 12.3 11.5 12.6 11.3 12.9C11.1 13.2 10.9 13.5 10.6 13.7C10.9 13.9 11.2 14.1 11.4 14.3C11.6 14.5 11.8 14.7 11.9 15C12 15.3 12.1 15.5 12.1 15.8C12.1 16.2 12 16.5 11.9 16.8C11.8 17.1 11.5 17.4 11.3 17.7C11.1 18 10.7 18.2 10.3 18.3C9.9 18.4 9.5 18.5 9 18.5C8.5 18.5 8.1 18.4 7.7 18.2C7.3 18 7 17.8 6.8 17.6C6.6 17.4 6.4 17.1 6.3 16.8C6.2 16.5 6.10001 16.3 6.10001 16.1C6.10001 15.9 6.2 15.7 6.3 15.6C6.4 15.5 6.6 15.4 6.8 15.4C6.9 15.4 7.00001 15.4 7.10001 15.5C7.20001 15.6 7.3 15.6 7.3 15.7C7.5 16.2 7.7 16.6 8 16.9C8.3 17.2 8.6 17.3 9 17.3C9.2 17.3 9.5 17.2 9.7 17.1C9.9 17 10.1 16.8 10.3 16.6C10.5 16.4 10.5 16.1 10.5 15.8C10.5 15.3 10.4 15 10.1 14.7C9.80001 14.4 9.50001 14.3 9.10001 14.3C9.00001 14.3 8.9 14.3 8.7 14.3C8.5 14.3 8.39999 14.3 8.39999 14.3C8.19999 14.3 7.99999 14.2 7.89999 14.1C7.79999 14 7.7 13.8 7.7 13.7C7.7 13.5 7.79999 13.4 7.89999 13.2C7.99999 13 8.2 13 8.5 13H8.8V13.1ZM15.3 17.5V12.2C14.3 13 13.6 13.3 13.3 13.3C13.1 13.3 13 13.2 12.9 13.1C12.8 13 12.7 12.8 12.7 12.6C12.7 12.4 12.8 12.3 12.9 12.2C13 12.1 13.2 12 13.6 11.8C14.1 11.6 14.5 11.3 14.7 11.1C14.9 10.9 15.2 10.6 15.5 10.3C15.8 10 15.9 9.80003 15.9 9.70003C15.9 9.60003 16.1 9.60004 16.3 9.60004C16.5 9.60004 16.7 9.70003 16.8 9.80003C16.9 9.90003 17 10.2 17 10.5V17.2C17 18 16.7 18.4 16.2 18.4C16 18.4 15.8 18.3 15.6 18.2C15.4 18.1 15.3 17.8 15.3 17.5Z" fill="currentColor" />
+															<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+															<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
 														</svg>
 													</span>
 													<!--end::Svg Icon-->
 												</div>
-												<!--end::Daterangepicker-->
+												<!--end::Close-->
 											</div>
-											<!--end::Toolbar-->
-										</div>
-										<!--end::Header-->
-										<!--begin::Body-->
-										<div class="card-body pt-6">
-											<!--begin::Table container-->
-											<div class="table-responsive">
-												<!--begin::Table-->
-												<table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
-													<!--begin::Table head-->
-													<thead>
-														<tr class="fs-7 fw-bold text-gray-400 border-bottom-0">
-															<th class="p-0 pb-3 min-w-175px text-start">ITEM</th>
-															<th class="p-0 pb-3 min-w-100px text-end">CALLS</th>
-															<th class="p-0 pb-3 min-w-100px text-end">CRP RANK</th>
-															<th class="p-0 pb-3 min-w-150px text-end pe-12">PROGRESS</th>
-															<th class="p-0 pb-3 w-125px text-end pe-7">CHART</th>
-															<th class="p-0 pb-3 w-50px text-end">VIEW</th>
-														</tr>
-													</thead>
-													<!--end::Table head-->
-													<!--begin::Table body-->
-													<tbody>
-														<tr>
-															<td>
-																<div class="d-flex align-items-center">
-																	<div class="symbol symbol-50px me-3">
-																		<img src="{{URL::asset('assets/media/avatars/300-3.jpg')}}" class="" alt="" />
-																	</div>
-																	<div class="d-flex justify-content-start flex-column">
-																		<a href="../../demo3/dist/apps/projects/users.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Guy Hawkins</a>
-																		<span class="text-gray-400 fw-semibold d-block fs-7">Haiti</span>
-																	</div>
-																</div>
-															</td>
-															<td class="text-end pe-0">
-																<span class="text-gray-600 fw-bold fs-6">245</span>
-															</td>
-															<td class="text-end pe-0">
-																<span class="text-gray-600 fw-bold fs-6">$78.34%</span>
-															</td>
-															<td class="text-end pe-12">
-																<!--begin::Label-->
-																<span class="badge badge-light-success fs-base">
-																<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg')}}-->
-																<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
-																		<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
-																	</svg>
-																</span>
-																<!--end::Svg Icon-->9.2%</span>
-																<!--end::Label-->
-															</td>
-															<td class="text-end pe-0">
-																<div id="kt_table_widget_15_chart_1" class="h-50px mt-n8 pe-7" data-kt-chart-color="success"></div>
-															</td>
-															<td class="text-end">
-																<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg')}}-->
-																	<span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
-																			<path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
-																		</svg>
+											<!--end::Modal header-->
+											<!--begin::Modal body-->
+											<div class="modal-body py-10 px-lg-17">
+												<!--begin::Scroll-->
+												<div class="d-flex flex-column scroll-y me-n7 pe-7" id="kt_modal_update_customer_scroll" data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}" data-kt-scroll-max-height="auto" data-kt-scroll-dependencies="#kt_modal_update_customer_header" data-kt-scroll-wrappers="#kt_modal_update_customer_scroll" data-kt-scroll-offset="300px">
+													
+													<!--begin::User toggle-->
+													<div class="fw-bold fs-3 rotate collapsible mb-7" data-bs-toggle="collapse" href="#kt_modal_update_customer_user_info" role="button" aria-expanded="false" aria-controls="kt_modal_update_customer_user_info">User Information
+													<span class="ms-2 rotate-180">
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+														<span class="svg-icon svg-icon-3">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</span></div>
+													<!--end::User toggle-->
+													<!--begin::User form-->
+													<div id="kt_modal_update_customer_user_info" class="collapse show">
+														<!--begin::Input group-->
+														<div class="mb-7">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold mb-2">
+																<span>Update Image</span>
+																<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Allowed file types: png, jpg, jpeg."></i>
+															</label>
+															<!--end::Label-->
+															<!--begin::Image input wrapper-->
+															<div class="mt-1">
+																<!--begin::Image input-->
+																<div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{asset('assets/media/svg/avatars/blank.svg')}}')">
+																	<!--begin::Preview existing avatar-->
+																	<div class="image-input-wrapper w-125px h-125px" style="background-image: url({{asset('/storage/'.Auth::user()->profilepic)}})"></div>
+																	<!--end::Preview existing avatar-->
+																	<!--begin::Edit-->
+																	<label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+																		<i class="bi bi-pencil-fill fs-7"></i>
+																		<!--begin::Inputs-->
+																		<input type="file" name="profilepic" accept=".png, .jpg, .jpeg" value="{{ $user->profilepic }}" />
+																		<input type="file" name="avatar_remove" />
+																		<!--end::Inputs-->
+																	</label>
+																	<!--end::Edit-->
+																	<!--begin::Cancel-->
+																	<span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+																		<i class="bi bi-x fs-2"></i>
 																	</span>
-																	<!--end::Svg Icon-->
-																</a>
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div class="d-flex align-items-center">
-																	<div class="symbol symbol-50px me-3">
-																		<img src="{{URL::asset('assets/media/avatars/300-10.jpg')}}" class="" alt="" />
-																	</div>
-																	<div class="d-flex justify-content-start flex-column">
-																		<a href="../../demo3/dist/apps/projects/users.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Jane Cooper</a>
-																		<span class="text-gray-400 fw-semibold d-block fs-7">Monaco</span>
-																	</div>
+																	<!--end::Cancel-->
+																	
 																</div>
-															</td>
-															<td class="text-end pe-0">
-																<span class="text-gray-600 fw-bold fs-6">725</span>
-															</td>
-															<td class="text-end pe-0">
-																<span class="text-gray-600 fw-bold fs-6">$63.83%</span>
-															</td>
-															<td class="text-end pe-12">
+																<!--end::Image input-->
+															</div>
+															<!--end::Image input wrapper-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold mb-2">Name</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+                                                            <input id="name" placeholder="Name" value="{{$user->name}}" class="form-control form-control-solid" type="text" name="name" required autofocus />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold mb-2">
+																<span>Email</span>
+																<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Email address must be active"></i>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+                                                            <input id="email" placeholder="Email" value="{{ $user->email }}" class="form-control form-control-solid" type="email" name="email" required autofocus readonly/>
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-15">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold mb-2">Phone Number</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+                                                            <input id="number" placeholder="Phone Number" value="{{$user->number}}" class="form-control form-control-solid" type="text" name="number" required autofocus />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+                                                        <!--begin::Input group-->
+														<div class="fv-row mb-15">
+															<!--begin::Label-->
+                                                            <label class="fs-6 fw-semibold mb-2">Roles</label>
+
+                                                            @foreach($roles as $role)
+                                                                <label class="form-check form-switch form-check-custom form-check-solid">
+                                                                    <input class="form-check-input w-30px h-20px" type="checkbox" value="{{$role->id}}"  name="roles[]" @if($user->roles->pluck('id')->contains($role->id)) checked @endif/>
+                                                                    <span style="font-size: 17px !important;text-transform:capitalize;" class="form-check-label ">{{$role->name}}</span>
+                                                                </label>
+                                                                <br>
+                                                            @endforeach
+                                                            <!--end::Label-->
+														</div>
+														<!--end::Input group-->
+													</div>
+													<!--end::User form-->
+													<!--begin::Billing toggle-->
+													<div class="fw-bold fs-3 rotate collapsible collapsed mb-7" data-bs-toggle="collapse" href="#kt_modal_update_customer_billing_info" role="button" aria-expanded="false" aria-controls="kt_modal_update_customer_billing_info">Shipping Information
+													<span class="ms-2 rotate-180">
+														<!--begin::Svg Icon | path: icons/duotune/arrows/arr072.svg')}}-->
+														<span class="svg-icon svg-icon-3">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M11.4343 12.7344L7.25 8.55005C6.83579 8.13583 6.16421 8.13584 5.75 8.55005C5.33579 8.96426 5.33579 9.63583 5.75 10.05L11.2929 15.5929C11.6834 15.9835 12.3166 15.9835 12.7071 15.5929L18.25 10.05C18.6642 9.63584 18.6642 8.96426 18.25 8.55005C17.8358 8.13584 17.1642 8.13584 16.75 8.55005L12.5657 12.7344C12.2533 13.0468 11.7467 13.0468 11.4343 12.7344Z" fill="currentColor" />
+															</svg>
+														</span>
+														<!--end::Svg Icon-->
+													</span></div>
+													<!--end::Billing toggle-->
+													<!--begin::Billing form-->
+													<div id="kt_modal_update_customer_billing_info" class="collapse">
+														<!--begin::Input group-->
+														<div class="d-flex flex-column mb-7 fv-row">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold mb-2">Address Line 1</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input class="form-control form-control-solid" placeholder="" name="address1" value="101, Collins Street" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="d-flex flex-column mb-7 fv-row">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold mb-2">Address Line 2</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input class="form-control form-control-solid" placeholder="" name="address2" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="d-flex flex-column mb-7 fv-row">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold mb-2">Town</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<input class="form-control form-control-solid" placeholder="" name="city" value="Melbourne" />
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="row g-9 mb-7">
+															<!--begin::Col-->
+															<div class="col-md-6 fv-row">
 																<!--begin::Label-->
-																<span class="badge badge-light-danger fs-base">
-																<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg')}}-->
-																<span class="svg-icon svg-icon-5 svg-icon-danger ms-n1">
-																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-																		<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
-																	</svg>
-																</span>
-																<!--end::Svg Icon-->0.4%</span>
+																<label class="fs-6 fw-semibold mb-2">State / Province</label>
 																<!--end::Label-->
-															</td>
-															<td class="text-end pe-0">
-																<div id="kt_table_widget_15_chart_2" class="h-50px mt-n8 pe-7" data-kt-chart-color="danger"></div>
-															</td>
-															<td class="text-end">
-																<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg')}}-->
-																	<span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
-																			<path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
-																		</svg>
-																	</span>
-																	<!--end::Svg Icon-->
-																</a>
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div class="d-flex align-items-center">
-																	<div class="symbol symbol-50px me-3">
-																		<img src="{{URL::asset('assets/media/avatars/300-9.jpg')}}" class="" alt="" />
-																	</div>
-																	<div class="d-flex justify-content-start flex-column">
-																		<a href="../../demo3/dist/apps/projects/users.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Jacob Jones</a>
-																		<span class="text-gray-400 fw-semibold d-block fs-7">Poland</span>
-																	</div>
+																<!--begin::Input-->
+																<input class="form-control form-control-solid" placeholder="" name="state" value="Victoria" />
+																<!--end::Input-->
+															</div>
+															<!--end::Col-->
+															<!--begin::Col-->
+															<div class="col-md-6 fv-row">
+																<!--begin::Label-->
+																<label class="fs-6 fw-semibold mb-2">Post Code</label>
+																<!--end::Label-->
+																<!--begin::Input-->
+																<input class="form-control form-control-solid" placeholder="" name="postcode" value="3000" />
+																<!--end::Input-->
+															</div>
+															<!--end::Col-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="d-flex flex-column mb-7 fv-row">
+															<!--begin::Label-->
+															<label class="fs-6 fw-semibold mb-2">
+																<span>Country</span>
+																<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title="Country of origination"></i>
+															</label>
+															<!--end::Label-->
+															<!--begin::Input-->
+															<select name="country" aria-label="Select a Country" data-control="select2" data-placeholder="Select a Country..." data-dropdown-parent="#kt_modal_update_customer" class="form-select form-select-solid fw-bold">
+																<option value="">Select a Country...</option>
+																<option value="AF">Afghanistan</option>
+																<option value="AX">Aland Islands</option>
+																<option value="AL">Albania</option>
+																<option value="DZ">Algeria</option>
+																<option value="AS">American Samoa</option>
+																<option value="AD">Andorra</option>
+																<option value="AO">Angola</option>
+																<option value="AI">Anguilla</option>
+																<option value="AG">Antigua and Barbuda</option>
+																<option value="AR">Argentina</option>
+																<option value="AM">Armenia</option>
+																<option value="AW">Aruba</option>
+																<option value="AU">Australia</option>
+																<option value="AT">Austria</option>
+																<option value="AZ">Azerbaijan</option>
+																<option value="BS">Bahamas</option>
+																<option value="BH">Bahrain</option>
+																<option value="BD">Bangladesh</option>
+																<option value="BB">Barbados</option>
+																<option value="BY">Belarus</option>
+																<option value="BE">Belgium</option>
+																<option value="BZ">Belize</option>
+																<option value="BJ">Benin</option>
+																<option value="BM">Bermuda</option>
+																<option value="BT">Bhutan</option>
+																<option value="BO">Bolivia, Plurinational State of</option>
+																<option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+																<option value="BA">Bosnia and Herzegovina</option>
+																<option value="BW">Botswana</option>
+																<option value="BR">Brazil</option>
+																<option value="IO">British Indian Ocean Territory</option>
+																<option value="BN">Brunei Darussalam</option>
+																<option value="BG">Bulgaria</option>
+																<option value="BF">Burkina Faso</option>
+																<option value="BI">Burundi</option>
+																<option value="KH">Cambodia</option>
+																<option value="CM">Cameroon</option>
+																<option value="CA">Canada</option>
+																<option value="CV">Cape Verde</option>
+																<option value="KY">Cayman Islands</option>
+																<option value="CF">Central African Republic</option>
+																<option value="TD">Chad</option>
+																<option value="CL">Chile</option>
+																<option value="CN">China</option>
+																<option value="CX">Christmas Island</option>
+																<option value="CC">Cocos (Keeling) Islands</option>
+																<option value="CO">Colombia</option>
+																<option value="KM">Comoros</option>
+																<option value="CK">Cook Islands</option>
+																<option value="CR">Costa Rica</option>
+																<option value="CI">Côte d'Ivoire</option>
+																<option value="HR">Croatia</option>
+																<option value="CU">Cuba</option>
+																<option value="CW">Curaçao</option>
+																<option value="CZ">Czech Republic</option>
+																<option value="DK">Denmark</option>
+																<option value="DJ">Djibouti</option>
+																<option value="DM">Dominica</option>
+																<option value="DO">Dominican Republic</option>
+																<option value="EC">Ecuador</option>
+																<option value="EG">Egypt</option>
+																<option value="SV">El Salvador</option>
+																<option value="GQ">Equatorial Guinea</option>
+																<option value="ER">Eritrea</option>
+																<option value="EE">Estonia</option>
+																<option value="ET">Ethiopia</option>
+																<option value="FK">Falkland Islands (Malvinas)</option>
+																<option value="FJ">Fiji</option>
+																<option value="FI">Finland</option>
+																<option value="FR">France</option>
+																<option value="PF">French Polynesia</option>
+																<option value="GA">Gabon</option>
+																<option value="GM">Gambia</option>
+																<option value="GE">Georgia</option>
+																<option value="DE">Germany</option>
+																<option value="GH">Ghana</option>
+																<option value="GI">Gibraltar</option>
+																<option value="GR">Greece</option>
+																<option value="GL">Greenland</option>
+																<option value="GD">Grenada</option>
+																<option value="GU">Guam</option>
+																<option value="GT">Guatemala</option>
+																<option value="GG">Guernsey</option>
+																<option value="GN">Guinea</option>
+																<option value="GW">Guinea-Bissau</option>
+																<option value="HT">Haiti</option>
+																<option value="VA">Holy See (Vatican City State)</option>
+																<option value="HN">Honduras</option>
+																<option value="HK">Hong Kong</option>
+																<option value="HU">Hungary</option>
+																<option value="IS">Iceland</option>
+																<option value="IN">India</option>
+																<option value="ID">Indonesia</option>
+																<option value="IR">Iran, Islamic Republic of</option>
+																<option value="IQ">Iraq</option>
+																<option value="IE">Ireland</option>
+																<option value="IM">Isle of Man</option>
+																<option value="IL">Israel</option>
+																<option value="IT">Italy</option>
+																<option value="JM">Jamaica</option>
+																<option value="JP">Japan</option>
+																<option value="JE">Jersey</option>
+																<option value="JO">Jordan</option>
+																<option value="KZ">Kazakhstan</option>
+																<option value="KE">Kenya</option>
+																<option value="KI">Kiribati</option>
+																<option value="KP">Korea, Democratic People's Republic of</option>
+																<option value="KW">Kuwait</option>
+																<option value="KG">Kyrgyzstan</option>
+																<option value="LA">Lao People's Democratic Republic</option>
+																<option value="LV">Latvia</option>
+																<option value="LB">Lebanon</option>
+																<option value="LS">Lesotho</option>
+																<option value="LR">Liberia</option>
+																<option value="LY">Libya</option>
+																<option value="LI">Liechtenstein</option>
+																<option value="LT">Lithuania</option>
+																<option value="LU">Luxembourg</option>
+																<option value="MO">Macao</option>
+																<option value="MG">Madagascar</option>
+																<option value="MW">Malawi</option>
+																<option value="MY">Malaysia</option>
+																<option value="MV">Maldives</option>
+																<option value="ML">Mali</option>
+																<option value="MT">Malta</option>
+																<option value="MH">Marshall Islands</option>
+																<option value="MQ">Martinique</option>
+																<option value="MR">Mauritania</option>
+																<option value="MU">Mauritius</option>
+																<option value="MX">Mexico</option>
+																<option value="FM">Micronesia, Federated States of</option>
+																<option value="MD">Moldova, Republic of</option>
+																<option value="MC">Monaco</option>
+																<option value="MN">Mongolia</option>
+																<option value="ME">Montenegro</option>
+																<option value="MS">Montserrat</option>
+																<option value="MA">Morocco</option>
+																<option value="MZ">Mozambique</option>
+																<option value="MM">Myanmar</option>
+																<option value="NA">Namibia</option>
+																<option value="NR">Nauru</option>
+																<option value="NP">Nepal</option>
+																<option value="NL">Netherlands</option>
+																<option value="NZ">New Zealand</option>
+																<option value="NI">Nicaragua</option>
+																<option value="NE">Niger</option>
+																<option value="NG">Nigeria</option>
+																<option value="NU">Niue</option>
+																<option value="NF">Norfolk Island</option>
+																<option value="MP">Northern Mariana Islands</option>
+																<option value="NO">Norway</option>
+																<option value="OM">Oman</option>
+																<option value="PK">Pakistan</option>
+																<option value="PW">Palau</option>
+																<option value="PS">Palestinian Territory, Occupied</option>
+																<option value="PA">Panama</option>
+																<option value="PG">Papua New Guinea</option>
+																<option value="PY">Paraguay</option>
+																<option value="PE">Peru</option>
+																<option value="PH">Philippines</option>
+																<option value="PL">Poland</option>
+																<option value="PT">Portugal</option>
+																<option value="PR">Puerto Rico</option>
+																<option value="QA">Qatar</option>
+																<option value="RO">Romania</option>
+																<option value="RU">Russian Federation</option>
+																<option value="RW">Rwanda</option>
+																<option value="BL">Saint Barthélemy</option>
+																<option value="KN">Saint Kitts and Nevis</option>
+																<option value="LC">Saint Lucia</option>
+																<option value="MF">Saint Martin (French part)</option>
+																<option value="VC">Saint Vincent and the Grenadines</option>
+																<option value="WS">Samoa</option>
+																<option value="SM">San Marino</option>
+																<option value="ST">Sao Tome and Principe</option>
+																<option value="SA">Saudi Arabia</option>
+																<option value="SN">Senegal</option>
+																<option value="RS">Serbia</option>
+																<option value="SC">Seychelles</option>
+																<option value="SL">Sierra Leone</option>
+																<option value="SG">Singapore</option>
+																<option value="SX">Sint Maarten (Dutch part)</option>
+																<option value="SK">Slovakia</option>
+																<option value="SI">Slovenia</option>
+																<option value="SB">Solomon Islands</option>
+																<option value="SO">Somalia</option>
+																<option value="ZA">South Africa</option>
+																<option value="KR">South Korea</option>
+																<option value="SS">South Sudan</option>
+																<option value="ES">Spain</option>
+																<option value="LK">Sri Lanka</option>
+																<option value="SD">Sudan</option>
+																<option value="SR">Suriname</option>
+																<option value="SZ">Swaziland</option>
+																<option value="SE">Sweden</option>
+																<option value="CH">Switzerland</option>
+																<option value="SY">Syrian Arab Republic</option>
+																<option value="TW">Taiwan, Province of China</option>
+																<option value="TJ">Tajikistan</option>
+																<option value="TZ">Tanzania, United Republic of</option>
+																<option value="TH">Thailand</option>
+																<option value="TG">Togo</option>
+																<option value="TK">Tokelau</option>
+																<option value="TO">Tonga</option>
+																<option value="TT">Trinidad and Tobago</option>
+																<option value="TN">Tunisia</option>
+																<option value="TR">Turkey</option>
+																<option value="TM">Turkmenistan</option>
+																<option value="TC">Turks and Caicos Islands</option>
+																<option value="TV">Tuvalu</option>
+																<option value="UG">Uganda</option>
+																<option value="UA">Ukraine</option>
+																<option value="AE">United Arab Emirates</option>
+																<option value="GB">United Kingdom</option>
+																<option value="US">United States</option>
+																<option value="UY">Uruguay</option>
+																<option value="UZ">Uzbekistan</option>
+																<option value="VU">Vanuatu</option>
+																<option value="VE">Venezuela, Bolivarian Republic of</option>
+																<option value="VN">Vietnam</option>
+																<option value="VI">Virgin Islands</option>
+																<option value="YE">Yemen</option>
+																<option value="ZM">Zambia</option>
+																<option value="ZW">Zimbabwe</option>
+															</select>
+															<!--end::Input-->
+														</div>
+														<!--end::Input group-->
+														<!--begin::Input group-->
+														<div class="fv-row mb-7">
+															<!--begin::Wrapper-->
+															<div class="d-flex flex-stack">
+																<!--begin::Label-->
+																<div class="me-5">
+																	<!--begin::Label-->
+																	<label class="fs-6 fw-semibold">Use as a billing adderess?</label>
+																	<!--end::Label-->
+																	<!--begin::Input-->
+																	<div class="fs-7 fw-semibold text-muted">If you need more info, please check budget planning</div>
+																	<!--end::Input-->
 																</div>
-															</td>
-															<td class="text-end pe-0">
-																<span class="text-gray-600 fw-bold fs-6">173</span>
-															</td>
-															<td class="text-end pe-0">
-																<span class="text-gray-600 fw-bold fs-6">$92.56%</span>
-															</td>
-															<td class="text-end pe-12">
-																<!--begin::Label-->
-																<span class="badge badge-light-success fs-base">
-																<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg')}}-->
-																<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
-																		<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
-																	</svg>
-																</span>
-																<!--end::Svg Icon-->9.2%</span>
 																<!--end::Label-->
-															</td>
-															<td class="text-end pe-0">
-																<div id="kt_table_widget_15_chart_3" class="h-50px mt-n8 pe-7" data-kt-chart-color="success"></div>
-															</td>
-															<td class="text-end">
-																<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg')}}-->
-																	<span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
-																			<path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
-																		</svg>
-																	</span>
-																	<!--end::Svg Icon-->
-																</a>
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div class="d-flex align-items-center">
-																	<div class="symbol symbol-50px me-3">
-																		<img src="{{URL::asset('assets/media/avatars/300-2.jpg')}}" class="" alt="" />
-																	</div>
-																	<div class="d-flex justify-content-start flex-column">
-																		<a href="../../demo3/dist/apps/projects/users.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Esther Howard</a>
-																		<span class="text-gray-400 fw-semibold d-block fs-7">Kiribatir</span>
-																	</div>
-																</div>
-															</td>
-															<td class="text-end pe-0">
-																<span class="text-gray-600 fw-bold fs-6">642</span>
-															</td>
-															<td class="text-end pe-0">
-																<span class="text-gray-600 fw-bold fs-6">$64.02%</span>
-															</td>
-															<td class="text-end pe-12">
-																<!--begin::Label-->
-																<span class="badge badge-light-success fs-base">
-																<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg')}}-->
-																<span class="svg-icon svg-icon-5 svg-icon-success ms-n1">
-																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
-																		<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
-																	</svg>
-																</span>
-																<!--end::Svg Icon-->9.2%</span>
-																<!--end::Label-->
-															</td>
-															<td class="text-end pe-0">
-																<div id="kt_table_widget_15_chart_4" class="h-50px mt-n8 pe-7" data-kt-chart-color="success"></div>
-															</td>
-															<td class="text-end">
-																<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg')}}-->
-																	<span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
-																			<path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
-																		</svg>
-																	</span>
-																	<!--end::Svg Icon-->
-																</a>
-															</td>
-														</tr>
-														<tr>
-															<td>
-																<div class="d-flex align-items-center">
-																	<div class="symbol symbol-50px me-3">
-																		<img src="{{URL::asset('assets/media/avatars/300-1.jpg')}}" class="" alt="" />
-																	</div>
-																	<div class="d-flex justify-content-start flex-column">
-																		<a href="../../demo3/dist/apps/projects/users.html" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Ralph Edwards</a>
-																		<span class="text-gray-400 fw-semibold d-block fs-7">Iceland</span>
-																	</div>
-																</div>
-															</td>
-															<td class="text-end pe-0">
-																<span class="text-gray-600 fw-bold fs-6">329</span>
-															</td>
-															<td class="text-end pe-0">
-																<span class="text-gray-600 fw-bold fs-6">$89.31%</span>
-															</td>
-															<td class="text-end pe-12">
-																<!--begin::Label-->
-																<span class="badge badge-light-danger fs-base">
-																<!--begin::Svg Icon | path: icons/duotune/arrows/arr065.svg')}}-->
-																<span class="svg-icon svg-icon-5 svg-icon-danger ms-n1">
-																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																		<rect opacity="0.5" x="11" y="18" width="13" height="2" rx="1" transform="rotate(-90 11 18)" fill="currentColor" />
-																		<path d="M11.4343 15.4343L7.25 11.25C6.83579 10.8358 6.16421 10.8358 5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75L11.2929 18.2929C11.6834 18.6834 12.3166 18.6834 12.7071 18.2929L18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25C17.8358 10.8358 17.1642 10.8358 16.75 11.25L12.5657 15.4343C12.2533 15.7467 11.7467 15.7467 11.4343 15.4343Z" fill="currentColor" />
-																	</svg>
-																</span>
-																<!--end::Svg Icon-->0.4%</span>
-																<!--end::Label-->
-															</td>
-															<td class="text-end pe-0">
-																<div id="kt_table_widget_15_chart_5" class="h-50px mt-n8 pe-7" data-kt-chart-color="danger"></div>
-															</td>
-															<td class="text-end">
-																<a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
-																	<!--begin::Svg Icon | path: icons/duotune/arrows/arr001.svg')}}-->
-																	<span class="svg-icon svg-icon-5 svg-icon-gray-700">
-																		<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																			<path d="M14.4 11H3C2.4 11 2 11.4 2 12C2 12.6 2.4 13 3 13H14.4V11Z" fill="currentColor" />
-																			<path opacity="0.3" d="M14.4 20V4L21.7 11.3C22.1 11.7 22.1 12.3 21.7 12.7L14.4 20Z" fill="currentColor" />
-																		</svg>
-																	</span>
-																	<!--end::Svg Icon-->
-																</a>
-															</td>
-														</tr>
-													</tbody>
-													<!--end::Table body-->
-												</table>
+																<!--begin::Switch-->
+																<label class="form-check form-switch form-check-custom form-check-solid">
+																	<!--begin::Input-->
+																	<input class="form-check-input" name="billing" type="checkbox" value="1" id="kt_modal_update_customer_billing" checked="checked" />
+																	<!--end::Input-->
+																	<!--begin::Label-->
+																	<span class="form-check-label fw-semibold text-muted" for="kt_modal_update_customer_billing">Yes</span>
+																	<!--end::Label-->
+																</label>
+																<!--end::Switch-->
+															</div>
+															<!--begin::Wrapper-->
+														</div>
+														<!--end::Input group-->
+													</div>
+													<!--end::Billing form-->
+												</div>
+												<!--end::Scroll-->
 											</div>
-											<!--end::Table-->
-										</div>
-										<!--end: Card Body-->
+											<!--end::Modal body-->
+											<!--begin::Modal footer-->
+											<div class="modal-footer flex-center">
+												<!--begin::Button-->
+												<button type="reset" id="kt_modal_update_customer_cancel" class="btn btn-light me-3">Discard</button>
+												<!--end::Button-->
+												<!--begin::Button-->
+												<button type="submit" id="" class="btn btn-primary">
+													<span class="indicator-label">Submit</span>
+													<span class="indicator-progress">Please wait...
+													<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+												</button>
+												<!--end::Button-->
+											</div>
+											<!--end::Modal footer-->
+										</form>
+										<!--end::Form-->
 									</div>
-									<!--end::Tables widget 15-->
 								</div>
-								<!--end::Col-->
 							</div>
-							<!--end::Row-->
-							<!--begin::Row-->
-							<div class="row g-5 g-xl-10">
-								<!--begin::Col-->
-								<div class="col-xl-4">
-									<!--begin::Chart widget 31-->
-									<div class="card card-flush h-lg-100">
-										<!--begin::Header-->
-										<div class="card-header pt-7 mb-7">
-											<!--begin::Title-->
-											<h3 class="card-title align-items-start flex-column">
-												<span class="card-label fw-bold text-gray-800">Calls by Departments</span>
-												<span class="text-gray-400 mt-1 fw-semibold fs-6">8k social visitors</span>
-											</h3>
-											<!--end::Title-->
-											<!--begin::Toolbar-->
-											<div class="card-toolbar">
-												<a href="../../demo3/dist/apps/ecommerce/catalog/add-product.html" class="btn btn-sm btn-light">PDF Report</a>
+							<!--end::Modal - New Address-->
+							<!--begin::Modal - New Card-->
+							<div class="modal fade" id="kt_modal_new_card" tabindex="-1" aria-hidden="true">
+								<!--begin::Modal dialog-->
+								<div class="modal-dialog modal-dialog-centered mw-650px">
+									<!--begin::Modal content-->
+									<div class="modal-content">
+										<!--begin::Modal header-->
+										<div class="modal-header">
+											<!--begin::Modal title-->
+											<h2>Add New Card</h2>
+											<!--end::Modal title-->
+											<!--begin::Close-->
+											<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+												<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg')}}-->
+												<span class="svg-icon svg-icon-1">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
+														<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
+													</svg>
+												</span>
+												<!--end::Svg Icon-->
 											</div>
-											<!--end::Toolbar-->
+											<!--end::Close-->
 										</div>
-										<!--end::Header-->
-										<!--begin::Body-->
-										<div class="card-body d-flex align-items-end pt-0">
-											<!--begin::Chart-->
-											<div id="kt_charts_widget_31_chart" class="w-100 h-300px"></div>
-											<!--end::Chart-->
+										<!--end::Modal header-->
+										<!--begin::Modal body-->
+										<div class="modal-body scroll-y mx-5 mx-xl-15 my-7">
+											<!--begin::Form-->
+											<form id="kt_modal_new_card_form" class="form" action="#">
+												<!--begin::Input group-->
+												<div class="d-flex flex-column mb-7 fv-row">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+														<span class="required">Name On Card</span>
+														<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Specify a card holder's name"></i>
+													</label>
+													<!--end::Label-->
+													<input type="text" class="form-control form-control-solid" placeholder="" name="card_name" value="Max Doe" />
+												</div>
+												<!--end::Input group-->
+												<!--begin::Input group-->
+												<div class="d-flex flex-column mb-7 fv-row">
+													<!--begin::Label-->
+													<label class="required fs-6 fw-semibold form-label mb-2">Card Number</label>
+													<!--end::Label-->
+													<!--begin::Input wrapper-->
+													<div class="position-relative">
+														<!--begin::Input-->
+														<input type="text" class="form-control form-control-solid" placeholder="Enter card number" name="card_number" value="4111 1111 1111 1111" />
+														<!--end::Input-->
+														<!--begin::Card logos-->
+														<div class="position-absolute translate-middle-y top-50 end-0 me-5">
+															<img src="{{asset('assets/media/svg/card-logos/visa.svg')}}" alt="" class="h-25px" />
+															<img src="{{asset('assets/media/svg/card-logos/mastercard.svg')}}" alt="" class="h-25px" />
+															<img src="{{asset('assets/media/svg/card-logos/american-express.svg')}}" alt="" class="h-25px" />
+														</div>
+														<!--end::Card logos-->
+													</div>
+													<!--end::Input wrapper-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Input group-->
+												<div class="row mb-10">
+													<!--begin::Col-->
+													<div class="col-md-8 fv-row">
+														<!--begin::Label-->
+														<label class="required fs-6 fw-semibold form-label mb-2">Expiration Date</label>
+														<!--end::Label-->
+														<!--begin::Row-->
+														<div class="row fv-row">
+															<!--begin::Col-->
+															<div class="col-6">
+																<select name="card_expiry_month" class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Month">
+																	<option></option>
+																	<option value="1">1</option>
+																	<option value="2">2</option>
+																	<option value="3">3</option>
+																	<option value="4">4</option>
+																	<option value="5">5</option>
+																	<option value="6">6</option>
+																	<option value="7">7</option>
+																	<option value="8">8</option>
+																	<option value="9">9</option>
+																	<option value="10">10</option>
+																	<option value="11">11</option>
+																	<option value="12">12</option>
+																</select>
+															</div>
+															<!--end::Col-->
+															<!--begin::Col-->
+															<div class="col-6">
+																<select name="card_expiry_year" class="form-select form-select-solid" data-control="select2" data-hide-search="true" data-placeholder="Year">
+																	<option></option>
+																	<option value="2022">2022</option>
+																	<option value="2023">2023</option>
+																	<option value="2024">2024</option>
+																	<option value="2025">2025</option>
+																	<option value="2026">2026</option>
+																	<option value="2027">2027</option>
+																	<option value="2028">2028</option>
+																	<option value="2029">2029</option>
+																	<option value="2030">2030</option>
+																	<option value="2031">2031</option>
+																	<option value="2032">2032</option>
+																</select>
+															</div>
+															<!--end::Col-->
+														</div>
+														<!--end::Row-->
+													</div>
+													<!--end::Col-->
+													<!--begin::Col-->
+													<div class="col-md-4 fv-row">
+														<!--begin::Label-->
+														<label class="d-flex align-items-center fs-6 fw-semibold form-label mb-2">
+															<span class="required">CVV</span>
+															<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="Enter a card CVV code"></i>
+														</label>
+														<!--end::Label-->
+														<!--begin::Input wrapper-->
+														<div class="position-relative">
+															<!--begin::Input-->
+															<input type="text" class="form-control form-control-solid" minlength="3" maxlength="4" placeholder="CVV" name="card_cvv" />
+															<!--end::Input-->
+															<!--begin::CVV icon-->
+															<div class="position-absolute translate-middle-y top-50 end-0 me-3">
+																<!--begin::Svg Icon | path: icons/duotune/finance/fin002.svg')}}-->
+																<span class="svg-icon svg-icon-2hx">
+																	<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																		<path d="M22 7H2V11H22V7Z" fill="currentColor" />
+																		<path opacity="0.3" d="M21 19H3C2.4 19 2 18.6 2 18V6C2 5.4 2.4 5 3 5H21C21.6 5 22 5.4 22 6V18C22 18.6 21.6 19 21 19ZM14 14C14 13.4 13.6 13 13 13H5C4.4 13 4 13.4 4 14C4 14.6 4.4 15 5 15H13C13.6 15 14 14.6 14 14ZM16 15.5C16 16.3 16.7 17 17.5 17H18.5C19.3 17 20 16.3 20 15.5C20 14.7 19.3 14 18.5 14H17.5C16.7 14 16 14.7 16 15.5Z" fill="currentColor" />
+																	</svg>
+																</span>
+																<!--end::Svg Icon-->
+															</div>
+															<!--end::CVV icon-->
+														</div>
+														<!--end::Input wrapper-->
+													</div>
+													<!--end::Col-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Input group-->
+												<div class="d-flex flex-stack">
+													<!--begin::Label-->
+													<div class="me-5">
+														<label class="fs-6 fw-semibold form-label">Save Card for further billing?</label>
+														<div class="fs-7 fw-semibold text-muted">If you need more info, please check budget planning</div>
+													</div>
+													<!--end::Label-->
+													<!--begin::Switch-->
+													<label class="form-check form-switch form-check-custom form-check-solid">
+														<input class="form-check-input" type="checkbox" value="1" checked="checked" />
+														<span class="form-check-label fw-semibold text-muted">Save Card</span>
+													</label>
+													<!--end::Switch-->
+												</div>
+												<!--end::Input group-->
+												<!--begin::Actions-->
+												<div class="text-center pt-15">
+													<button type="reset" id="kt_modal_new_card_cancel" class="btn btn-light me-3">Discard</button>
+													<button type="submit" id="kt_modal_new_card_submit" class="btn btn-primary">
+														<span class="indicator-label">Submit</span>
+														<span class="indicator-progress">Please wait...
+														<span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+													</button>
+												</div>
+												<!--end::Actions-->
+											</form>
+											<!--end::Form-->
 										</div>
-										<!--end::Body-->
+										<!--end::Modal body-->
 									</div>
-									<!--end::Chart widget 31-->
+									<!--end::Modal content-->
 								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-xl-8">
-									<!--begin::Maps widget 2-->
-									<div class="card card-flush h-lg-100">
-										<!--begin::Header-->
-										<div class="card-header pt-7">
-											<!--begin::Title-->
-											<h3 class="card-title align-items-start flex-column">
-												<span class="card-label fw-bold text-dark">Calls Geography</span>
-												<span class="text-gray-400 pt-2 fw-semibold fs-6">Updated 37 minutes ago</span>
-											</h3>
-											<!--end::Title-->
-											<!--begin::Toolbar-->
-											<div class="card-toolbar">
-												<a href="../../demo3/dist/apps/ecommerce/catalog/add-product.html" class="btn btn-sm btn-light">PDF Report</a>
-											</div>
-											<!--end::Toolbar-->
-										</div>
-										<!--end::Header-->
-										<!--begin::Body-->
-										<div class="card-body d-flex flex-center">
-											<!--begin::Map container-->
-											<div id="kt_maps_widget_2_map" class="w-100 h-350px"></div>
-											<!--end::Map container-->
-										</div>
-										<!--end::Body-->
-									</div>
-									<!--end::Maps widget 2-->
-								</div>
-								<!--end::Col-->
+								<!--end::Modal dialog-->
 							</div>
-							<!--end::Row-->
+							<!--end::Modal - New Card-->
+							<!--end::Modals-->
 						</div>
 						<!--end::Container-->
 					</div>
@@ -5611,7 +8716,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-												<img src="{{URL::asset('assets/media/avatars/300-14.jpg')}}" alt="img" />
+												<img src="{{asset('assets/media/avatars/300-14.jpg')}}" alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -5634,12 +8739,12 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px pe-2">
 												<!--begin::User-->
 												<div class="symbol symbol-circle symbol-25px">
-													<img src="{{URL::asset('assets/media/avatars/300-2.jpg')}}" alt="img" />
+													<img src="{{asset('assets/media/avatars/300-2.jpg')}}" alt="img" />
 												</div>
 												<!--end::User-->
 												<!--begin::User-->
 												<div class="symbol symbol-circle symbol-25px">
-													<img src="{{URL::asset('assets/media/avatars/300-14.jpg')}}" alt="img" />
+													<img src="{{asset('assets/media/avatars/300-14.jpg')}}" alt="img" />
 												</div>
 												<!--end::User-->
 												<!--begin::User-->
@@ -5673,7 +8778,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="symbol-group symbol-hover flex-nowrap flex-grow-1 min-w-100px">
 												<!--begin::User-->
 												<div class="symbol symbol-circle symbol-25px">
-													<img src="{{URL::asset('assets/media/avatars/300-20.jpg')}}" alt="img" />
+													<img src="{{asset('assets/media/avatars/300-20.jpg')}}" alt="img" />
 												</div>
 												<!--end::User-->
 												<!--begin::User-->
@@ -5732,7 +8837,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Alan Nilson">
-												<img src="{{URL::asset('assets/media/avatars/300-1.jpg')}}" alt="img" />
+												<img src="{{asset('assets/media/avatars/300-1.jpg')}}" alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -5776,7 +8881,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Jan Hummer">
-												<img src="{{URL::asset('assets/media/avatars/300-23.jpg')}}" alt="img" />
+												<img src="{{asset('assets/media/avatars/300-23.jpg')}}" alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -5789,7 +8894,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-aligns-center pe-10 pe-lg-20">
 												<!--begin::Icon-->
-												<img alt="" class="w-30px me-3" src="{{URL::asset('assets/media/svg/files/pdf.svg')}}" />
+												<img alt="" class="w-30px me-3" src="{{asset('assets/media/svg/files/pdf.svg')}}" />
 												<!--end::Icon-->
 												<!--begin::Info-->
 												<div class="ms-1 fw-semibold">
@@ -5806,7 +8911,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-aligns-center pe-10 pe-lg-20">
 												<!--begin::Icon-->
-												<img alt="../../demo3/dist/apps/projects/project.html" class="w-30px me-3" src="{{URL::asset('assets/media/svg/files/doc.svg')}}" />
+												<img alt="../../demo3/dist/apps/projects/project.html" class="w-30px me-3" src="{{asset('assets/media/svg/files/doc.svg')}}" />
 												<!--end::Icon-->
 												<!--begin::Info-->
 												<div class="ms-1 fw-semibold">
@@ -5823,7 +8928,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--begin::Item-->
 											<div class="d-flex flex-aligns-center">
 												<!--begin::Icon-->
-												<img alt="../../demo3/dist/apps/projects/project.html" class="w-30px me-3" src="{{URL::asset('assets/media/svg/files/css.svg')}}" />
+												<img alt="../../demo3/dist/apps/projects/project.html" class="w-30px me-3" src="{{asset('assets/media/svg/files/css.svg')}}" />
 												<!--end::Icon-->
 												<!--begin::Info-->
 												<div class="ms-1 fw-semibold">
@@ -5879,7 +8984,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Nina Nilson">
-												<img src="{{URL::asset('assets/media/avatars/300-14.jpg')}}" alt="img" />
+												<img src="{{asset('assets/media/avatars/300-14.jpg')}}" alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -5923,7 +9028,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Marcus Dotson">
-												<img src="{{URL::asset('assets/media/avatars/300-2.jpg')}}" alt="img" />
+												<img src="{{asset('assets/media/avatars/300-2.jpg')}}" alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -5937,7 +9042,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="overlay me-10">
 												<!--begin::Image-->
 												<div class="overlay-wrapper">
-													<img alt="img" class="rounded w-150px" src="{{URL::asset('assets/media/stock/600x400/img-29.jpg')}}" />
+													<img alt="img" class="rounded w-150px" src="{{asset('assets/media/stock/600x400/img-29.jpg')}}" />
 												</div>
 												<!--end::Image-->
 												<!--begin::Link-->
@@ -5951,7 +9056,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="overlay me-10">
 												<!--begin::Image-->
 												<div class="overlay-wrapper">
-													<img alt="img" class="rounded w-150px" src="{{URL::asset('assets/media/stock/600x400/img-31.jpg')}}" />
+													<img alt="img" class="rounded w-150px" src="{{asset('assets/media/stock/600x400/img-31.jpg')}}" />
 												</div>
 												<!--end::Image-->
 												<!--begin::Link-->
@@ -5965,7 +9070,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="overlay">
 												<!--begin::Image-->
 												<div class="overlay-wrapper">
-													<img alt="img" class="rounded w-150px" src="{{URL::asset('assets/media/stock/600x400/img-40.jpg')}}" />
+													<img alt="img" class="rounded w-150px" src="{{asset('assets/media/stock/600x400/img-40.jpg')}}" />
 												</div>
 												<!--end::Image-->
 												<!--begin::Link-->
@@ -6062,7 +9167,7 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Info-->
 											<!--begin::User-->
 											<div class="symbol symbol-circle symbol-25px" data-bs-toggle="tooltip" data-bs-boundary="window" data-bs-placement="top" title="Robert Rich">
-												<img src="{{URL::asset('assets/media/avatars/300-4.jpg')}}" alt="img" />
+												<img src="{{asset('assets/media/avatars/300-4.jpg')}}" alt="img" />
 											</div>
 											<!--end::User-->
 										</div>
@@ -6280,7 +9385,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="d-flex align-items-center mb-2">
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-25.jpg')}}" />
+										<img alt="Pic" src="{{asset('assets/media/avatars/300-25.jpg')}}" />
 									</div>
 									<!--end::Avatar-->
 									<!--begin::Details-->
@@ -6312,7 +9417,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Details-->
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-1.jpg')}}" />
+										<img alt="Pic" src="{{asset('assets/media/avatars/300-1.jpg')}}" />
 									</div>
 									<!--end::Avatar-->
 								</div>
@@ -6332,7 +9437,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="d-flex align-items-center mb-2">
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-25.jpg')}}" />
+										<img alt="Pic" src="{{asset('assets/media/avatars/300-25.jpg')}}" />
 									</div>
 									<!--end::Avatar-->
 									<!--begin::Details-->
@@ -6364,7 +9469,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Details-->
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-1.jpg')}}" />
+										<img alt="Pic" src="{{asset('assets/media/avatars/300-1.jpg')}}" />
 									</div>
 									<!--end::Avatar-->
 								</div>
@@ -6384,7 +9489,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="d-flex align-items-center mb-2">
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-25.jpg')}}" />
+										<img alt="Pic" src="{{asset('assets/media/avatars/300-25.jpg')}}" />
 									</div>
 									<!--end::Avatar-->
 									<!--begin::Details-->
@@ -6417,7 +9522,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Details-->
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-1.jpg')}}" />
+										<img alt="Pic" src="{{asset('assets/media/avatars/300-1.jpg')}}" />
 									</div>
 									<!--end::Avatar-->
 								</div>
@@ -6437,7 +9542,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="d-flex align-items-center mb-2">
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-25.jpg')}}" />
+										<img alt="Pic" src="{{asset('assets/media/avatars/300-25.jpg')}}" />
 									</div>
 									<!--end::Avatar-->
 									<!--begin::Details-->
@@ -6469,7 +9574,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Details-->
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-1.jpg')}}" />
+										<img alt="Pic" src="{{asset('assets/media/avatars/300-1.jpg')}}" />
 									</div>
 									<!--end::Avatar-->
 								</div>
@@ -6489,7 +9594,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="d-flex align-items-center mb-2">
 									<!--begin::Avatar-->
 									<div class="symbol symbol-35px symbol-circle">
-										<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-25.jpg')}}" />
+										<img alt="Pic" src="{{asset('assets/media/avatars/300-25.jpg')}}" />
 									</div>
 									<!--end::Avatar-->
 									<!--begin::Details-->
@@ -6639,7 +9744,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo1.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo1.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo1" class="btn btn-sm btn-success shadow">Demo 1</a>
@@ -6653,7 +9758,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo2.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo2.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo2" class="btn btn-sm btn-success shadow">Demo 2</a>
@@ -6667,7 +9772,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-success rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo3.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo3.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo3" class="btn btn-sm btn-success shadow">Demo 3</a>
@@ -6681,7 +9786,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo4.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo4.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo4" class="btn btn-sm btn-success shadow">Demo 4</a>
@@ -6695,7 +9800,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo5.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo5.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo5" class="btn btn-sm btn-success shadow">Demo 5</a>
@@ -6709,7 +9814,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo6.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo6.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo6" class="btn btn-sm btn-success shadow">Demo 6</a>
@@ -6723,7 +9828,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo7.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo7.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo7" class="btn btn-sm btn-success shadow">Demo 7</a>
@@ -6737,7 +9842,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo8.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo8.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo8" class="btn btn-sm btn-success shadow">Demo 8</a>
@@ -6751,7 +9856,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo9.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo9.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo9" class="btn btn-sm btn-success shadow">Demo 9</a>
@@ -6765,7 +9870,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo10.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo10.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo10" class="btn btn-sm btn-success shadow">Demo 10</a>
@@ -6779,7 +9884,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo11.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo11.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo11" class="btn btn-sm btn-success shadow">Demo 11</a>
@@ -6793,7 +9898,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo12.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo12.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo12" class="btn btn-sm btn-success shadow">Demo 12</a>
@@ -6807,7 +9912,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo13.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo13.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo13" class="btn btn-sm btn-success shadow">Demo 13</a>
@@ -6821,7 +9926,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo14.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo14.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo14" class="btn btn-sm btn-success shadow">Demo 14</a>
@@ -6835,7 +9940,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo15.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo15.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo15" class="btn btn-sm btn-success shadow">Demo 15</a>
@@ -6849,7 +9954,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo16.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo16.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo16" class="btn btn-sm btn-success shadow">Demo 16</a>
@@ -6863,7 +9968,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo17.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo17.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo17" class="btn btn-sm btn-success shadow">Demo 17</a>
@@ -6877,7 +9982,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo18.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo18.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo18" class="btn btn-sm btn-success shadow">Demo 18</a>
@@ -6891,7 +9996,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo19.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo19.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo19" class="btn btn-sm btn-success shadow">Demo 19</a>
@@ -6905,7 +10010,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo20.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo20.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo20" class="btn btn-sm btn-success shadow">Demo 20</a>
@@ -6919,7 +10024,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo21.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo21.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo21" class="btn btn-sm btn-success shadow">Demo 21</a>
@@ -6933,7 +10038,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo22.png')}}" alt="demo" class="w-100" />
+												<img src="{{asset('assets/media/demos/demo22.png')}}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<a href="https://preview.keenthemes.com/metronic8/demo22" class="btn btn-sm btn-success shadow">Demo 22</a>
@@ -6947,7 +10052,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo23.png')}}" alt="demo" class="w-100 opacity-25" />
+												<img src="{{asset('assets/media/demos/demo23.png')}}" alt="demo" class="w-100 opacity-25" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<div class="badge badge-white px-6 py-4 fw-semibold fs-base shadow">Coming soon</div>
@@ -6961,7 +10066,7 @@ License: For each use you must have a valid license purchased only from above li
 										<!--begin::Demo-->
 										<div class="overlay overflow-hidden position-relative border border-4 border-gray-200 rounded">
 											<div class="overlay-wrapper">
-												<img src="{{URL::asset('assets/media/demos/demo24.png')}}" alt="demo" class="w-100 opacity-25" />
+												<img src="{{asset('assets/media/demos/demo24.png')}}" alt="demo" class="w-100 opacity-25" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
 												<div class="badge badge-white px-6 py-4 fw-semibold fs-base shadow">Coming soon</div>
@@ -7252,613 +10357,6 @@ License: For each use you must have a valid license purchased only from above li
 		</div>
 		<!--end::Scrolltop-->
 		<!--begin::Modals-->
-		<!--begin::Modal - Upgrade plan-->
-		<div class="modal fade" id="kt_modal_upgrade_plan" tabindex="-1" aria-hidden="true">
-			<!--begin::Modal dialog-->
-			<div class="modal-dialog modal-xl">
-				<!--begin::Modal content-->
-				<div class="modal-content rounded">
-					<!--begin::Modal header-->
-					<div class="modal-header justify-content-end border-0 pb-0">
-						<!--begin::Close-->
-						<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
-							<!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg')}}-->
-							<span class="svg-icon svg-icon-1">
-								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="currentColor" />
-									<rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor" />
-								</svg>
-							</span>
-							<!--end::Svg Icon-->
-						</div>
-						<!--end::Close-->
-					</div>
-					<!--end::Modal header-->
-					<!--begin::Modal body-->
-					<div class="modal-body pt-0 pb-15 px-5 px-xl-20">
-						<!--begin::Heading-->
-						<div class="mb-13 text-center">
-							<h1 class="mb-3">Upgrade a Plan</h1>
-							<div class="text-muted fw-semibold fs-5">If you need more info, please check
-							<a href="#" class="link-primary fw-bold">Pricing Guidelines</a>.</div>
-						</div>
-						<!--end::Heading-->
-						<!--begin::Plans-->
-						<div class="d-flex flex-column">
-							<!--begin::Nav group-->
-							<div class="nav-group nav-group-outline mx-auto" data-kt-buttons="true">
-								<button class="btn btn-color-gray-400 btn-active btn-active-secondary px-6 py-3 me-2 active" data-kt-plan="month">Monthly</button>
-								<button class="btn btn-color-gray-400 btn-active btn-active-secondary px-6 py-3" data-kt-plan="annual">Annual</button>
-							</div>
-							<!--end::Nav group-->
-							<!--begin::Row-->
-							<div class="row mt-10">
-								<!--begin::Col-->
-								<div class="col-lg-6 mb-10 mb-lg-0">
-									<!--begin::Tabs-->
-									<div class="nav flex-column">
-										<!--begin::Tab link-->
-										<label class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 active mb-6" data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_startup">
-											<!--end::Description-->
-											<div class="d-flex align-items-center me-2">
-												<!--begin::Radio-->
-												<div class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
-													<input class="form-check-input" type="radio" name="plan" checked="checked" value="startup" />
-												</div>
-												<!--end::Radio-->
-												<!--begin::Info-->
-												<div class="flex-grow-1">
-													<div class="d-flex align-items-center fs-2 fw-bold flex-wrap">Startup</div>
-													<div class="fw-semibold opacity-75">Best for startups</div>
-												</div>
-												<!--end::Info-->
-											</div>
-											<!--end::Description-->
-											<!--begin::Price-->
-											<div class="ms-5">
-												<span class="mb-2">$</span>
-												<span class="fs-3x fw-bold" data-kt-plan-price-month="39" data-kt-plan-price-annual="399">39</span>
-												<span class="fs-7 opacity-50">/
-												<span data-kt-element="period">Mon</span></span>
-											</div>
-											<!--end::Price-->
-										</label>
-										<!--end::Tab link-->
-										<!--begin::Tab link-->
-										<label class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 mb-6" data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_advanced">
-											<!--end::Description-->
-											<div class="d-flex align-items-center me-2">
-												<!--begin::Radio-->
-												<div class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
-													<input class="form-check-input" type="radio" name="plan" value="advanced" />
-												</div>
-												<!--end::Radio-->
-												<!--begin::Info-->
-												<div class="flex-grow-1">
-													<div class="d-flex align-items-center fs-2 fw-bold flex-wrap">Advanced</div>
-													<div class="fw-semibold opacity-75">Best for 100+ team size</div>
-												</div>
-												<!--end::Info-->
-											</div>
-											<!--end::Description-->
-											<!--begin::Price-->
-											<div class="ms-5">
-												<span class="mb-2">$</span>
-												<span class="fs-3x fw-bold" data-kt-plan-price-month="339" data-kt-plan-price-annual="3399">339</span>
-												<span class="fs-7 opacity-50">/
-												<span data-kt-element="period">Mon</span></span>
-											</div>
-											<!--end::Price-->
-										</label>
-										<!--end::Tab link-->
-										<!--begin::Tab link-->
-										<label class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 mb-6" data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_enterprise">
-											<!--end::Description-->
-											<div class="d-flex align-items-center me-2">
-												<!--begin::Radio-->
-												<div class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
-													<input class="form-check-input" type="radio" name="plan" value="enterprise" />
-												</div>
-												<!--end::Radio-->
-												<!--begin::Info-->
-												<div class="flex-grow-1">
-													<div class="d-flex align-items-center fs-2 fw-bold flex-wrap">Enterprise
-													<span class="badge badge-light-success ms-2 py-2 px-3 fs-7">Popular</span></div>
-													<div class="fw-semibold opacity-75">Best value for 1000+ team</div>
-												</div>
-												<!--end::Info-->
-											</div>
-											<!--end::Description-->
-											<!--begin::Price-->
-											<div class="ms-5">
-												<span class="mb-2">$</span>
-												<span class="fs-3x fw-bold" data-kt-plan-price-month="999" data-kt-plan-price-annual="9999">999</span>
-												<span class="fs-7 opacity-50">/
-												<span data-kt-element="period">Mon</span></span>
-											</div>
-											<!--end::Price-->
-										</label>
-										<!--end::Tab link-->
-										<!--begin::Tab link-->
-										<label class="nav-link btn btn-outline btn-outline-dashed btn-color-dark btn-active btn-active-primary d-flex flex-stack text-start p-6 mb-6" data-bs-toggle="tab" data-bs-target="#kt_upgrade_plan_custom">
-											<!--end::Description-->
-											<div class="d-flex align-items-center me-2">
-												<!--begin::Radio-->
-												<div class="form-check form-check-custom form-check-solid form-check-success flex-shrink-0 me-6">
-													<input class="form-check-input" type="radio" name="plan" value="custom" />
-												</div>
-												<!--end::Radio-->
-												<!--begin::Info-->
-												<div class="flex-grow-1">
-													<div class="d-flex align-items-center fs-2 fw-bold flex-wrap">Custom</div>
-													<div class="fw-semibold opacity-75">Requet a custom license</div>
-												</div>
-												<!--end::Info-->
-											</div>
-											<!--end::Description-->
-											<!--begin::Price-->
-											<div class="ms-5">
-												<a href="#" class="btn btn-sm btn-success">Contact Us</a>
-											</div>
-											<!--end::Price-->
-										</label>
-										<!--end::Tab link-->
-									</div>
-									<!--end::Tabs-->
-								</div>
-								<!--end::Col-->
-								<!--begin::Col-->
-								<div class="col-lg-6">
-									<!--begin::Tab content-->
-									<div class="tab-content rounded h-100 bg-light p-10">
-										<!--begin::Tab Pane-->
-										<div class="tab-pane fade show active" id="kt_upgrade_plan_startup">
-											<!--begin::Heading-->
-											<div class="pb-5">
-												<h2 class="fw-bold text-dark">What’s in Startup Plan?</h2>
-												<div class="text-muted fw-semibold">Optimal for 10+ team size and new startup</div>
-											</div>
-											<!--end::Heading-->
-											<!--begin::Body-->
-											<div class="pt-1">
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Up to 10 Active Users</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Up to 30 Project Integrations</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-muted flex-grow-1">Finance Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen040.svg')}}-->
-													<span class="svg-icon svg-icon-1">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="currentColor" />
-															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-muted flex-grow-1">Accounting Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen040.svg')}}-->
-													<span class="svg-icon svg-icon-1">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="currentColor" />
-															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-muted flex-grow-1">Network Platform</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen040.svg')}}-->
-													<span class="svg-icon svg-icon-1">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="currentColor" />
-															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center">
-													<span class="fw-semibold fs-5 text-muted flex-grow-1">Unlimited Cloud Space</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen040.svg')}}-->
-													<span class="svg-icon svg-icon-1">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="currentColor" />
-															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::Tab Pane-->
-										<!--begin::Tab Pane-->
-										<div class="tab-pane fade" id="kt_upgrade_plan_advanced">
-											<!--begin::Heading-->
-											<div class="pb-5">
-												<h2 class="fw-bold text-dark">What’s in Startup Plan?</h2>
-												<div class="text-muted fw-semibold">Optimal for 100+ team size and grown company</div>
-											</div>
-											<!--end::Heading-->
-											<!--begin::Body-->
-											<div class="pt-1">
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Up to 10 Active Users</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Up to 30 Project Integrations</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-muted flex-grow-1">Network Platform</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen040.svg')}}-->
-													<span class="svg-icon svg-icon-1">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="currentColor" />
-															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center">
-													<span class="fw-semibold fs-5 text-muted flex-grow-1">Unlimited Cloud Space</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen040.svg')}}-->
-													<span class="svg-icon svg-icon-1">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<rect x="7" y="15.3137" width="12" height="2" rx="1" transform="rotate(-45 7 15.3137)" fill="currentColor" />
-															<rect x="8.41422" y="7" width="12" height="2" rx="1" transform="rotate(45 8.41422 7)" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::Tab Pane-->
-										<!--begin::Tab Pane-->
-										<div class="tab-pane fade" id="kt_upgrade_plan_enterprise">
-											<!--begin::Heading-->
-											<div class="pb-5">
-												<h2 class="fw-bold text-dark">What’s in Startup Plan?</h2>
-												<div class="text-muted fw-semibold">Optimal for 1000+ team and enterpise</div>
-											</div>
-											<!--end::Heading-->
-											<!--begin::Body-->
-											<div class="pt-1">
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Up to 10 Active Users</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Up to 30 Project Integrations</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Network Platform</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Unlimited Cloud Space</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::Tab Pane-->
-										<!--begin::Tab Pane-->
-										<div class="tab-pane fade" id="kt_upgrade_plan_custom">
-											<!--begin::Heading-->
-											<div class="pb-5">
-												<h2 class="fw-bold text-dark">What’s in Startup Plan?</h2>
-												<div class="text-muted fw-semibold">Optimal for corporations</div>
-											</div>
-											<!--end::Heading-->
-											<!--begin::Body-->
-											<div class="pt-1">
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Unlimited Users</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Unlimited Project Integrations</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Analytics Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Finance Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Accounting Module</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center mb-7">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Network Platform</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center">
-													<span class="fw-semibold fs-5 text-gray-700 flex-grow-1">Unlimited Cloud Space</span>
-													<!--begin::Svg Icon | path: icons/duotune/general/gen043.svg')}}-->
-													<span class="svg-icon svg-icon-1 svg-icon-success">
-														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<rect opacity="0.3" x="2" y="2" width="20" height="20" rx="10" fill="currentColor" />
-															<path d="M10.4343 12.4343L8.75 10.75C8.33579 10.3358 7.66421 10.3358 7.25 10.75C6.83579 11.1642 6.83579 11.8358 7.25 12.25L10.2929 15.2929C10.6834 15.6834 11.3166 15.6834 11.7071 15.2929L17.25 9.75C17.6642 9.33579 17.6642 8.66421 17.25 8.25C16.8358 7.83579 16.1642 7.83579 15.75 8.25L11.5657 12.4343C11.2533 12.7467 10.7467 12.7467 10.4343 12.4343Z" fill="currentColor" />
-														</svg>
-													</span>
-													<!--end::Svg Icon-->
-												</div>
-												<!--end::Item-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::Tab Pane-->
-									</div>
-									<!--end::Tab content-->
-								</div>
-								<!--end::Col-->
-							</div>
-							<!--end::Row-->
-						</div>
-						<!--end::Plans-->
-						<!--begin::Actions-->
-						<div class="d-flex flex-center flex-row-fluid pt-12">
-							<button type="reset" class="btn btn-light me-3" data-bs-dismiss="modal">Cancel</button>
-							<button type="submit" class="btn btn-primary">Upgrade Plan</button>
-						</div>
-						<!--end::Actions-->
-					</div>
-					<!--end::Modal body-->
-				</div>
-				<!--end::Modal content-->
-			</div>
-			<!--end::Modal dialog-->
-		</div>
-		<!--end::Modal - Upgrade plan-->
 		<!--begin::Modal - Users Search-->
 		<div class="modal fade" id="kt_modal_users_search" tabindex="-1" aria-hidden="true">
 			<!--begin::Modal dialog-->
@@ -7941,7 +10439,7 @@ License: For each use you must have a valid license purchased only from above li
 										<a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-35px symbol-circle me-5">
-												<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-6.jpg')}}" />
+												<img alt="Pic" src="{{asset('assets/media/avatars/300-6.jpg')}}" />
 											</div>
 											<!--end::Avatar-->
 											<!--begin::Info-->
@@ -7971,7 +10469,7 @@ License: For each use you must have a valid license purchased only from above li
 										<a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-35px symbol-circle me-5">
-												<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-1.jpg')}}" />
+												<img alt="Pic" src="{{asset('assets/media/avatars/300-1.jpg')}}" />
 											</div>
 											<!--end::Avatar-->
 											<!--begin::Info-->
@@ -7986,7 +10484,7 @@ License: For each use you must have a valid license purchased only from above li
 										<a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-35px symbol-circle me-5">
-												<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-5.jpg')}}" />
+												<img alt="Pic" src="{{asset('assets/media/avatars/300-5.jpg')}}" />
 											</div>
 											<!--end::Avatar-->
 											<!--begin::Info-->
@@ -8001,7 +10499,7 @@ License: For each use you must have a valid license purchased only from above li
 										<a href="#" class="d-flex align-items-center p-3 rounded bg-state-light bg-state-opacity-50 mb-1">
 											<!--begin::Avatar-->
 											<div class="symbol symbol-35px symbol-circle me-5">
-												<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-25.jpg')}}" />
+												<img alt="Pic" src="{{asset('assets/media/avatars/300-25.jpg')}}" />
 											</div>
 											<!--end::Avatar-->
 											<!--begin::Info-->
@@ -8031,7 +10529,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-6.jpg')}}" />
+													<img alt="Pic" src="{{asset('assets/media/avatars/300-6.jpg')}}" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
@@ -8103,7 +10601,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-1.jpg')}}" />
+													<img alt="Pic" src="{{asset('assets/media/avatars/300-1.jpg')}}" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
@@ -8139,7 +10637,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-5.jpg')}}" />
+													<img alt="Pic" src="{{asset('assets/media/avatars/300-5.jpg')}}" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
@@ -8175,7 +10673,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-25.jpg')}}" />
+													<img alt="Pic" src="{{asset('assets/media/avatars/300-25.jpg')}}" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
@@ -8247,7 +10745,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-9.jpg')}}" />
+													<img alt="Pic" src="{{asset('assets/media/avatars/300-9.jpg')}}" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
@@ -8355,7 +10853,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-23.jpg')}}" />
+													<img alt="Pic" src="{{asset('assets/media/avatars/300-23.jpg')}}" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
@@ -8427,7 +10925,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-12.jpg')}}" />
+													<img alt="Pic" src="{{asset('assets/media/avatars/300-12.jpg')}}" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
@@ -8499,7 +10997,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-13.jpg')}}" />
+													<img alt="Pic" src="{{asset('assets/media/avatars/300-13.jpg')}}" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
@@ -8571,7 +11069,7 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-21.jpg')}}" />
+													<img alt="Pic" src="{{asset('assets/media/avatars/300-21.jpg')}}" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
@@ -8607,13 +11105,13 @@ License: For each use you must have a valid license purchased only from above li
 												<!--end::Checkbox-->
 												<!--begin::Avatar-->
 												<div class="symbol symbol-35px symbol-circle">
-													<span class="symbol-label bg-light-danger text-danger fw-semibold">M</span>
+													<img alt="Pic" src="{{asset('assets/media/avatars/300-12.jpg')}}" />
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Details-->
 												<div class="ms-5">
-													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody Macy</a>
-													<div class="fw-semibold text-muted">melody@altbox.com</div>
+													<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Ana Crown</a>
+													<div class="fw-semibold text-muted">ana.cf@limtel.com</div>
 												</div>
 												<!--end::Details-->
 											</div>
@@ -8649,7 +11147,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Message-->
 									<!--begin::Illustration-->
 									<div class="text-center px-5">
-										<img src="{{URL::asset('assets/media/illustrations/dozzy-1/1.png')}}" alt="" class="w-100 h-200px h-sm-325px" />
+										<img src="{{asset('assets/media/illustrations/dozzy-1/1.png')}}" alt="" class="w-100 h-200px h-sm-325px" />
 									</div>
 									<!--end::Illustration-->
 								</div>
@@ -8703,7 +11201,7 @@ License: For each use you must have a valid license purchased only from above li
 						<!--end::Heading-->
 						<!--begin::Google Contacts Invite-->
 						<div class="btn btn-light-primary fw-bold w-100 mb-8">
-						<img alt="Logo" src="{{URL::asset('assets/media/svg/brand-logos/google-icon.svg')}}" class="h-20px me-3" />Invite Gmail Contacts</div>
+						<img alt="Logo" src="{{asset('assets/media/svg/brand-logos/google-icon.svg')}}" class="h-20px me-3" />Invite Gmail Contacts</div>
 						<!--end::Google Contacts Invite-->
 						<!--begin::Separator-->
 						<div class="separator d-flex flex-center mb-8">
@@ -8726,7 +11224,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-6.jpg')}}" />
+											<img alt="Pic" src="{{asset('assets/media/avatars/300-6.jpg')}}" />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -8782,7 +11280,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-1.jpg')}}" />
+											<img alt="Pic" src="{{asset('assets/media/avatars/300-1.jpg')}}" />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -8810,7 +11308,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-5.jpg')}}" />
+											<img alt="Pic" src="{{asset('assets/media/avatars/300-5.jpg')}}" />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -8838,7 +11336,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-25.jpg')}}" />
+											<img alt="Pic" src="{{asset('assets/media/avatars/300-25.jpg')}}" />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -8894,7 +11392,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-9.jpg')}}" />
+											<img alt="Pic" src="{{asset('assets/media/avatars/300-9.jpg')}}" />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -8978,7 +11476,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-23.jpg')}}" />
+											<img alt="Pic" src="{{asset('assets/media/avatars/300-23.jpg')}}" />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9034,7 +11532,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-12.jpg')}}" />
+											<img alt="Pic" src="{{asset('assets/media/avatars/300-12.jpg')}}" />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9090,7 +11588,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-13.jpg')}}" />
+											<img alt="Pic" src="{{asset('assets/media/avatars/300-13.jpg')}}" />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9146,7 +11644,7 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<img alt="Pic" src="{{URL::asset('assets/media/avatars/300-21.jpg')}}" />
+											<img alt="Pic" src="{{asset('assets/media/avatars/300-21.jpg')}}" />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
@@ -9174,13 +11672,13 @@ License: For each use you must have a valid license purchased only from above li
 									<div class="d-flex align-items-center">
 										<!--begin::Avatar-->
 										<div class="symbol symbol-35px symbol-circle">
-											<span class="symbol-label bg-light-danger text-danger fw-semibold">M</span>
+											<img alt="Pic" src="{{asset('assets/media/avatars/300-9.jpg')}}" />
 										</div>
 										<!--end::Avatar-->
 										<!--begin::Details-->
 										<div class="ms-5">
-											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Melody Macy</a>
-											<div class="fw-semibold text-muted">melody@altbox.com</div>
+											<a href="#" class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2">Francis Mitcham</a>
+											<div class="fw-semibold text-muted">f.mit@kpmg.com</div>
 										</div>
 										<!--end::Details-->
 									</div>
@@ -9228,30 +11726,25 @@ License: For each use you must have a valid license purchased only from above li
 		<!--begin::Javascript-->
 		<script>var hostUrl = "assets/";</script>
 		<!--begin::Global Javascript Bundle(used by all pages)-->
-		<script src="{{URL::asset('assets/plugins/global/plugins.bundle.js')}}"></script>
-		<script src="{{URL::asset('assets/js/scripts.bundle.js')}}"></script>
+		<script src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+		<script src="{{asset('assets/js/scripts.bundle.js')}}"></script>
 		<!--end::Global Javascript Bundle-->
 		<!--begin::Vendors Javascript(used by this page)-->
-		<script src="{{URL::asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
-		<script src="{{URL::asset('assets/plugins/custom/vis-timeline/vis-timeline.bundle.js')}}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/index.js')}}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/xy.js')}}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/percent.js')}}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/radar.js')}}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js')}}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/map.js')}}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js')}}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js')}}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js')}}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js')}}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js')}}"></script>
+		<script src="{{asset('assets/plugins/custom/datatables/datatables.bundle.js')}}"></script>
 		<!--end::Vendors Javascript-->
 		<!--begin::Custom Javascript(used by this page)-->
-		<script src="{{URL::asset('assets/js/widgets.bundle.js')}}"></script>
-		<script src="{{URL::asset('assets/js/custom/widgets.js')}}"></script>
-		<script src="{{URL::asset('assets/js/custom/apps/chat/chat.js')}}"></script>
-		<script src="{{URL::asset('assets/js/custom/utilities/modals/upgrade-plan.js')}}"></script>
-		<script src="{{URL::asset('assets/js/custom/utilities/modals/users-search.js')}}"></script>
+		<script src="{{asset('assets/js/custom/apps/customers/view/add-payment.js')}}"></script>
+		<script src="{{asset('assets/js/custom/apps/customers/view/adjust-balance.js')}}"></script>
+		<script src="{{asset('assets/js/custom/apps/customers/view/invoices.js')}}"></script>
+		<script src="{{asset('assets/js/custom/apps/customers/view/payment-method.js')}}"></script>
+		<script src="{{asset('assets/js/custom/apps/customers/view/payment-table.js')}}"></script>
+		<script src="{{asset('assets/js/custom/apps/customers/view/statement.js')}}"></script>
+		<script src="{{asset('assets/js/custom/apps/customers/update.js')}}"></script>
+		<script src="{{asset('assets/js/widgets.bundle.js')}}"></script>
+		<script src="{{asset('assets/js/custom/widgets.js')}}"></script>
+		<script src="{{asset('assets/js/custom/apps/chat/chat.js')}}"></script>
+		<script src="{{asset('assets/js/custom/utilities/modals/new-card.js')}}"></script>
+		<script src="{{asset('assets/js/custom/utilities/modals/users-search.js')}}"></script>
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
 	</body>

@@ -48,7 +48,7 @@ class UsersController extends Controller
      */
     public function edit(User $user)
     {
-        if(Gate::denies('helpdesk')){
+        if(Auth::user()->hasRole('admin')){
             $roles = Role::all();
             return view('admin.edit')->with([
                 'user'=>$user,
@@ -72,6 +72,42 @@ class UsersController extends Controller
         }
     }
 
+    public function userDetails(User $user)
+    {
+        if(Auth::user()->hasRole('admin')){
+            $roles = Role::all();
+            return view('admin.user_detail')->with([
+                'user'=>$user,
+                'roles'=>$roles
+            ]);
+        }
+        else
+        {
+            if($user->hasRole('student'))
+            {
+                $roles = Role::all();
+                return view('admin.user_detail')->with([
+                    'user'=>$user,
+                    'roles'=>$roles
+                ]);
+            }
+            else{
+                return redirect()->route('index');
+
+            }
+        }
+    }
+
+    public function profile()
+    {
+        $roles = Role::all();
+        $user = Auth::user();
+        return view('profile')->with([
+            'user'=>$user,
+            'roles'=>$roles
+        ]);
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -81,17 +117,24 @@ class UsersController extends Controller
      */
     public function update(Request $request, User $user)
     {
+        
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'number' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:11',
             'email' => ['required', 'string', 'email', 'max:255']
         ]);
+        if($request->profilepic != null)
+        {
+        $profilepic = app('App\Http\Controllers\UploadImageController')->storage_upload($request->profilepic,'/app/public/Users/Profile/');
+            $user->profilepic = $profilepic;
+
+        }
         $user->roles()->sync($request->roles);
         $user->name = $request->name;
         $user->number = $request->number;
         $user->save();
         
-        return redirect()->route('index');
+        return Redirect()->back()->with('message', 'Details Updated Successfully');   
     }
 
     public function changePassword(Request $request, User $user)
@@ -116,7 +159,7 @@ class UsersController extends Controller
 
     public function lockuser(User $user)
     {
-        if(Gate::denies('helpdesk')){
+        if(Auth::user()->hasRole('admin')){
             if($user->lock==1)
             {
                 $user->lock = 0;
@@ -162,7 +205,7 @@ class UsersController extends Controller
      */
     public function destroy(User $user)
     {
-        if(Gate::denies('helpdesk')){
+        if(Auth::user()->hasRole('admin')){
             $user->roles()->detach();
             $user->delete();
             return redirect()->route('index');

@@ -3232,7 +3232,7 @@ License: For each use you must have a valid license purchased only from above li
 								<!--begin::User info-->
 								<div class="ms-2">
 									<!--begin::Name-->
-									<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold lh-1">{{ Auth::user()->name }}</a>
+									<a href="{{route('profile')}}" class="text-gray-800 text-hover-primary fs-6 fw-bold lh-1">{{ Auth::user()->name }}</a>
 									<!--end::Name-->
 									<!--begin::Major-->
 									<span class="text-muted fw-semibold d-block fs-7 lh-1">Python Dev</span>
@@ -3278,7 +3278,7 @@ License: For each use you must have a valid license purchased only from above li
 									<!--end::Menu separator-->
 									<!--begin::Menu item-->
 									<div class="menu-item px-5">
-										<a href="../../demo3/dist/account/overview.html" class="menu-link px-5">My Profile</a>
+										<a href="{{route('profile')}}" class="menu-link px-5">My Profile</a>
 									</div>
 									<!--end::Menu item-->
 									<!--begin::Menu item-->
@@ -7933,7 +7933,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="tab-pane active" id="kt_timeline_widget_4_tab_day" role="tabpanel" aria-labelledby="day-tab" data-kt-timeline-widget-4-blockui="true">
 													<div class="table-responsive pb-10">
 														<!--begin::Timeline-->
-														<div id="kt_timeline_widget_4_1" class="vis-timeline-custom h-350px min-w-700px" data-kt-timeline-widget-4-image-root="{{URL::asset('assets/media/"></div>
+														<div id="kt_timeline_widget_4_1" class="vis-timeline-custom h-350px min-w-700px" data-kt-timeline-widget-4-image-root="{{URL::asset('assets/media/')}}"></div>
 														<!--end::Timeline-->
 													</div>
 												</div>
@@ -7942,7 +7942,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="tab-pane" id="kt_timeline_widget_4_tab_week" role="tabpanel" aria-labelledby="week-tab" data-kt-timeline-widget-4-blockui="true">
 													<div class="table-responsive pb-10">
 														<!--begin::Timeline-->
-														<div id="kt_timeline_widget_4_2" class="vis-timeline-custom h-350px min-w-700px" data-kt-timeline-widget-4-image-root="{{URL::asset('assets/media/"></div>
+														<div id="kt_timeline_widget_4_2" class="vis-timeline-custom h-350px min-w-700px" data-kt-timeline-widget-4-image-root="{{URL::asset('assets/media/')}}"></div>
 														<!--end::Timeline-->
 													</div>
 												</div>
@@ -7951,7 +7951,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="tab-pane" id="kt_timeline_widget_4_tab_month" role="tabpanel" aria-labelledby="month-tab" data-kt-timeline-widget-4-blockui="true">
 													<div class="table-responsive pb-10">
 														<!--begin::Timeline-->
-														<div id="kt_timeline_widget_4_3" class="vis-timeline-custom h-350px min-w-700px" data-kt-timeline-widget-4-image-root="{{URL::asset('assets/media/"></div>
+														<div id="kt_timeline_widget_4_3" class="vis-timeline-custom h-350px min-w-700px" data-kt-timeline-widget-4-image-root="{{URL::asset('assets/media/')}}"></div>
 														<!--end::Timeline-->
 													</div>
 												</div>
@@ -7960,7 +7960,7 @@ License: For each use you must have a valid license purchased only from above li
 												<div class="tab-pane" id="kt_timeline_widget_4_tab_2022" role="tabpanel" aria-labelledby="week-tab" data-kt-timeline-widget-4-blockui="true">
 													<div class="table-responsive pb-10">
 														<!--begin::Timeline-->
-														<div id="kt_timeline_widget_4_4" class="vis-timeline-custom h-350px min-w-700px" data-kt-timeline-widget-4-image-root="{{URL::asset('assets/media/"></div>
+														<div id="kt_timeline_widget_4_4" class="vis-timeline-custom h-350px min-w-700px" data-kt-timeline-widget-4-image-root="{{URL::asset('assets/media/')}}"></div>
 														<!--end::Timeline-->
 													</div>
 												</div>
