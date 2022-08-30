@@ -3231,7 +3231,7 @@ License: For each use you must have a valid license purchased only from above li
 								<!--begin::User info-->
 								<div class="ms-2">
 									<!--begin::Name-->
-									<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold lh-1">{{$user->name}}</a>
+									<a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold lh-1">{{Auth::user()->name}}</a>
 									<!--end::Name-->
 									<!--begin::Major-->
 									<span class="text-muted fw-semibold d-block fs-7 lh-1">Python Dev</span>
@@ -3264,9 +3264,9 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Avatar-->
 											<!--begin::Username-->
 											<div class="d-flex flex-column">
-												<div class="fw-bold d-flex align-items-center fs-5">{{$user->name}}
+												<div class="fw-bold d-flex align-items-center fs-5">{{Auth::user()->name}}
 												<span class="badge badge-light-success fw-bold fs-8 px-2 py-1 ms-2">Pro</span></div>
-												<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{$user->email}}</a>
+												<a href="#" class="fw-semibold text-muted text-hover-primary fs-7">{{Auth::user()->email}}</a>
 											</div>
 											<!--end::Username-->
 										</div>
@@ -4367,7 +4367,7 @@ License: For each use you must have a valid license purchased only from above li
 											<div class="d-flex flex-center flex-column mb-5">
 												<!--begin::Avatar-->
 												<div class="symbol symbol-100px symbol-circle mb-7">
-                                                <img src="{{asset('/storage/'.Auth::user()->profilepic)}}" alt="">
+                                                <img src="{{asset('/storage/'.$user->profilepic)}}" alt="">
 												</div>
 												<!--end::Avatar-->
 												<!--begin::Name-->
@@ -8006,7 +8006,7 @@ License: For each use you must have a valid license purchased only from above li
 																<!--begin::Image input-->
 																<div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url('{{asset('assets/media/svg/avatars/blank.svg')}}')">
 																	<!--begin::Preview existing avatar-->
-																	<div class="image-input-wrapper w-125px h-125px" style="background-image: url({{asset('/storage/'.Auth::user()->profilepic)}})"></div>
+																	<div class="image-input-wrapper w-125px h-125px" style="background-image: url({{asset('/storage/'.$user->profilepic)}})"></div>
 																	<!--end::Preview existing avatar-->
 																	<!--begin::Edit-->
 																	<label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">

@@ -29,7 +29,7 @@ Route::get('/change-password',[App\Http\Controllers\Admin\UsersController::Class
 Route::get('/Profile', [App\Http\Controllers\Admin\UsersController::Class, 'profile'])->middleware(['auth','verified','locked'])->name('profile');
 
 /////student
-Route::get('student/', App\Http\Controllers\Student\StudentController::Class, 'index')->middleware(['auth','verified','locked','student'])->name('student.index');
+Route::get('student/', App\Http\Controllers\Student\StudentController::Class, 'index')->middleware(['auth','verified','locked'])->name('student.index');
 /////contributor
 Route::get('contributor/', App\Http\Controllers\Contributor\ContributorController::Class, 'index')->middleware(['auth','verified','locked','contributor'])->name('contributor.index');
 
