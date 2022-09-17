@@ -22,5 +22,10 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call(UsersTableSeeder::class);
         $this->call(RolesTableSeeder::class);
+        $this->call(TeamUsersTableSeeder::class);
+        $this->call(SilverRewardTableSeeder::class);
+        $this->call(GoldRewardTableSeeder::class);
+        $this->call(DeactivateDaysTableSeeder::class);
+
     }
 }

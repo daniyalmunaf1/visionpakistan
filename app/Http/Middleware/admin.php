@@ -20,11 +20,11 @@ class admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::user()->hasAnyRoles(['admin' , 'helpdesk']))
+        if(Auth::user()->hasRole('admin'))
         {
             return $next($request);
         }
 
-        return redirect()->route('contributor.index');
+        return redirect()->route('user.dashboard');
     }
 }

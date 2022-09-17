@@ -67,6 +67,8 @@ class Kernel extends HttpKernel
         'contributor' => \App\Http\Middleware\contributor::class,
         'student' => \App\Http\Middleware\student::class,
         'admin' => \App\Http\Middleware\admin::class,
+        'Deactivate' => \App\Http\Middleware\Deactivate::class,
+        
 
 
     ];

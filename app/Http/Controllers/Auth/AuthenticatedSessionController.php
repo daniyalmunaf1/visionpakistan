@@ -4,9 +4,13 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Models\DeactivateDays;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
+
 
 class AuthenticatedSessionController extends Controller
 {
@@ -31,6 +35,16 @@ class AuthenticatedSessionController extends Controller
         $request->authenticate();
 
         $request->session()->regenerate();
+
+        $_days = DeactivateDays::where('id',1)->first();
+        $days = $_days->days;
+
+        $users = User::where('lastuseradded', '<', Carbon::now()->subDays($days))->get();
+        foreach($users as $user)
+        {
+            $user->deactivate = 1;
+            $user->save();
+        }
 
         return redirect()->intended(RouteServiceProvider::HOME);
     }

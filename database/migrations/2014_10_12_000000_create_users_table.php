@@ -15,15 +15,24 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('six_digit_Id');
-            $table->string('userid');
             $table->string('name');
-            $table->integer('lock');
             $table->string('number');
-            $table->string('profilepic')->nullable();
+            $table->string('accountname');
+            $table->bigInteger('current_income')->nullable();
+            $table->bigInteger('reward_income')->nullable();
+            $table->bigInteger('total_income')->nullable();
+            $table->bigInteger('level')->nullable();
+            $table->bigInteger('score')->nullable();
+            $table->bigInteger('target')->nullable();
+            $table->bigInteger('team_bonus')->nullable();
+            $table->string('bankname');
             $table->string('email')->unique();
+            $table->string('ref_email')->nullable();
+            $table->integer('pin')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->dateTime('lastuseradded');
+            $table->string('deactivate');
             $table->rememberToken();
             $table->timestamps();
         });
