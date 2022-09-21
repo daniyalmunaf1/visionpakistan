@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Vision Pakistan is a network Marketing Website, Here you can earn unlimited Money by just developing a network">
+  <meta name="keywords" content="Network Marketing,Online Earnig,Earning,Marketing,Work From Home,Make Your Network,Invite,Invite Friends">
+  <meta name="author" content="Vision Pakistan">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"

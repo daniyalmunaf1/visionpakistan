@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->bigInteger('reward');
+            $table->bigInteger('level');
             $table->string('number');
             $table->string('bankname');
             $table->string('accountname');

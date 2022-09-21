@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vision Pakistan is a network Marketing Website, Here you can earn unlimited Money by just developing a network">
+  <meta name="keywords" content="Network Marketing,Online Earnig,Earning,Marketing,Work From Home,Make Your Network,Invite,Invite Friends">
+  <meta name="author" content="Vision Pakistan">
       <!-- Custom fonts for this template-->
       <link href="{{asset('assets/dashboard/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
       <link
@@ -49,7 +52,7 @@
     text-align: center;
 }
       </style>
-    <title>Vision Pakistan - viewpins</title>
+    <title>Vision Pakistan - View Pins</title>
     <link rel="icon"  sizes="512x512" href="{{asset('assets/favicon/android-chrome-512x512.png')}}">
 </head>
 <body id="page-top">

@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Vision Pakistan is a network Marketing Website, Here you can earn unlimited Money by just developing a network">
+  <meta name="keywords" content="Network Marketing,Online Earnig,Earning,Marketing,Work From Home,Make Your Network,Invite,Invite Friends">
+  <meta name="author" content="Vision Pakistan">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -14,7 +17,7 @@
     <!-- <link rel="stylesheet" href="{{asset('assets/css/style.css')}}"> -->
     <link rel="icon"  sizes="512x512" href="{{asset('assets/favicon/android-chrome-512x512.png')}}">
 
-    <title>Vision Pakistan - Dashboard</title>
+    <title>Vision Pakistan - Deactivate</title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -57,7 +60,7 @@
             <div
               class="d-sm-flex align-items-center justify-content-between mb-4"
             >
-              <h1 class="h3 mb-0 text-gray-800">YOUR ACCOUNT IS DEACTIVATED BECAUSE YOU DIDN'T  ADD A USER IN 30 DAYS</h1>
+              <h1 class="h3 mb-0 text-gray-800">YOUR ACCOUNT IS DEACTIVATED BECAUSE YOU DIDN'T  ADD A USER IN {{$days}} DAYS</h1>
             </div>
 
            

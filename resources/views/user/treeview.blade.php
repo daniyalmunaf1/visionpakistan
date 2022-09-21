@@ -3,6 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Vision Pakistan is a network Marketing Website, Here you can earn unlimited Money by just developing a network">
+  <meta name="keywords" content="Network Marketing,Online Earnig,Earning,Marketing,Work From Home,Make Your Network,Invite,Invite Friends">
+  <meta name="author" content="Vision Pakistan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Custom fonts for this template-->
@@ -77,7 +80,7 @@
     
 }
 </style>
-    <title>Vision Pakistan - Tree View</title>
+    <title>Vision Pakistan - Team View</title>
   </head>
   <body id="page-top">
     <div id="wrapper">
@@ -137,7 +140,7 @@
               <ul>
                 <li>
                   <a href="javascript:void(0);">
-                    <div  class="member-view-box" style="right:-25px;">
+                    <div  class="member-view-box">
                       <div class="member-image">
                         <img
                           class="user-img1"
@@ -157,13 +160,14 @@
                         <div class="member-view-box">
                           <div class="member-image">
                             <!-- <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member"> -->
-                            @if($activeTeam!=NULL)
-                            @if($activeTeam->ref1!=NULL)
+                            
                             <img
                               class="user-img2"
                               src="{{asset('assets/dashboard/treeview/icons8-user-80.png')}}"
                               alt="User"
                             />
+                            @if($activeTeam!=NULL)
+                            @if($activeTeam->ref1!=NULL)
                             <div class="member-details">
                               <h3 class="member-h3-2">
                                 {{$activeTeam->ref1}}
@@ -183,13 +187,14 @@
                         <div class="member-view-box">
                           <div class="member-image">
                             <!-- <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member"> -->
-                            @if($activeTeam!=NULL)
-                            @if($activeTeam->ref2!=NULL)
+                           
                             <img
                               class="user-img2"
                               src="{{asset('assets/dashboard/treeview/icons8-user-80.png')}}"
                               alt="User"
                             />
+                            @if($activeTeam!=NULL)
+                            @if($activeTeam->ref2!=NULL)
                             <div class="member-details">
                               <h3 class="member-h3-2">
                                 {{$activeTeam->ref2}}
@@ -211,13 +216,14 @@
                         <div class="member-view-box">
                           <div class="member-image">
                             <!-- <img src="https://image.flaticon.com/icons/svg/145/145867.svg" alt="Member"> -->
-                            @if($activeTeam!=NULL)
-                            @if($activeTeam->ref3!=NULL)
+                           
                             <img
                               class="user-img2"
                               src="{{asset('assets/dashboard/treeview/icons8-user-80.png')}}"
                               alt="User"
                             />
+                            @if($activeTeam!=NULL)
+                            @if($activeTeam->ref3!=NULL)
                             <div class="member-details">
                               <h3 class="member-h3-2">
                                 {{$activeTeam->ref3}}

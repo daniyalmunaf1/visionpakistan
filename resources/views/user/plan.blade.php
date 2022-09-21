@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Vision Pakistan is a network Marketing Website, Here you can earn unlimited Money by just developing a network">
+  <meta name="keywords" content="Network Marketing,Online Earnig,Earning,Marketing,Work From Home,Make Your Network,Invite,Invite Friends">
+  <meta name="author" content="Vision Pakistan">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -13,7 +16,7 @@
     <link rel="icon"  sizes="512x512" href="{{asset('assets/favicon/android-chrome-512x512.png')}}">
     <link rel="stylesheet" href="{{asset('assets/dashboard/css/rewards.css')}}">
    
-    <title>Vision Pakistan - Silver Plan</title>
+    <title>Vision Pakistan - Plan</title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -130,63 +133,63 @@
                   </div>
                   <div class="table-content">	
                     <div class="table-row">		
-                      <div class="table-data">1</div>
+                      <div class="table-data">2</div>
                       <div class="table-data">45</div>
                       <div class="table-data">2500</div>
                       <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>
                   
                     </div>
                     <div class="table-row">
-                      <div class="table-data">2</div>
+                      <div class="table-data">3</div>
                       <div class="table-data">300</div>
                       <div class="table-data">SmartPhone<br>25,000</div>
                       <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/phone.png')}}" alt=""> </div>
   
                     </div>
                     <div class="table-row">
-                      <div class="table-data">3</div>
+                      <div class="table-data">4</div>
                       <div class="table-data">2000</div>
                       <div class="table-data">Corei5 4thGen Laptop<br>35,000</div>
                       <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/laptop.png')}}" alt=""></div>
                     </div>
                     <div class="table-row">
-                      <div class="table-data">4</div>
+                      <div class="table-data">5</div>
                       <div class="table-data">5000</div>
                       <div class="table-data">Smart LED TV<br>40,000</div>
                       <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/tv.png')}}" alt=""></div>
                     </div>
                     <div class="table-row">
-                      <div class="table-data">5</div>
+                      <div class="table-data">6</div>
                       <div class="table-data">10,000</div>
                       <div class="table-data">75,000</div>
                       <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>
                     </div>
                     <div class="table-row">
-                      <div class="table-data">6</div>
+                      <div class="table-data">7</div>
                       <div class="table-data">20,000</div>
                       <div class="table-data">150,000</div>
                       <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>
                     </div>
                     <div class="table-row">
-                      <div class="table-data">7</div>
+                      <div class="table-data">8</div>
                       <div class="table-data">32,000</div>
                       <div class="table-data">Complete Umrah Package<br>2500,000</div>
                       <div class="table-data"> <img style="width: 46px;" src="{{asset('assets/dashboard/rewards-img/umrah.png')}}" alt=""> </div>
                     </div>
                     <div class="table-row">
-                      <div class="table-data">8</div>
+                      <div class="table-data">9</div>
                       <div class="table-data">52,000</div>
                       <div class="table-data">500,000</div>
                       <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>
                     </div>
                     <div class="table-row">
-                      <div class="table-data">9</div>
+                      <div class="table-data">10</div>
                       <div class="table-data">90,000</div>
                       <div class="table-data">100,0000</div>
                       <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>
                     </div>
                     <div class="table-row">
-                      <div class="table-data">10</div>
+                      <div class="table-data">11</div>
                       <div class="table-data">150,000</div>
                       <div class="table-data">200,0000</div>
                       <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>
@@ -204,63 +207,63 @@
                     </div>
                     <div class="table-content">	
                       <div class="table-row">		
-                        <div class="table-data">1</div>
+                        <div class="table-data">2</div>
                         <div class="table-data">35</div>
                         <div class="table-data">7000</div>
                         <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>
                     
                       </div>
                       <div class="table-row">
-                        <div class="table-data">2</div>
+                        <div class="table-data">3</div>
                         <div class="table-data">110</div>
                         <div class="table-data">SmartPhone<br>25,000</div>
                         <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/phone.png')}}" alt=""> </div>
     
                       </div>
                       <div class="table-row">
-                        <div class="table-data">3</div>
+                        <div class="table-data">4</div>
                         <div class="table-data">320</div>
                         <div class="table-data">Corei5 4thGen Laptop<br>35,000</div>
                         <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/laptop.png')}}" alt=""></div>
                       </div>
                       <div class="table-row">
-                        <div class="table-data">4</div>
+                        <div class="table-data">5</div>
                         <div class="table-data">750</div>
                         <div class="table-data">Smart LED TV 42"<br>50,000</div>
                         <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/tv.png')}}" alt=""></div>
                       </div>
                       <div class="table-row">
-                        <div class="table-data">5</div>
+                        <div class="table-data">6</div>
                         <div class="table-data">1600</div>
                         <div class="table-data">80,000</div>
                         <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>
                       </div>
                       <div class="table-row">
-                        <div class="table-data">6</div>
+                        <div class="table-data">7</div>
                         <div class="table-data">3600</div>
                         <div class="table-data">150,000</div>
                         <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>
                       </div>
                       <div class="table-row">
-                        <div class="table-data">7</div>
+                        <div class="table-data">8</div>
                         <div class="table-data">7200</div>
                         <div class="table-data">Complete Umrah Package<br>2500,000</div>
                         <div class="table-data"> <img style="width: 46px;" src="{{asset('assets/dashboard/rewards-img/umrah.png')}}" alt=""> </div>
                       </div>
                       <div class="table-row">
-                        <div class="table-data">8</div>
+                        <div class="table-data">9</div>
                         <div class="table-data">21,000</div>
                         <div class="table-data">1200,000</div>
                         <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>
                       </div>
                       <div class="table-row">
-                        <div class="table-data">9</div>
+                        <div class="table-data">10</div>
                         <div class="table-data">36,000</div>
                         <div class="table-data">1500,000</div>
                         <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>
                       </div>
                       <div class="table-row">
-                        <div class="table-data">10</div>
+                        <div class="table-data">11</div>
                         <div class="table-data">95,000</div>
                         <div class="table-data">3500,000</div>
                         <div class="table-data"> <img style="width: 56px;" src="{{asset('assets/dashboard/rewards-img/money.png')}}" alt=""> </div>

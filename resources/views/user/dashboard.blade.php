@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Vision Pakistan is a network Marketing Website, Here you can earn unlimited Money by just developing a network">
+  <meta name="keywords" content="Network Marketing,Online Earnig,Earning,Marketing,Work From Home,Make Your Network,Invite,Invite Friends">
+  <meta name="author" content="Vision Pakistan">
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -260,7 +263,7 @@
                       <p class="price"><span>1000</span></p>
                       <ul class="pricing-offers">
                         <li>6 Digit Pin</li>
-                        <li>1200rs Reward for one Score</li>
+                        <li>1050rs Reward for one Score</li>
                         <li>less rewards</li>
                       </ul>
                       <a href="{{route('user.plan')}}" class="login-btn">Buy Now</a>
@@ -273,7 +276,7 @@
                       <p class="price"><span>5000</span></p>
                       <ul class="pricing-offers">
                         <li>8 Digit Pin</li>
-                        <li>4000rs Reward for one Score</li>
+                        <li>5400rs Reward for one Score</li>
                         <li>More Rewards</li>
                       </ul>
                       <a href="#paymentplans" class="login-btn">Buy Now</a>
@@ -290,7 +293,7 @@
                       <p class="price"><span>1000</span></p>
                       <ul class="pricing-offers">
                         <li>6 Digit Pin</li>
-                        <li>1200rs Reward for one Score</li>
+                        <li>1050rs Reward for one Score</li>
                         <li>less rewards</li>
                       </ul>
                       <a href="" class="login-btn">Buy Now</a>
@@ -303,7 +306,7 @@
                       <p class="price"><span>5000</span></p>
                       <ul class="pricing-offers">
                         <li>8 Digit Pin</li>
-                        <li>4000rs Reward for one Score</li>
+                        <li>5400rs Reward for one Score</li>
                         <li>More Rewards</li>
                       </ul>
                       <a href="{{route('user.plan')}}" class="login-btn">Buy Now</a>

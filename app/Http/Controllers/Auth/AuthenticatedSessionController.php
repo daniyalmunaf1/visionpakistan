@@ -38,6 +38,7 @@ class AuthenticatedSessionController extends Controller
 
         $_days = DeactivateDays::where('id',1)->first();
         $days = $_days->days;
+        // dd($days);
 
         $users = User::where('lastuseradded', '<', Carbon::now()->subDays($days))->get();
         foreach($users as $user)

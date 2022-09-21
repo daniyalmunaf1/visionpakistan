@@ -7,6 +7,7 @@ use Closure;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 
 class Deactivate
@@ -20,6 +21,17 @@ class Deactivate
      */
     public function handle(Request $request, Closure $next)
     {
+        $_days = DeactivateDays::where('id',1)->first();
+        $days = $_days->days;
+        // dd($days);
+
+        $users = User::where('lastuseradded', '<', Carbon::now()->subDays($days))->get();
+        foreach($users as $user)
+        {
+            $user->deactivate = 1;
+            $user->save();
+        }
+
         $deactivate = Auth::user()->deactivate;
         $_status = DeactivateDays::where('id',1)->first();
         $status = $_status->status;

@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Vision Pakistan is a network Marketing Website, Here you can earn unlimited Money by just developing a network">
+  <meta name="keywords" content="Network Marketing,Online Earnig,Earning,Marketing,Work From Home,Make Your Network,Invite,Invite Friends">
+  <meta name="author" content="Vision Pakistan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Custom fonts for this template-->
@@ -23,7 +26,7 @@
 <link rel="stylesheet" href="{{asset('assets/dashboard/joinAuser/joinuser.css')}}">
 <link rel="stylesheet" href="{{asset('assets/dist/pincode-input.min.css')}}" />
 <link rel="icon"  sizes="512x512" href="{{asset('assets/favicon/android-chrome-512x512.png')}}">
-    <title>Vision Pakistan - Join</title>
+    <title>Vision Pakistan - Edit User</title>
     <style>
         .pincode-input{
         margin: 5px;
@@ -96,6 +99,10 @@
                     <div class="form-group">
                         <label for="accname">Account Holder Name</label>
                         <input type="text" class="form-control item" id="accname" value="{{ $user->accountname }}" name="accountname" placeholder="Account Holder Name of new User">
+                    </div>
+                    <div class="form-group">
+                        <label for="accname">Score</label>
+                        <input type="number" class="form-control item" id="accname" value="{{ $user->score }}" name="score" placeholder="Score">
                     </div>
                     <div class="form-group">
                         <label for="accname">Level</label>

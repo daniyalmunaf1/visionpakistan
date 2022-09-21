@@ -93,7 +93,7 @@ class RegisteredUserController extends Controller
                 $user->level = 1;
                 $user->score = 0;
                 $user->deactivate = 0;
-                $user->lastlogin = Carbon::now();
+                $user->lastuseradded = Carbon::now();
                 if(Auth::user()->hasRole('silver'))
                 {
                     $user->target = 45;

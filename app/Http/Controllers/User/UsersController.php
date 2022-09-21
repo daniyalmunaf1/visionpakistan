@@ -13,6 +13,7 @@ use App\Models\GoldReward;
 use App\Models\WithdrawalRequest;
 use App\Models\TeamBonusRequest;
 use App\Models\RewardBonusRequest;
+use App\Models\DeactivateDays;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
@@ -78,7 +79,9 @@ class UsersController extends Controller
     }
     public function deactivate()
     {
-        return view('user.deactivate');
+        $deactivate = DeactivateDays::where('id',1)->first();
+        $days = $deactivate->days;
+        return view('user.deactivate')->with('days',$days);
 
     }
     public function planchange()
@@ -151,6 +154,10 @@ class UsersController extends Controller
         if(Auth::user()->hasRole('silver'))
         {
             $rScore = SilverReward::where('level',$level)->value('score');
+            $target = SilverReward::where('level',$level)->first();
+
+            $user->target = $target->score;
+            $user->save();
             // $rTarget = SilverReward::where('level',$level+1)->value('score');
         //     if($score>=$rScore)
         //     {
@@ -238,6 +245,7 @@ class UsersController extends Controller
         $rewardbonusrequest->user_id = Auth::user()->id;
         $rewardbonusrequest->name = Auth::user()->name;
         $rewardbonusrequest->email = Auth::user()->email;
+        $rewardbonusrequest->level = Auth::user()->level+1;
         $rewardbonusrequest->bankname = Auth::user()->bankname;
         $rewardbonusrequest->accountname = Auth::user()->accountname;
         $rewardbonusrequest->number = Auth::user()->number;

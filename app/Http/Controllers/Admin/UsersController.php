@@ -147,6 +147,8 @@ class UsersController extends Controller
     }
     public function updatedays(Request $request)
     {
+        $users = User::all();
+        
         $days = DeactivateDays::where('id',1)->first();
         $days->days = $request->days;
         $days->save();
@@ -155,6 +157,7 @@ class UsersController extends Controller
     }
     public function deactivatestatus()
     {
+        
         $days = DeactivateDays::where('id',1)->first();
         if($days->status=='enabled')
         {
@@ -195,18 +198,19 @@ class UsersController extends Controller
             'bankname' => ['required', 'string', 'max:255'],
             'accountname' => ['required', 'string', 'max:255'],
             'number' => ['required', 'string', 'max:255'],
-            'current_income' => ['required', 'numeric', 'max:1000000'],
-            'reward_income' => ['required', 'numeric', 'max:1000000'],
-            'total_income' => ['required', 'numeric', 'max:1000000'],
-            'team_bonus' => ['required', 'numeric', 'max:1000000'],
-            'level' => ['required', 'numeric', 'max:1000000'],
+            'current_income' => ['required', 'numeric', 'max:100000000'],
+            'reward_income' => ['required', 'numeric', 'max:100000000'],
+            'total_income' => ['required', 'numeric', 'max:100000000'],
+            'team_bonus' => ['required', 'numeric', 'max:100000000'],
+            'level' => ['required', 'numeric', 'max:100000000'],
+            'score' => ['required', 'numeric', 'max:100000000'],
         ]);
-        
         $user->name = $request->name;
         $user->email = $request->email;
         $user->accountname = $request->accountname;
         $user->bankname = $request->bankname;
-        $user->level = 1;
+        $user->level = $request->level;
+        $user->score = $request->score;
         $user->current_income = $request->current_income;
         $user->reward_income =  $request->reward_income;
         $user->total_income =  $request->total_income;
