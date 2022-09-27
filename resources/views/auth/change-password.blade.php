@@ -8,16 +8,16 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="icon"  sizes="512x512" href="assets/favicon/android-chrome-512x512.png">
-	<link rel="stylesheet" href="assets/css/login.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="assets/css/bootstrap/style.bundle.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap/_media.css">
-    <link rel="stylesheet" href="assets/css/bootstrap/mixins/_border-radius.css">
-    <link rel="stylesheet" href="assets/css/bootstrap/mixins/_screen-reader.css">
-    <link rel="stylesheet" href="assets/css/bootstrap/mixins/_visibility.css">
-    <link rel="stylesheet" href="assets/css/bootstrap/utilities/_stretched-link.css">
+	<link rel="icon"  sizes="512x512" href="{{asset('assets/favicon/android-chrome-512x512.png')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/login.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/bootstrap/style.bundle.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap/_media.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap/mixins/_border-radius.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap/mixins/_screen-reader.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap/mixins/_visibility.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap/utilities/_stretched-link.css')}}">
 
 	</head>
 	<body>
@@ -109,12 +109,12 @@
 			</div>
 		</div>
 	</section>
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/popper.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/index.js"></script>
-	<script src="assets/js/custom/authentication/sign-in/general.js"></script>
+	<script src="{{asset('assets/js/jquery.min.js')}}"></script>
+	<script src="{{asset('assets/js/popper.js')}}"></script>
+	<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('assets/js/main.js')}}"></script>
+	<script src="{{asset('assets/js/index.js')}}"></script>
+	<script src="{{asset('assets/js/custom/authentication/sign-in/general.js')}}"></script>
 
 	</body>
 </html>

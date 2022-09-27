@@ -60,8 +60,8 @@ Route::get('user/planchange', [App\Http\Controllers\User\UsersController::class,
 Route::namespace('App\Http\Controllers\Admin')->group(function(){
     Route::resource('users',UsersController::class)->except(['show','create','store']);
 });
-Route::post('/change', [App\Http\Controllers\Admin\UsersController::class, 'changePassword'])->middleware(['auth','verified'])->name('change_password');
-Route::get('/change-password',[App\Http\Controllers\Admin\UsersController::class, 'gotochangepassword'])->middleware(['auth','verified'])->name('gotochangepassword');
+Route::post('user/change', [App\Http\Controllers\Admin\UsersController::class, 'changePassword'])->middleware(['auth','verified'])->name('change_password');
+Route::get('user/change-password',[App\Http\Controllers\Admin\UsersController::class, 'gotochangepassword'])->middleware(['auth','verified'])->name('gotochangepassword');
 // Route::get('/Profile', [App\Http\Controllers\Admin\UsersController::class, 'profile'])->middleware(['auth','verified','locked'])->name('profile');
 
 // /////student
