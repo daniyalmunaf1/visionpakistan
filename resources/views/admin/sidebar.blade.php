@@ -6,7 +6,7 @@
         <!-- Sidebar - Brand -->
         <a style="flex-direction:column;height: 87px;"
           class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="{{asset('assets/adminPanel/admin.html')}}"
+          href="{{route('dashboard')}}"
         >
           <div style="transform:none;" class="sidebar-brand-icon rotate-n-15">
             <img class="V-logo" style="width:100px;" src="{{asset('assets/Images/VsionPakLogoVWhite.png')}}" alt="">
@@ -19,7 +19,7 @@
         <hr class="sidebar-divider my-0" />
 
         <!-- Nav Item - Dashboard -->
-        <li class="nav-item  active ">
+        <li class="nav-item">
         <a class="nav-link" href="{{route('dashboard')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a

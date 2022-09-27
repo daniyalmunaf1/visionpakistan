@@ -67,7 +67,7 @@
                     </div>
                     <div class="form-group">
                         <label for="sender-acc">Sender Account Number#</label>
-                        <input type="number" name="sender_acc_number" value="{{Auth::user()->number}}" class="form-control item" id="sender-acc" placeholder="Enter Account# of Sender Account">
+                        <input type="number" name="sender_acc_number" value="{{ old('trx_id') }}" class="form-control item" id="sender-acc" placeholder="Enter Account# of Sender Account">
                     </div>
                     <div class="form-group">
                         <label for="trxid">Trx ID</label>

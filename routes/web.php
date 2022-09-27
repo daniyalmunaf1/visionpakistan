@@ -30,26 +30,27 @@ Route::get('/teambonusrequest', [App\Http\Controllers\Admin\UsersController::cla
 Route::get('bonusdone/{id}/{user_id}/{plan}', [App\Http\Controllers\Admin\UsersController::class, 'bonusdone'])->middleware(['auth','verified','admin'])->name('bonusdone');
 Route::get('/rewardrequest', [App\Http\Controllers\Admin\UsersController::class, 'rewardrequest'])->middleware(['auth','verified','admin'])->name('rewardrequest');
 Route::get('rewarddone/{id}/{user_id}/{reward}/{plan}', [App\Http\Controllers\Admin\UsersController::class, 'rewarddone'])->middleware(['auth','verified','admin'])->name('rewarddone');
+Route::get('/{user}', [App\Http\Controllers\Admin\UsersController::class, 'deactivateuser'])->middleware(['auth','verified'])->name('deactivateuser');
 
 
 Route::post('register', [App\Http\Controllers\Auth\RegisteredUserController::class, 'store'])->middleware(['auth','verified'])->name('register');;
 
 Route::get('user/dashboard', [App\Http\Controllers\User\UsersController::class, 'dashboard'])->middleware(['auth','Deactivate','verified'])->name('user.dashboard');
-Route::get('plan', [App\Http\Controllers\User\UsersController::class, 'plan'])->middleware(['auth','Deactivate','verified'])->name('user.plan');
-Route::get('viewpin', [App\Http\Controllers\User\UsersController::class, 'viewpin'])->middleware(['auth','Deactivate','verified'])->name('user.viewpin');
+Route::get('user/plan', [App\Http\Controllers\User\UsersController::class, 'plan'])->middleware(['auth','Deactivate','verified'])->name('user.plan');
+Route::get('user/viewpin', [App\Http\Controllers\User\UsersController::class, 'viewpin'])->middleware(['auth','Deactivate','verified'])->name('user.viewpin');
 Route::get('user/pinrequest', [App\Http\Controllers\User\UsersController::class, 'pinrequest'])->middleware(['auth','Deactivate','verified'])->name('user.pinrequest');
-Route::post('pinrequeststore', [App\Http\Controllers\User\UsersController::class, 'pinrequeststore'])->middleware(['auth','Deactivate','verified'])->name('user.pinrequeststore');
-Route::get('treeview', [App\Http\Controllers\User\UsersController::class, 'treeview'])->middleware(['auth','Deactivate','verified'])->name('user.treeview');
-Route::get('submit/{id}', [App\Http\Controllers\User\UsersController::class, 'submit'])->middleware(['auth','Deactivate','verified'])->name('user.submit');
-Route::get('submitreward', [App\Http\Controllers\User\UsersController::class, 'submitreward'])->middleware(['auth','verified'])->name('user.submitreward');
-Route::get('submitteambonus/{id}', [App\Http\Controllers\User\UsersController::class, 'submitteambonus'])->middleware(['auth','Deactivate','verified'])->name('user.submitteambonus');
-Route::get('treeviewgold', [App\Http\Controllers\User\UsersController::class, 'treeviewgold'])->middleware(['auth','Deactivate','verified'])->name('user.treeviewgold');
-Route::get('adduser', [App\Http\Controllers\User\UsersController::class, 'adduser'])->middleware(['auth','Deactivate','verified'])->name('user.adduser');
-Route::get('addusergold', [App\Http\Controllers\User\UsersController::class, 'addusergold'])->middleware(['auth','Deactivate','verified'])->name('user.addusergold');
-Route::get('changeplan', [App\Http\Controllers\User\UsersController::class, 'changeplan'])->middleware(['auth','Deactivate','verified'])->name('user.changeplan');
-Route::get('paymenthistory', [App\Http\Controllers\User\UsersController::class, 'paymenthistory'])->middleware(['auth','Deactivate','verified'])->name('user.paymenthistory');
-Route::get('deactivate', [App\Http\Controllers\User\UsersController::class, 'deactivate'])->name('user.deactivate');
-Route::get('planchange', [App\Http\Controllers\User\UsersController::class, 'planchange'])->middleware(['auth','Deactivate','verified'])->name('user.planchange');
+Route::post('user/pinrequeststore', [App\Http\Controllers\User\UsersController::class, 'pinrequeststore'])->middleware(['auth','Deactivate','verified'])->name('user.pinrequeststore');
+Route::get('user/treeview', [App\Http\Controllers\User\UsersController::class, 'treeview'])->middleware(['auth','Deactivate','verified'])->name('user.treeview');
+Route::get('user/submit/{id}', [App\Http\Controllers\User\UsersController::class, 'submit'])->middleware(['auth','Deactivate','verified'])->name('user.submit');
+Route::get('user/submitreward', [App\Http\Controllers\User\UsersController::class, 'submitreward'])->middleware(['auth','verified'])->name('user.submitreward');
+Route::get('user/submitteambonus/{id}', [App\Http\Controllers\User\UsersController::class, 'submitteambonus'])->middleware(['auth','Deactivate','verified'])->name('user.submitteambonus');
+Route::get('user/treeviewgold', [App\Http\Controllers\User\UsersController::class, 'treeviewgold'])->middleware(['auth','Deactivate','verified'])->name('user.treeviewgold');
+Route::get('user/adduser', [App\Http\Controllers\User\UsersController::class, 'adduser'])->middleware(['auth','Deactivate','verified'])->name('user.adduser');
+Route::get('user/addusergold', [App\Http\Controllers\User\UsersController::class, 'addusergold'])->middleware(['auth','Deactivate','verified'])->name('user.addusergold');
+Route::get('user/changeplan', [App\Http\Controllers\User\UsersController::class, 'changeplan'])->middleware(['auth','Deactivate','verified'])->name('user.changeplan');
+Route::get('user/paymenthistory', [App\Http\Controllers\User\UsersController::class, 'paymenthistory'])->middleware(['auth','Deactivate','verified'])->name('user.paymenthistory');
+Route::get('user/deactivate', [App\Http\Controllers\User\UsersController::class, 'deactivate'])->name('user.deactivate');
+Route::get('user/planchange', [App\Http\Controllers\User\UsersController::class, 'planchange'])->middleware(['auth','Deactivate','verified'])->name('user.planchange');
 
 
 
@@ -59,7 +60,6 @@ Route::get('planchange', [App\Http\Controllers\User\UsersController::class, 'pla
 Route::namespace('App\Http\Controllers\Admin')->group(function(){
     Route::resource('users',UsersController::class)->except(['show','create','store']);
 });
-// Route::Put('/{user}', [App\Http\Controllers\Admin\UsersController::class, 'lockuser'])->middleware(['auth','verified'])->name('lockuser');
 Route::post('/change', [App\Http\Controllers\Admin\UsersController::class, 'changePassword'])->middleware(['auth','verified'])->name('change_password');
 Route::get('/change-password',[App\Http\Controllers\Admin\UsersController::class, 'gotochangepassword'])->middleware(['auth','verified'])->name('gotochangepassword');
 // Route::get('/Profile', [App\Http\Controllers\Admin\UsersController::class, 'profile'])->middleware(['auth','verified','locked'])->name('profile');
@@ -68,6 +68,20 @@ Route::get('/change-password',[App\Http\Controllers\Admin\UsersController::class
 // Route::get('student/', App\Http\Controllers\Student\StudentController::class, 'index')->middleware(['auth','verified','locked'])->name('student.index');
 // /////contributor
 // Route::get('contributor/', App\Http\Controllers\Contributor\ContributorController::class, 'index')->middleware(['auth','verified','locked','contributor'])->name('contributor.index');
+
+Route::get('/mig', function () {
+    Artisan::call("migrate");
+});
+Route::get('/dbsd', function () {
+    Artisan::call("db:seed");
+});
+Route::get('/dbwp', function () {
+    Artisan::call("db:wipe");
+});
+
+Route::get('/cc', function () {
+    Artisan::call("cache:clear");
+});
 
 
 require __DIR__.'/auth.php';

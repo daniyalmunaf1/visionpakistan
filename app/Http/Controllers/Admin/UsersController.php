@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
+use Carbon\Carbon;
 use Illuminate\Validation\Rules;
 
 class UsersController extends Controller
@@ -259,44 +260,26 @@ class UsersController extends Controller
     }
 
 
-    public function lockuser(User $user)
+    public function deactivateuser(User $user)
     {
-        if(Auth::user()->hasRole('admin')){
-            if($user->lock==1)
-            {
-                $user->lock = 0;
-                $user->save();
-                return redirect()->route('index');
-            }
-            else
-            {
-                $user->lock = 1;
-                $user->save();
-                return redirect()->route('index');
-            }
+        if($user->deactivate==1)
+        {
+            // dd('dectivated');
+            $user->lastuseradded = Carbon::now();
+            $user->deactivate = 0;
+            $user->save();
+            return redirect()->route('usermanagement')->with('message', 'User Activated Successfully');
         }
         else
         {
-            if($user->hasRole('student'))
-            {
-                if($user->lock==1)
-                {
-                    $user->lock = 0;
-                    $user->save();
-                    return redirect()->route('index');
-                }
-                else
-                {
-                    $user->lock = 1;
-                    $user->save();
-                    return redirect()->route('index');
-                }
-            }
-            else{
-                return redirect()->route('index');
+            $user->deactivate = 1;
+            $user->save();
+            return redirect()->route('usermanagement')->with('message', 'User Deactivated Successfully');
+            // dd('activated',$user );
 
-            }
         }
+
+        
     }
     public function pinrequest()
     {
@@ -477,8 +460,8 @@ class UsersController extends Controller
      */
     public function destroy(User $user)
     {
-            // $user->roles()->detach();
-            // $user->delete();
+            $user->roles()->detach();
+            $user->delete();
             return Redirect()->back()->with('message', 'User Account Deleted Successfully');   
         
         

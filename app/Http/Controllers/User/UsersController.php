@@ -169,6 +169,10 @@ class UsersController extends Controller
         else
         {
             $rScore = GoldReward::where('level',$level)->value('score');
+            $target = GoldReward::where('level',$level)->first();
+
+            $user->target = $target->score;
+            $user->save();
             // if($score>=$rScore)
             // {
             //     dd('level up');

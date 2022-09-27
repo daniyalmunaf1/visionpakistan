@@ -63,11 +63,15 @@
                     </div>
                     @can('silver')
                     <label for="pincode-input">Enter 6 Digits PIN</label>
-                    <input type="number" class="form-control item" value="{{ old('pin') }}" name="pin" placeholder="Enter 6 Digits Pin" maxlength="6">
+                    <input type="number" class="form-control item" value="{{ old('pin') }}" name="pin" placeholder="Enter 6 Digits Pin" 
+                    onInput="if(this.value>999999){this.value='';}"
+                    >
                     @endcan('silver')
                     @can('gold')
                     <label for="pincode-input">Enter 8 Digits PIN</label>
-                    <input type="number" class="form-control item" value="{{ old('pin') }}" name="pin" placeholder="Enter 8 Digits Pin" maxlength="8">
+                    <input type="number" class="form-control item" value="{{ old('pin') }}" name="pin" placeholder="Enter 8 Digits Pin" 
+   onInput="if(this.value>99999999){this.value='';}"
+/>
                     @endcan('gold')
                     <!-- <div id="pincode-input" name="pin" class="form-group container"></div> -->
                     <div class="form-group">

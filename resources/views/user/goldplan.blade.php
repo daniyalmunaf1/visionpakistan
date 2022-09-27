@@ -110,10 +110,10 @@
                 >Team View</a
               >
             </div>
-            <section class="rewards-sec" style="margin-top:30px; color:black;">
+            <section class="rewards-sec" style="margin-top:30px; color:black;overflow:auto;">
                 <h1>Your Future Rewards </h1>
 
-                <div class="container">
+                <div class="container"style="min-width: 445px;padding:0;">
 	
                   <div class="table">
                     <div class="table-header">

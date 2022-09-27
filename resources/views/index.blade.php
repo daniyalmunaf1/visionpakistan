@@ -66,7 +66,7 @@
 								</li>
 									</form>
   
-                @endcannot
+                @endcan
                 @cannot('login')
 								<li class="pl-4 pl-md-0 ml-0 ml-md-4">
 								<a  class="nav-login login-a" href="{{route('login')}}">Login</a>
@@ -87,7 +87,10 @@
 <div class="sec1-cont">
     <div class="left-sec1-cont">
         <h1>Let's Start Earning With <br> <h1 class="blue-color">Vision Pakistan</h1></h1>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto hic porro, quaerat cumque quis voluptates quae rerum asperiores in id! Harum, in?</p>
+<p>Vision Pakistan is the world's first networking website where you can withdraw your invested money on your first deposit with a five percent bonus.</p>
+<p style="font-family:
+    font-family: inherit;
+;">ویژن پاکستان دنیا کی پہلی ایسی نیٹ ورکنگ ویب سائٹ ہے جس میں آپ اپنے پہلے ہی وڈرال میں اپنے انویسٹمنٹ شدہ رقم کو  پانچ پرسنٹ بونس کے ساتھ واپس لے سکتے ہیں</p>
 @cannot('login')
 <a  class="nav-login login-a" href="{{route('login')}}">Log In</a>
 @endcannot
@@ -110,9 +113,13 @@
 <h1>Welcome to <spans class="blue-color">Vision Pakistan</spans> </h1>
 <h3>Why You Should Choose Us?</h3>
 <ul class="list-bullets">
-    <li class="mb-2">Lorem ipsum dolor sit amet.</li>
-    <li class="mb-2">Consectetur adipisicing elit.</li>
-    <li class="mb-2">Consectetur adipisicing elit.</li>
+    <li class="mb-2"><p>Our aim is to reduce the growing unemployment in Pakistan</p>
+<p style="font-family:
+    font-family: inherit;
+;">ہمارا مقصد پاکستان میں بڑھتی ہوئی بے روزگاری کو کم کرنا</p>
+    </li>
+    <li class="mb-2"><p>Vision Pakistan website is registered with FBR, an organization of Government of Pakistan</p><p style="font-family:inherit;">ویژن پاکستان ویب سائڈ گورنمنٹ آف پاکستان کے ادارے ایف بی آر سے رجسٹرڈ ہے</p></li>
+    <li class="mb-2"> <p>Vision Pakistan is 100% Trusted website</p> <p style="font-family:inherit;margin-left:13px;">ویژن پاکستان 100% پرسینٹ  بھروسے مند ویب سائٹ ہے</p>  </li>
    
 </ul>
 
@@ -125,8 +132,8 @@
     <div class="aboutcontent">
         <img src="assets/Images/img-3.jpg" alt="">
         <div class="about-para">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore nam ratione, aspernatur ut facilis ipsa nisi aut fugiat optio quibusdam velit iusto nesciunt tenetur commodi similique doloribus, delectus eos sapiente quam! Qui quia libero cumque reiciendis sapiente iure ab nihil?</p>
-            <p class="mt-14">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel ea, eius, inventore doloremque, modi laborum distinctio atque accusantium repellendus aut dolore ab?</p>
+            <p>Vision Pakistan is the first networking website whose rules are much simpler than all other networking websites.All bonuses will be transferred to their given bank accounts within 24 hours without any request to all customers.</p>
+            <p class="mt-14"style="font-family:inherit;">ویژن پاکستان پہلی نیٹ ورکنگ ویب سائٹ ہے جس کے قوانین دیگر تمام نیٹ ورکنگ ویب سائٹس سے بہت آسان ہیں۔تمام صارفین کو بغیر کسی درخواست کے 24 گھنٹے کے اندر تمام قسم کے بونس ان کے دیئے گئے بینک اکاؤنٹس میں منتقل کر دیے جائیں گے</p>
 
         </div>
     </div>
@@ -311,8 +318,7 @@
               <i class="fas fa-gem me-3"></i>Vision Pakistan
             </h6>
             <p>
-             Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
+             Vision Pakistan - The Best Networking Website
             </p>
           </div>
        
@@ -344,9 +350,9 @@
             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
             <p>
               <i class="fas fa-envelope me-3"></i>
-              hafizasimbwn123@gmail.com
+              visionpakistan@visionpakistan.com
             </p>
-            <p><i class="fas fa-phone me-3"></i>0304 4112119 </p>
+            <p><i class="fas fa-phone me-3"></i>03</p>
           </div>
           <!-- Grid column -->
         </div>
@@ -357,7 +363,7 @@
   
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2022 Copyright:
+      © 2015 Copyright:
       <a class="text-reset fw-bold" href="https://mdbootstrap.com/">VisionPakistan.com</a>
     </div>
     <!-- Copyright -->

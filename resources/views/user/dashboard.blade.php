@@ -227,15 +227,15 @@
               <div  class="account-details">
                 <div class="bank-acc">
                   <h5>Back Account <i class="fa fa-hand-o-right"></i> </h5>
-                  <p>{{$bank->bankname}}</p>
+                  <p style="max-width: 124px;">{{$bank->bankname}}</p>
                 </div>
                 <div class="bank-acc">
                   <h5>Account Number <i class="fa fa-hand-o-right"></i> </h5>
-                  <p>{{$bank->number}}</p>
+                  <p style="max-width: 124px;">{{$bank->number}}</p>
                 </div>
                 <div class="bank-acc">
                   <h5>Account Name <i class="fa fa-hand-o-right"></i></h5>
-                  <p>{{$bank->accountname}}</p>
+                  <p style="max-width: 124px;">{{$bank->accountname}}</p>
                 </div>
                            </div>
 
@@ -323,7 +323,7 @@
            
 
               <div class="card mb-4">
-                  <div class="card-body">
+                  <div class="card-body" style="overflow:auto;">
                       <!-- Grid row -->
                       <div class="row">
                           <!-- Grid column -->

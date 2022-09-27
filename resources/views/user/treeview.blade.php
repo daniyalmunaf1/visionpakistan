@@ -121,11 +121,11 @@
             @endif
           @if($activeTeam!=NULL)
               @if($activeTeam->ref1!=NULL && $activeTeam->ref2!=NULL && $activeTeam->ref3!=NULL)
-              <div class="row">
-                <div class="col-7">
-                <h4 style="text-align:right;margin-top:25px;" class="complete-score1">You Can Now Submit the Score</h4>
+              <div class="row flex-column align-items-center">
+                <div class="col-7 text-center">
+                <h4 style="margin-top:25px;" class="complete-score1">You Can Now Submit the Score</h4>
                 </div>
-                <div class="col-5">
+                <div class="col-5 text-center">
                 <a href="{{route('user.submit',$activeTeam->id)}}" class="submit-btn-tree" style="display:inline-flex;">Submit</a>
                 </div>
           </div>
@@ -247,7 +247,7 @@
             </div>
           </div>
                 @foreach($TeamUsers as $TeamUser)
-                <ul class="row">
+                <ul class="row flex-nowrap mt-3">
                     <strong style="font-size: 2rem;padding-right:20px;    color: #3588f6;">{{++$sno}}:</strong> 
                   <div style="max-width:20%" class="bg-white-ul mr-5">
                     <li  class="bg-blue"style="font-size: 1.5rem;">  {{$TeamUser->score1}}</li>
@@ -259,7 +259,7 @@
                   </div>
                 </ul>
                 @if($TeamUser->score1>=$TeamUser->level&&$TeamUser->score2>=$TeamUser->level&&$TeamUser->score3>=$TeamUser->level)
-                <ul class="row">
+                <ul class="row flex-nowrap">
                   <a href="{{route('user.submitteambonus',$TeamUser->id)}}" class="submit-btn-tree1">Claim Bonus</a>
                 </ul>
                 @endif

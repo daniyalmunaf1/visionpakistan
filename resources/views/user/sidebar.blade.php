@@ -3,7 +3,7 @@
         <!-- Sidebar - Brand -->
         <a style="flex-direction:column;height: 87px;"
           class="sidebar-brand d-flex align-items-center justify-content-center"
-          href="{{asset('assets/dashboard/dashboard.html')}}"
+          href="{{route('dashboard')}}"
         >
           <div style="transform:none;" class="sidebar-brand-icon rotate-n-15">
             <img class="V-logo" style="width:100px;" src="{{asset('assets/Images/VsionPakLogoVWhite.png')}}" alt="">

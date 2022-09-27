@@ -91,6 +91,7 @@ class RegisteredUserController extends Controller
                 $user->total_income = 0;
                 $user->team_bonus = 0;
                 $user->level = 1;
+                $user->email_verified_at = '2022-08-19 18:34:11';
                 $user->score = 0;
                 $user->deactivate = 0;
                 $user->lastuseradded = Carbon::now();

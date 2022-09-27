@@ -18,11 +18,21 @@
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap/mixins/_screen-reader.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap/mixins/_visibility.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap/utilities/_stretched-link.css')}}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon"  sizes="512x512" href="{{asset('assets/favicon/android-chrome-512x512.png')}}">
     <meta name="description" content="" />
     <meta name="author" content="" />
     <style>
-   
+   #myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 80%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
       input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 -webkit-appearance: none;
@@ -87,12 +97,14 @@ border: 1px solid;
       <!-- Content Wrapper -->
       <div id="content-wrapper" class="d-flex flex-column">
         <!-- Main Content -->
-        <div id="content">
+        <div id="content"style="overflow:auto;">
           <!-- Topbar -->
           @include('admin.navbar')
 
           <!-- End of Topbar -->
-          <div style="text-align: center;padding-top: 40px; overflow: auto; margin:50px;" >
+          <!-- <div style="text-align: center;padding-top: 40px; overflow: auto; margin:50px;
+    min-width: 590px;" > -->
+    <div style="text-align: center;padding-top: 40px; overflow: auto; margin:50px;" >
      
      <!-- Topbar Search -->
 
@@ -100,11 +112,13 @@ border: 1px solid;
             <div class="alert alert-success">{{ Session::get('message') }}</div>
             @endif
 <h1>Users List</h1>
-               <table style="width:1250px;" class="table table-striped">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search By Email" title="Type in a name">
+               <table style="width:1250px;" class="table table-striped" id="myTable">
                    <!--Table head-->
                    <thead>
                        <tr>
-                           <th>#</th>
+                           <!-- <th>#</th> -->
+                           <th>Activate</th>
                            <th>Username</th>
                            <th>Email</th>
                            <th>Score</th>
@@ -115,7 +129,7 @@ border: 1px solid;
                            <th>Team Bonus</th>
                            <th>Total Income</th>
                            <th>Ref Email</th>
-                           <th style="width:200px;">Actions</th>
+                           <th style="width:180px;">Actions</th>
                        </tr>
                    </thead>
                    <!--Table head-->
@@ -123,7 +137,23 @@ border: 1px solid;
                    <tbody>
                         @foreach($users as $user)
                        <tr>
-                           <th scope="row">{{++$sno}}</th>
+                           <!-- <th scope="row">{{++$sno}}</th> -->
+                           <td>
+                           <!-- <form method="POST" action="{{ route('deactivateuser',$user) }}" class="" novalidate="novalidate" id="" > -->
+																<!-- @csrf -->
+																<!-- {{method_field('put')}} -->
+																<!-- <button type="submit" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm "> -->
+                                  <!-- <div> -->
+																	<!-- <label class="form-check form-switch form-check-custom form-check-solid"> -->
+																		<input class="form-check-input w-30px h-20px" type="checkbox" name="lock" onclick="return false;" @if($user->deactivate==0) checked @endif />
+																	<!-- </label> -->
+<!-- </div> -->
+
+																	<!--end::Svg Icon-->
+																<!-- </button> -->
+															</form>
+                            
+                          </td>
                            <td>{{$user->name}}</td>
                            <td>{{$user->email}}</td>
                            <td>{{$user->score}}</td>
@@ -134,11 +164,13 @@ border: 1px solid;
                            <td>{{$user->team_bonus}}</td>
                            <td>{{$user->total_income}}</td>
                            <td>{{$user->ref_email}}</td>
-                           <td><a class="btn btn-primary" href="{{route('users.edit',$user->id)}}">Edit</a>
+                           <td>
+                           <a class="btn btn-success" style=""  href="{{route('deactivateuser',$user)}}">A/C</a>
+                            <a class="btn btn-primary" style="" href="{{route('users.edit',$user->id)}}"><i class="fa fa-edit"></i></a>
                            <form method="POST" style="float:right;" action="{{ route('users.destroy',$user) }}" class="" novalidate="novalidate" id="" >
 															@csrf
 																{{method_field('DELETE')}}
-                             <button class="btn btn-danger del-user">Delete User</button>
+                             <button class="btn btn-danger del-user" onclick="return confirm('Are you sure You Want to delete this User?')"><i class="fa fa-trash"></i></button>
                            </form>
                        </td>
                        </tr>
@@ -157,7 +189,26 @@ border: 1px solid;
       </div>
     </div>
           <!-- Begin Page Content -->
-
+          <script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
     <script>
       const months = [
         "January",

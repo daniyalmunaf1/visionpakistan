@@ -45,7 +45,7 @@
 
       <div id="content-wrapper" class="d-flex flex-column">
         <!-- Main Content -->
-        <div id="content">
+        <div id="content"style="overflow:auto;">
           @include('admin.navbar')
 <style>
   input[type='number']{
@@ -58,7 +58,8 @@
 }
 </style>
 
-   <div style="text-align: center;padding-top: 40px;" class="container">
+   <div style="text-align: center;padding-top: 40px;    overflow: auto;
+    min-width: 590px;" class="container">
    @if (Session::has('message'))
             <div class="alert alert-success">{{ Session::get('message') }}</div>
             @endif

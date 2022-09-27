@@ -118,11 +118,11 @@
                 >Team View</a
               >
             </div>
-            <section class="rewards-sec" style="margin-top:30px; color:black;">
+            <section class="rewards-sec" style="margin-top:30px; color:black;overflow:auto;">
                 <h1>Your Future Rewards </h1>
 
                <!-- Table Example -->
-               <div class="container">
+               <div class="container"style="min-width: 445px;padding:0;">
                 @can('silver')
                 <div class="table">
                   <div class="table-header">
