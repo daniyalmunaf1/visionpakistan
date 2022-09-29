@@ -41,9 +41,18 @@ class UsersController extends Controller
         $PinRequestCount = PinRequest::where('status',0)->count();
         $WithdrawalRequestCount = WithdrawalRequest::where('status',0)->count();
         $BonusRequestCount = TeamBonusRequest::where('status',0)->count();
-        $SilverusersCount = DB::table('role_user')->where('role_id',2)->count();
-        $GoldusersCount = DB::table('role_user')->where('role_id',3)->count();
-        $TotalusersCount = User::count()-1;
+        $RewardRequestCount = RewardBonusRequest::where('status',0)->count();
+        $SilverusersCount = DB::table('role_user')
+        ->where('role_id',2)
+        ->join('users','users.id','=','role_user.id')
+        ->where('password','!=',Null)
+        ->count();
+        $GoldusersCount = DB::table('role_user')
+        ->where('role_id',3)
+        ->join('users','users.id','=','role_user.id')
+        ->where('password','!=',Null)
+        ->count();
+        $TotalusersCount = User::where('password','!=',NULL)->count()-1;
         $deactivate = DeactivateDays::where('id',1)->first();
         $days = $deactivate->days;
         $status = $deactivate->status;
@@ -54,6 +63,7 @@ class UsersController extends Controller
             'PinRequestCount'=>$PinRequestCount,
             'WithdrawalRequestCount'=>$WithdrawalRequestCount,
             'BonusRequestCount'=>$BonusRequestCount,
+            'RewardRequestCount'=>$RewardRequestCount,
             'SilverusersCount'=>$SilverusersCount,
             'GoldusersCount'=>$GoldusersCount,
             'TotalusersCount'=>$TotalusersCount,
@@ -64,7 +74,7 @@ class UsersController extends Controller
 
     public function usermanagement()
     {
-        $users = User::all()->except(Auth::id());
+        $users = User::where('password','!=',NULL)->where('id','!=',Auth::id())->get();
         $sno = 0;
         return view('admin.usermanagement')->with([
             'users'=>$users,
@@ -151,9 +161,25 @@ class UsersController extends Controller
         $users = User::all();
         
         $days = DeactivateDays::where('id',1)->first();
-        $days->days = $request->days;
-        $days->save();
-        return redirect()->route('dashboard')->with('message', 'Deactivation Days Updated Successfully');   
+        if($request->days>=$days->days)
+        {
+            $days->days = $request->days;
+            $days->save();
+            return redirect()->route('dashboard')->with('message', 'Deactivation Days Updated Successfully');  
+        }
+        else
+        {
+            $users = User::all();
+            foreach($users as $user)
+            {
+                $user->lastuseradded = Carbon::now();
+                $user->save();
+            }
+            $days->days = $request->days;
+            $days->save();
+            return redirect()->route('dashboard')->with('message', 'Deactivation Days Updated Successfully');  
+        }
+           
         
     }
     public function deactivatestatus()
@@ -168,6 +194,12 @@ class UsersController extends Controller
         }
         else
         {
+            $users = User::all();
+            foreach($users as $user)
+            {
+                $user->lastuseradded = Carbon::now();
+                $user->save();
+            }
             $days->status = 'enabled';
             $days->save();
             return redirect()->route('dashboard')->with('message', 'Deactivation Enabled Successfully');   
@@ -303,27 +335,34 @@ class UsersController extends Controller
     }
     public function sendpin(Request $request,$id,$user_id,$trx_id,$plan)
     {
-        // dd($plan);
-        $PinRequest = PinRequest::where('id',$id)->first();
-        $PinRequest->status = 1;
-        $PinRequest->save();
-        // dd($request->number_of_pins);
-        for($i=0;$i<$request->number_of_pins;$i++)
+        if(PinRequest::where('id',$id)->where('status',0)->first())
         {
-            $pin = new Pin();
-            $pin->user_id = $request->user_id;
-            $pin->trx_id = $request->trx_id;
-            if($plan=='silver')
+            // dd($plan);
+            $PinRequest = PinRequest::where('id',$id)->first();
+            $PinRequest->status = 1;
+            $PinRequest->save();
+            // dd($request->number_of_pins);
+            for($i=0;$i<$request->number_of_pins;$i++)
             {
-                $pin->pin = random_int(100000, 999999);
+                $pin = new Pin();
+                $pin->user_id = $request->user_id;
+                $pin->trx_id = $request->trx_id;
+                if($plan=='silver')
+                {
+                    $pin->pin = random_int(100000, 999999);
+                }
+                else
+                {
+                    $pin->pin = random_int(10000000, 99999999);
+                }
+                $pin->save();
             }
-            else
-            {
-                $pin->pin = random_int(10000000, 99999999);
-            }
-            $pin->save();
+            return Redirect()->back()->with('message', 'Pin Sent Successfully');   
         }
-        return Redirect()->back()->with('message', 'Pin Sent Successfully');   
+        else
+        {
+            return Redirect()->back()->with('message', 'Pin Sent Already');   
+        }
 
     }
     public function withdrawalrequest()
@@ -364,49 +403,57 @@ class UsersController extends Controller
     }
     public function withdrawdone(Request $request,$id,$user_id,$plan)
     {
-        // dd($plan);
-        $WithdrawRequest = WithdrawalRequest::where('id',$id)->first();
-        $WithdrawRequest->status = 1;
-        $WithdrawRequest->save();
-        // dd($request->number_of_pins);
-        $user = User::where('id',$user_id)->first();
-            
-        if($plan=='silver')
+        if(WithdrawalRequest::where('id',$id)->where('status',0)->first())
         {
-            $user->current_income-=1050;
-            $user->total_income+=1050;
+            // dd($plan);
+            $WithdrawRequest = WithdrawalRequest::where('id',$id)->first();
+            $WithdrawRequest->status = 1;
+            $WithdrawRequest->save();
+            // dd($request->number_of_pins);
+            $user = User::where('id',$user_id)->first();
+                
+            if($plan=='silver')
+            {
+                $user->current_income-=1050;
+                $user->total_income+=1050;
+            }
+            else
+            {
+                $user->current_income-=5400;
+                $user->total_income+=5400;
+            }
+            $user->save();
+            
+            return Redirect()->back()->with('message', 'Withdraw Done Successfully');   
         }
         else
         {
-            $user->current_income-=5400;
-            $user->total_income+=5400;
+            return Redirect()->back()->with('message', 'Already Done');   
         }
-        $user->save();
-        
-        return Redirect()->back()->with('message', 'Withdraw Done Successfully');   
-
     }
     public function rewarddone(Request $request,$id,$user_id,$reward,$plan)
     {
-        // dd($plan);
-        $RewardRequest = RewardBonusRequest::where('id',$id)->first();
-        // if($RewardRequest->status == 0)
-        // {
-        $RewardRequest->status = 1;
-        $RewardRequest->save();
-        // dd($request->number_of_pins);
-        $user = User::where('id',$user_id)->first();
-            $user->current_income-=$reward;
-            $user->reward_income+=$reward;
-            $user->total_income+=$reward;
-        $user->save();
-        
-        return Redirect()->back()->with('message', 'Reward Sent Successfully');
-        // }  
-        // else{
-        // return Redirect()->back()->with('message', 'Already Sent');
-
-        // }
+        if(RewardBonusRequest::where('id',$id)->where('status',0)->first())
+        {
+            // dd($plan);
+            $RewardRequest = RewardBonusRequest::where('id',$id)->first();
+            // if($RewardRequest->status == 0)
+            // {
+            $RewardRequest->status = 1;
+            $RewardRequest->save();
+            // dd($request->number_of_pins);
+            $user = User::where('id',$user_id)->first();
+                $user->current_income-=$reward;
+                $user->reward_income+=$reward;
+                $user->total_income+=$reward;
+            $user->save();
+            
+            return Redirect()->back()->with('message', 'Reward Sent Successfully');
+        }  
+        else
+        {
+            return Redirect()->back()->with('message', 'Already Sent');
+        }
     }
     public function teambonusrequest()
     {
@@ -429,28 +476,34 @@ class UsersController extends Controller
     public function bonusdone(Request $request,$id,$user_id,$plan)
     {
         // dd($plan);
-        $TeamBonusRequest = TeamBonusRequest::where('id',$id)->first();
-        $TeamBonusRequest->status = 1;
-        $TeamBonusRequest->save();
-        // dd($request->number_of_pins);
-        $user = User::where('id',$user_id)->first();
-            
-        if($plan=='silver')
+        if(TeamBonusRequest::where('id',$id)->where('status',0)->first())
         {
-            $user->current_income-=300;
-            $user->team_bonus+=300;
-            $user->total_income+=300;
+            $TeamBonusRequest = TeamBonusRequest::where('id',$id)->first();
+            $TeamBonusRequest->status = 1;
+            $TeamBonusRequest->save();
+            // dd($request->number_of_pins);
+            $user = User::where('id',$user_id)->first();
+                
+            if($plan=='silver')
+            {
+                $user->current_income-=300;
+                $user->team_bonus+=300;
+                $user->total_income+=300;
+            }
+            else
+            {
+                $user->current_income-=450;
+                $user->team_bonus+=450;
+                $user->total_income+=450;
+            }
+            $user->save();
+            
+            return Redirect()->back()->with('message', 'Bonus sent Successfully');   
         }
         else
         {
-            $user->current_income-=450;
-            $user->team_bonus+=450;
-            $user->total_income+=450;
+            return Redirect()->back()->with('message', 'Done Already');   
         }
-        $user->save();
-        
-        return Redirect()->back()->with('message', 'Bonus sent Successfully');   
-
     }
     /**
      * Remove the specified resource from storage.
@@ -460,8 +513,8 @@ class UsersController extends Controller
      */
     public function destroy(User $user)
     {
-            $user->roles()->detach();
-            $user->delete();
+            $user->password = NULL;
+            $user->save();
             return Redirect()->back()->with('message', 'User Account Deleted Successfully');   
         
         

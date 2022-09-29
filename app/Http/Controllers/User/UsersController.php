@@ -150,7 +150,6 @@ class UsersController extends Controller
         $user = Auth::user();
         $score = $user->score;
         $level = $user->level;
-        
         if(Auth::user()->hasRole('silver'))
         {
             $rScore = SilverReward::where('level',$level)->value('score');
@@ -203,130 +202,213 @@ class UsersController extends Controller
     }
     public function submit($id)
     {
-        $activeTeam = TeamUser::where('id',$id)->first();
-        $activeTeam->status = 1;
-        $activeTeam->save();
-
-        Auth::user()->score++;
-
-        $withdrawrequest = new WithdrawalRequest();
-        $withdrawrequest->user_id = Auth::user()->id;
-        $withdrawrequest->name = Auth::user()->name;
-        $withdrawrequest->email = Auth::user()->email;
-        $withdrawrequest->bankname = Auth::user()->bankname;
-        $withdrawrequest->accountname = Auth::user()->accountname;
-        $withdrawrequest->number = Auth::user()->number;
-        $withdrawrequest->status = 0;
-
-        if(Auth::user()->hasRole('silver'))
+        if(TeamUser::where('id',$id)->where('status',0)->first())
         {
-            Auth::user()->current_income+=1050;
-            $withdrawrequest->plan = 'silver';
-            $message = 'Score Claimed Successfully, Rs.1050 has been added in your wallet';
+            $activeTeam = TeamUser::where('id',$id)->first();
+            $activeTeam->status = 1;
+            $activeTeam->save();
+
+            Auth::user()->score++;
+
+            $withdrawrequest = new WithdrawalRequest();
+            $withdrawrequest->user_id = Auth::user()->id;
+            $withdrawrequest->name = Auth::user()->name;
+            $withdrawrequest->email = Auth::user()->email;
+            $withdrawrequest->bankname = Auth::user()->bankname;
+            $withdrawrequest->accountname = Auth::user()->accountname;
+            $withdrawrequest->number = Auth::user()->number;
+            $withdrawrequest->status = 0;
+
+            if(Auth::user()->hasRole('silver'))
+            {
+                Auth::user()->current_income+=1050;
+                $withdrawrequest->plan = 'silver';
+                $message = 'Score Claimed Successfully, Rs.1050 has been added in your wallet';
+            }
+            else
+            {
+                Auth::user()->current_income+=5400;
+                $withdrawrequest->plan = 'gold';
+                $message = 'Score Claimed Successfully, Rs.5400 has been added in your wallet';
+            }
+            $withdrawrequest->save();
+            Auth::user()->save();
+            
+            $ref_email = User::where('email',Auth::user()->email)->value('ref_email');
+            for($ref_email;$ref_email!=NULL;)
+            {
+                $user = User::where('email',$ref_email)->first();
+                $user->score++;
+                $ref_email = $user->ref_email;
+                $user->save();
+            }
+            return Redirect()->back()->with('message', $message);   
         }
         else
         {
-            Auth::user()->current_income+=5400;
-            $withdrawrequest->plan = 'gold';
-            $message = 'Score Claimed Successfully, Rs.5400 has been added in your wallet';
+            return Redirect()->back()->with('message', 'Already Claimed');   
         }
-        $withdrawrequest->save();
-        Auth::user()->save();
-        
-        $ref_email = User::where('email',Auth::user()->email)->value('ref_email');
-        for($ref_email;$ref_email!=NULL;)
-        {
-            $user = User::where('email',$ref_email)->first();
-            $user->score++;
-            $ref_email = $user->ref_email;
-            $user->save();
-        }
-        return Redirect()->back()->with('message', $message);   
     }
     public function submitReward()
     {
-        $rewardbonusrequest = new RewardBonusRequest();
-        $rewardbonusrequest->user_id = Auth::user()->id;
-        $rewardbonusrequest->name = Auth::user()->name;
-        $rewardbonusrequest->email = Auth::user()->email;
-        $rewardbonusrequest->level = Auth::user()->level+1;
-        $rewardbonusrequest->bankname = Auth::user()->bankname;
-        $rewardbonusrequest->accountname = Auth::user()->accountname;
-        $rewardbonusrequest->number = Auth::user()->number;
-        $rewardbonusrequest->status = 0;
-
-        $user = Auth::user();
-        $score = $user->score;
-        $level = $user->level;
-
         if(Auth::user()->hasRole('silver'))
         {
-            $_reward = SilverReward::where('level',$level)->first();
-            $reward = $_reward->reward;
-            $_rTarget = SilverReward::where('level',$level+1)->first();
-            $rTarget = $_rTarget->score;
-            // dd($rTarget);
-           
-            Auth::user()->current_income+=$reward;
-            $rewardbonusrequest->reward = $reward;
-            $rewardbonusrequest->plan = 'silver';
-            $message = 'You are Upgraded to Level '.++$level.',Reward of Rs.'.$reward.' has been added in your wallet';
-            Auth::user()->level++;
-            Auth::user()->target = $rTarget;
+            if(Auth::user()->score>=SilverReward::where('level',Auth::user()->level)->value('score'))
+            {
+                $rewardbonusrequest = new RewardBonusRequest();
+                $rewardbonusrequest->user_id = Auth::user()->id;
+                $rewardbonusrequest->name = Auth::user()->name;
+                $rewardbonusrequest->email = Auth::user()->email;
+                $rewardbonusrequest->level = Auth::user()->level+1;
+                $rewardbonusrequest->bankname = Auth::user()->bankname;
+                $rewardbonusrequest->accountname = Auth::user()->accountname;
+                $rewardbonusrequest->number = Auth::user()->number;
+                $rewardbonusrequest->status = 0;
+
+                $user = Auth::user();
+                $score = $user->score;
+                $level = $user->level;
+
+                if(Auth::user()->hasRole('silver'))
+                {
+                    $_reward = SilverReward::where('level',$level)->first();
+                    $reward = $_reward->reward;
+                    $_rTarget = SilverReward::where('level',$level+1)->first();
+                    $rTarget = $_rTarget->score;
+                    // dd($rTarget);
+                
+                    Auth::user()->current_income+=$reward;
+                    $rewardbonusrequest->reward = $reward;
+                    $rewardbonusrequest->plan = 'silver';
+                    $message = 'You are Upgraded to Level '.++$level.',Reward of Rs.'.$reward.' has been added in your wallet';
+                    Auth::user()->level++;
+                    Auth::user()->target = $rTarget;
+                }
+                else
+                {
+                    $_reward = GoldReward::where('level',$level)->first();
+                    $reward = $_reward->reward;
+                    $_rTarget = GoldReward::where('level',$level+1)->first();
+                    $rTarget = $_rTarget->score;
+                
+                    Auth::user()->current_income+=$reward;
+                    $rewardbonusrequest->reward = $reward;
+                    $rewardbonusrequest->plan = 'gold';
+                    $message = 'You are Upgraded to Level '.++$level.',Reward of Rs.'.$reward.' has been added in your wallet';
+                    Auth::user()->level++;
+                    Auth::user()->target = $rTarget;
+                }
+                $rewardbonusrequest->save();
+                Auth::user()->save();
+                
+                
+                return Redirect()->back()->with('message', $message); 
+            }
+            else
+            {
+                return Redirect()->back()->with('message', 'Already Claimed'); 
+            }
         }
-        else
+        if(Auth::user()->hasRole('silver'))
         {
-            $_reward = GoldReward::where('level',$level)->first();
-            $reward = $_reward->reward;
-            $_rTarget = GoldReward::where('level',$level+1)->first();
-            $rTarget = $_rTarget->score;
-           
-            Auth::user()->current_income+=$reward;
-            $rewardbonusrequest->reward = $reward;
-            $rewardbonusrequest->plan = 'gold';
-            $message = 'You are Upgraded to Level '.++$level.',Reward of Rs.'.$reward.' has been added in your wallet';
-            Auth::user()->level++;
-            Auth::user()->target = $rTarget;
+            if(Auth::user()->score>=GoldReward::where('level',Auth::user()->level)->value('score'))
+            {
+                $rewardbonusrequest = new RewardBonusRequest();
+                $rewardbonusrequest->user_id = Auth::user()->id;
+                $rewardbonusrequest->name = Auth::user()->name;
+                $rewardbonusrequest->email = Auth::user()->email;
+                $rewardbonusrequest->level = Auth::user()->level+1;
+                $rewardbonusrequest->bankname = Auth::user()->bankname;
+                $rewardbonusrequest->accountname = Auth::user()->accountname;
+                $rewardbonusrequest->number = Auth::user()->number;
+                $rewardbonusrequest->status = 0;
+
+                $user = Auth::user();
+                $score = $user->score;
+                $level = $user->level;
+
+                if(Auth::user()->hasRole('silver'))
+                {
+                    $_reward = SilverReward::where('level',$level)->first();
+                    $reward = $_reward->reward;
+                    $_rTarget = SilverReward::where('level',$level+1)->first();
+                    $rTarget = $_rTarget->score;
+                    // dd($rTarget);
+                
+                    Auth::user()->current_income+=$reward;
+                    $rewardbonusrequest->reward = $reward;
+                    $rewardbonusrequest->plan = 'silver';
+                    $message = 'You are Upgraded to Level '.++$level.',Reward of Rs.'.$reward.' has been added in your wallet';
+                    Auth::user()->level++;
+                    Auth::user()->target = $rTarget;
+                }
+                else
+                {
+                    $_reward = GoldReward::where('level',$level)->first();
+                    $reward = $_reward->reward;
+                    $_rTarget = GoldReward::where('level',$level+1)->first();
+                    $rTarget = $_rTarget->score;
+                
+                    Auth::user()->current_income+=$reward;
+                    $rewardbonusrequest->reward = $reward;
+                    $rewardbonusrequest->plan = 'gold';
+                    $message = 'You are Upgraded to Level '.++$level.',Reward of Rs.'.$reward.' has been added in your wallet';
+                    Auth::user()->level++;
+                    Auth::user()->target = $rTarget;
+                }
+                $rewardbonusrequest->save();
+                Auth::user()->save();
+                
+                
+                return Redirect()->back()->with('message', $message); 
+            }
+            else
+            {
+                return Redirect()->back()->with('message', 'Already Claimed'); 
+            }
         }
-        $rewardbonusrequest->save();
-        Auth::user()->save();
-        
-        
-        return Redirect()->back()->with('message', $message); 
     }
     public function submitteambonus($id)
     {
         $activeTeam = TeamUser::where('id',$id)->first();
-        $activeTeam->level++;
-        $activeTeam->save();
 
-
-        $teambonusrequest = new TeamBonusRequest();
-        $teambonusrequest->user_id = Auth::user()->id;
-        $teambonusrequest->name = Auth::user()->name;
-        $teambonusrequest->email = Auth::user()->email;
-        $teambonusrequest->bankname = Auth::user()->bankname;
-        $teambonusrequest->accountname = Auth::user()->accountname;
-        $teambonusrequest->number = Auth::user()->number;
-        $teambonusrequest->status = 0;
-
-        if(Auth::user()->hasRole('silver'))
+        if($activeTeam->score1>=$activeTeam->level&&$activeTeam->score2>=$activeTeam->level&&$activeTeam->score3>=$activeTeam->level)
         {
-            Auth::user()->current_income+=300;
-            $teambonusrequest->plan = 'silver';
-            $message = 'Bonus Claimed Successfully, Rs.300 has been added in your wallet';
+            $activeTeam->level++;
+            $activeTeam->save();
+
+
+            $teambonusrequest = new TeamBonusRequest();
+            $teambonusrequest->user_id = Auth::user()->id;
+            $teambonusrequest->name = Auth::user()->name;
+            $teambonusrequest->email = Auth::user()->email;
+            $teambonusrequest->bankname = Auth::user()->bankname;
+            $teambonusrequest->accountname = Auth::user()->accountname;
+            $teambonusrequest->number = Auth::user()->number;
+            $teambonusrequest->status = 0;
+
+            if(Auth::user()->hasRole('silver'))
+            {
+                Auth::user()->current_income+=300;
+                $teambonusrequest->plan = 'silver';
+                $message = 'Bonus Claimed Successfully, Rs.300 has been added in your wallet';
+            }
+            else
+            {
+                Auth::user()->current_income+=450;
+                $teambonusrequest->plan = 'gold';
+                $message = 'Bonus Claimed Successfully, Rs.450 has been added in your wallet';
+            }
+            $teambonusrequest->save();
+            Auth::user()->save();
+            
+            
+            return Redirect()->back()->with('message', $message);   
         }
         else
         {
-            Auth::user()->current_income+=450;
-            $teambonusrequest->plan = 'gold';
-            $message = 'Bonus Claimed Successfully, Rs.450 has been added in your wallet';
+            return Redirect()->back()->with('message', 'Already Claimed');   
         }
-        $teambonusrequest->save();
-        Auth::user()->save();
-        
-        
-        return Redirect()->back()->with('message', $message);   
     }
 
     public function treeviewgold()

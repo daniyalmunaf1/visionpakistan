@@ -104,5 +104,16 @@ class TeamUsersTableSeeder extends Seeder
             'level' => 1,
             'status' => 0,
         ]);
+        TeamUser::create([
+            'email' => 'gold11@user.com',
+            'ref1' => 'gold111@user.com',
+            'ref2' => 'gold112@user.com',
+            'ref3' => 'gold113@user.com',
+            'score1' => 0,
+            'score2' => 0,
+            'score3' => 0,
+            'level' => 1,
+            'status' => 0,
+        ]);
     }
 }

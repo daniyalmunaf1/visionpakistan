@@ -481,6 +481,57 @@ class UsersTableSeeder extends Seeder
             'password' => Hash::make('qwertyuiop'),
             'email_verified_at' => '2022-08-19 18:34:11',
             'deactivate' => 0,            'lastuseradded' => '2022-09-16 18:34:11'        ]);
+            $gold13 = User::create([
+                'name' => 'Gold User111',
+                'number' => '03123456789',
+                'accountname' => 'GoldUser',
+                'bankname' => 'EasyPaisa',
+                'team_bonus' => 0,
+                'current_income' => 0,
+                'reward_income' => 0,
+                'total_income' => 0,
+                'level' => 1,
+                'score' => 0,
+                'target' => 35,
+                'email' => 'gold111@user.com',
+                'ref_email' => 'gold11@user.com',
+                'password' => Hash::make('qwertyuiop'),
+                'email_verified_at' => '2022-08-19 18:34:11',
+                'deactivate' => 0,            'lastuseradded' => '2022-09-16 18:34:11'        ]);
+                $gold14 = User::create([
+                    'name' => 'Gold User112',
+                    'number' => '03123456789',
+                    'accountname' => 'GoldUser',
+                    'bankname' => 'EasyPaisa',
+                    'team_bonus' => 0,
+                    'current_income' => 0,
+                    'reward_income' => 0,
+                    'total_income' => 0,
+                    'level' => 1,
+                    'score' => 0,
+                    'target' => 35,
+                    'email' => 'gold112@user.com',
+                    'ref_email' => 'gold11@user.com',
+                    'password' => Hash::make('qwertyuiop'),
+                    'email_verified_at' => '2022-08-19 18:34:11',
+                    'deactivate' => 0,            'lastuseradded' => '2022-09-16 18:34:11'        ]);
+                    $gold15 = User::create([
+                        'name' => 'Gold User113',
+                        'number' => '03123456789',
+                        'accountname' => 'GoldUser',
+                        'bankname' => 'EasyPaisa',
+                        'team_bonus' => 0,
+                        'current_income' => 0,
+                        'reward_income' => 0,
+                        'total_income' => 0,
+                        'level' => 1,
+                        'score' => 0,
+                        'target' => 35,
+                        'email' => 'gold113@user.com',
+                        'ref_email' => 'gold11@user.com',
+                        'password' => Hash::make('qwertyuiop'),
+                        'email_verified_at' => '2022-08-19 18:34:11',
+                        'deactivate' => 0,            'lastuseradded' => '2022-09-16 18:34:11'        ]);
         
 
         $admin->roles()->attach($adminRole);
@@ -510,6 +561,10 @@ class UsersTableSeeder extends Seeder
         $gold10->roles()->attach($goldRole);
         $gold11->roles()->attach($goldRole);
         $gold12->roles()->attach($goldRole);
+        $gold13->roles()->attach($goldRole);
+        $gold14->roles()->attach($goldRole);
+        $gold15->roles()->attach($goldRole);
+
 
 
         

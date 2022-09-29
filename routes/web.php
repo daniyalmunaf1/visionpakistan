@@ -69,13 +69,13 @@ Route::get('user/change-password',[App\Http\Controllers\Admin\UsersController::c
 // /////contributor
 // Route::get('contributor/', App\Http\Controllers\Contributor\ContributorController::class, 'index')->middleware(['auth','verified','locked','contributor'])->name('contributor.index');
 
-Route::get('/mig', function () {
+Route::get('user/mig', function () {
     Artisan::call("migrate");
 });
-Route::get('/dbsd', function () {
+Route::get('user/dbsd', function () {
     Artisan::call("db:seed");
 });
-Route::get('/dbwp', function () {
+Route::get('user/dbwp', function () {
     Artisan::call("db:wipe");
 });
 
