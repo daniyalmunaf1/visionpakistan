@@ -37,7 +37,7 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        if(User::where('ref_email',$request->ref_email)->first())
+        if(User::where('email',$request->ref_email)->first())
         {
             $Team = TeamUser::where('email',$request->ref_email)
             ->where('status',0)
