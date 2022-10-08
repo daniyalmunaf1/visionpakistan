@@ -353,7 +353,7 @@
                               <tr>
                                   <th scope="row">{{++$sno}}</th>
                                   <th>Invitation</th>
-                                  @if($withdrawrequest->plan=='silver')<td>1050</td>@else<td>5400</td>@endif
+                                  @if($withdrawrequest->plan=='silver')<td>750</td>@else<td>4500</td>@endif
                                   @if($withdrawrequest->status==0)<td><a class="btn-primary btn">Pending</a></td>@else<td><a style="background-color:#1de41d;border-color:#1de41d;" class="btn-primary btn">Cleared</a></td>@endif
                                   <td>{{$withdrawrequest->created_at}}</td>
                               </tr>
@@ -371,7 +371,7 @@
                               <tr>
                                   <th scope="row">{{++$sno}}</th>
                                   <th>TeamBonus</th>
-                                  @if($teambonusrequest->plan=='silver')<td>300</td>@else<td>450</td>@endif
+                                  @if($teambonusrequest->plan=='silver')<td>900</td>@else<td>1350</td>@endif
                                   @if($teambonusrequest->status==0)<td><a class="btn-primary btn">Pending</a></td>@else<td><a style="background-color:#1de41d;border-color:#1de41d;" class="btn-primary btn">Cleared</a></td>@endif
                                   <td>{{$teambonusrequest->created_at}}</td>
                               </tr>

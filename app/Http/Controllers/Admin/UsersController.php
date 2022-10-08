@@ -414,13 +414,13 @@ class UsersController extends Controller
                 
             if($plan=='silver')
             {
-                $user->current_income-=1050;
-                $user->total_income+=1050;
+                $user->current_income-=750;
+                $user->total_income+=750;
             }
             else
             {
-                $user->current_income-=5400;
-                $user->total_income+=5400;
+                $user->current_income-=4500;
+                $user->total_income+=4500;
             }
             $user->save();
             
@@ -486,15 +486,15 @@ class UsersController extends Controller
                 
             if($plan=='silver')
             {
-                $user->current_income-=300;
-                $user->team_bonus+=300;
-                $user->total_income+=300;
+                $user->current_income-=900;
+                $user->team_bonus+=900;
+                $user->total_income+=900;
             }
             else
             {
-                $user->current_income-=450;
-                $user->team_bonus+=450;
-                $user->total_income+=450;
+                $user->current_income-=1350;
+                $user->team_bonus+=1350;
+                $user->total_income+=1350;
             }
             $user->save();
             

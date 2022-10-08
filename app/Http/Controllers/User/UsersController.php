@@ -221,15 +221,15 @@ class UsersController extends Controller
 
             if(Auth::user()->hasRole('silver'))
             {
-                Auth::user()->current_income+=1050;
+                Auth::user()->current_income+=750;
                 $withdrawrequest->plan = 'silver';
-                $message = 'Score Claimed Successfully, Rs.1050 has been added in your wallet';
+                $message = 'Score Claimed Successfully, Rs.750 has been added in your wallet';
             }
             else
             {
-                Auth::user()->current_income+=5400;
+                Auth::user()->current_income+=4500;
                 $withdrawrequest->plan = 'gold';
-                $message = 'Score Claimed Successfully, Rs.5400 has been added in your wallet';
+                $message = 'Score Claimed Successfully, Rs.4500 has been added in your wallet';
             }
             $withdrawrequest->save();
             Auth::user()->save();
@@ -389,15 +389,15 @@ class UsersController extends Controller
 
             if(Auth::user()->hasRole('silver'))
             {
-                Auth::user()->current_income+=300;
+                Auth::user()->current_income+=900;
                 $teambonusrequest->plan = 'silver';
-                $message = 'Bonus Claimed Successfully, Rs.300 has been added in your wallet';
+                $message = 'Bonus Claimed Successfully, Rs.900 has been added in your wallet';
             }
             else
             {
-                Auth::user()->current_income+=450;
+                Auth::user()->current_income+=1350;
                 $teambonusrequest->plan = 'gold';
-                $message = 'Bonus Claimed Successfully, Rs.450 has been added in your wallet';
+                $message = 'Bonus Claimed Successfully, Rs.1350 has been added in your wallet';
             }
             $teambonusrequest->save();
             Auth::user()->save();
